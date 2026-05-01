@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 680 680'><circle cx='340' cy='340' r='340' fill='%232d6a4f'/><text x='260' y='410' font-family='Georgia' font-size='240' font-weight='700' fill='%23f7f4ef'>B</text><text x='430' y='410' font-family='Georgia' font-size='240' font-weight='700' fill='%231c1a16'>V</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="VDSCh8TTqZUptly6CAik9csSDh3nkavv_aQneLgaEBA" />
+<meta name="description" content="Sport-Challenges für mehr Fokus und Energie – mach mit und verbinde dich mit der BewegungVerbindet Community.">
+<meta property="og:title" content="Sport Challenges – BewegungVerbindet">
+<meta property="og:description" content="Nimm an unseren Challenges teil und bring Bewegung in deinen Alltag.">
+<meta property="og:url" content="https://bewegungverbindet.netlify.app/artikel-challenges.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Challenges – BewegungVerbindet">
+<meta name="twitter:description" content="Sport-Challenges für deinen Alltag.">
+<title>Warum soziale Challenges dich motivierter machen | BewegungVerbindet</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;0,900;1,300;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f7f4ef;--text:#1c1a16;--muted:#8a8478;--accent:#2d6a4f;--accent2:#74c69d;--accent3:#e76f51;--surface:#fff;--border:rgba(28,26,22,0.1)}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7}
+  .read-progress{position:fixed;top:0;left:0;height:3px;background:var(--accent3);z-index:200;transition:width .1s;width:0}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(247,244,239,0.92);backdrop-filter:blur(12px);border-bottom:.5px solid var(--border)}
+  .logo{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;color:var(--accent);text-decoration:none}.logo span{color:var(--text)}
+  .nav-right{display:flex;align-items:center;gap:1rem}
+  .back-btn{font-size:13px;color:var(--muted);text-decoration:none}.back-btn:hover{color:var(--text)}
+  .lang-switcher{display:flex;gap:3px;background:var(--bg);border:.5px solid var(--border);border-radius:100px;padding:3px}
+  .lang-btn{background:none;border:none;font-size:11px;font-weight:500;padding:3px 8px;border-radius:100px;cursor:pointer;color:var(--muted);transition:all .2s;font-family:'DM Sans',sans-serif}.lang-btn.active{background:var(--accent);color:white}
+  .article-hero{padding:7rem 2rem 3rem;max-width:780px;margin:0 auto;text-align:center}
+  .article-tag{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent3);background:rgba(231,111,81,.1);padding:5px 14px;border-radius:100px;margin-bottom:1.5rem}
+  .article-hero h1{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:1.25rem}
+  .article-hero h1 em{font-style:italic;color:var(--accent3)}
+  .article-meta{font-size:13px;color:var(--muted);margin-bottom:2rem}.article-meta span{margin:0 8px}
+  .article-body{max-width:680px;margin:0 auto;padding:0 2rem 4rem}
+  .article-body p{font-size:1.05rem;margin-bottom:1.5rem}
+  .article-body h2{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:900;letter-spacing:-.02em;margin:3rem 0 1rem;line-height:1.2}
+  .article-body h2 em{font-style:italic;color:var(--accent3)}
+  .lead{font-size:1.2rem!important;color:var(--muted)!important;font-style:italic;border-left:3px solid var(--accent3);padding-left:1.25rem;margin-bottom:2rem!important}
+  .study-box{background:var(--surface);border:.5px solid var(--border);border-radius:20px;padding:2rem;margin:2.5rem 0;position:relative}
+  .study-box::before{content:'🔬';position:absolute;top:1.5rem;right:1.5rem;font-size:2rem;opacity:.3}
+  .study-label{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent3);margin-bottom:.75rem}
+  .study-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;margin-bottom:.5rem}
+  .study-text{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:1rem}
+  .study-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  .study-stat{text-align:center}.study-stat-num{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:900;color:var(--accent3)}.study-stat-label{font-size:11px;color:var(--muted);line-height:1.3}
+  .interactive-block{background:linear-gradient(135deg,rgba(231,111,81,.04),rgba(231,111,81,.08));border:.5px solid rgba(231,111,81,.2);border-radius:20px;padding:2rem;margin:2.5rem 0}
+  .interactive-label{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent3);margin-bottom:1rem;display:flex;align-items:center;gap:6px}.interactive-label::before{content:'🤝'}
+  .interactive-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;margin-bottom:.5rem}
+  .interactive-sub{font-size:13px;color:var(--muted);margin-bottom:1.5rem}
+  .pull-quote{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:700;font-style:italic;color:var(--accent3);text-align:center;padding:2rem 0;border-top:.5px solid var(--border);border-bottom:.5px solid var(--border);margin:2.5rem 0;line-height:1.3}
+  .tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.5rem 0}
+  .tip-card{background:var(--surface);border:.5px solid var(--border);border-radius:16px;padding:1.25rem;transition:transform .2s}.tip-card:hover{transform:translateY(-3px)}
+  .tip-icon{font-size:1.5rem;margin-bottom:8px}.tip-title{font-weight:500;font-size:14px;margin-bottom:4px}.tip-text{font-size:13px;color:var(--muted);line-height:1.5}
+  /* MOTIVATION METER */
+  .motive-bars{display:flex;flex-direction:column;gap:12px;margin:1rem 0}
+  .motive-bar-item{display:flex;align-items:center;gap:12px}
+  .motive-bar-label{font-size:13px;min-width:100px;color:var(--text)}
+  .motive-bar-track{flex:1;height:12px;background:var(--border);border-radius:6px;overflow:hidden}
+  .motive-bar-fill{height:100%;border-radius:6px;width:0;transition:width 1.5s ease}
+  .fill-orange{background:var(--accent3)}
+  .fill-green{background:var(--accent)}
+  .motive-bar-pct{font-size:12px;font-weight:500;min-width:35px;text-align:right}
+  /* CHALLENGE SIMULATOR */
+  .challenge-sim{background:var(--surface);border-radius:16px;padding:1.5rem;border:.5px solid var(--border)}
+  .sim-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+  .sim-title{font-weight:500;font-size:14px}
+  .sim-day{font-size:12px;color:var(--muted)}
+  .sim-members{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1rem}
+  .sim-member{display:flex;flex-direction:column;align-items:center;gap:4px}
+  .sim-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;border:2px solid var(--border)}
+  .sim-avatar.done{border-color:var(--accent)}
+  .sim-avatar.you{border-color:var(--accent3)}
+  .sim-name{font-size:10px;color:var(--muted)}
+  .sim-check{font-size:10px}
+  .sim-btn{width:100%;background:var(--accent3);color:white;border:none;border-radius:100px;padding:10px;font-size:14px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;margin-top:8px}
+  .sim-btn:hover{opacity:.85}
+  .sim-btn:disabled{opacity:.5;cursor:not-allowed}
+  .sim-feedback{margin-top:10px;font-size:13px;color:var(--accent);display:none;padding:8px 12px;background:rgba(45,106,79,.08);border-radius:10px}
+  .sim-feedback.show{display:block}
+  .share-block{background:var(--accent3);color:white;border-radius:20px;padding:2rem;text-align:center;margin:3rem 0}
+  .share-title{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:900;margin-bottom:.5rem}
+  .share-sub{font-size:14px;opacity:.8;margin-bottom:1.5rem}
+  .share-btn{background:white;color:var(--accent3);border:none;border-radius:100px;padding:12px 24px;font-size:14px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;margin:4px}.share-btn:hover{opacity:.9}
+  .author-block{display:flex;gap:1rem;align-items:center;background:var(--surface);border-radius:16px;border:.5px solid var(--border);padding:1.25rem;margin:2rem 0}
+  .author-avatar{width:52px;height:52px;border-radius:50%;background:rgba(231,111,81,.15);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0}
+  .author-name{font-weight:500;font-size:15px}.author-bio{font-size:13px;color:var(--muted)}
+  .next-article{background:var(--surface);border:.5px solid var(--border);border-radius:20px;padding:1.5rem;text-align:center;text-decoration:none;color:var(--text);display:block;transition:transform .2s}.next-article:hover{transform:translateY(-3px)}
+  .next-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+  .next-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700}
+  @media(max-width:600px){.study-stats{grid-template-columns:1fr}.tips-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="read-progress" id="rp"></div>
+<nav>
+  <a href="index.html" class="logo">Bewegung<span>Verbindet</span></a>
+  <div class="nav-right">
+    <a href="bibliothek.html" class="back-btn" data-de="← Bibliothek" data-en="← Library">← Bibliothek</a>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <span class="article-tag" data-de="Community" data-en="Community">Community</span>
+  <h1 data-de="Gemeinsam bewegen:<br>Warum soziale Challenges<br>dich <em>3x motivierter</em> machen." data-en="Move together:<br>Why social challenges<br>make you <em>3x more motivated.</em>">Gemeinsam bewegen:<br>Warum soziale Challenges<br>dich <em>3x motivierter</em> machen.</h1>
+  <div class="article-meta">
+    <span>BewegungVerbindet</span><span>·</span>
+    <span data-de="3 Min Lesedauer" data-en="3 min read">3 Min Lesedauer</span>
+    <span>·</span><span>🤝 Interaktiv</span>
+  </div>
+</div>
+
+<div class="article-body">
+  <p class="lead" data-de="Alleine scheitern viele. Mit einer Gruppe fast niemand. Das ist kein Zufall – das ist Psychologie. Und es verändert alles." data-en="Many fail alone. Hardly anyone fails with a group. That's not a coincidence – that's psychology. And it changes everything.">Alleine scheitern viele. Mit einer Gruppe fast niemand. Das ist kein Zufall – das ist Psychologie. Und es verändert alles.</p>
+
+  <p data-de="Du kennst das Gefühl: Du nimmst dir vor dreimal pro Woche Sport zu machen. Woche eins klappt. Woche zwei noch halbwegs. Woche drei – nichts. Aber was wäre wenn jemand auf dich wartet?" data-en="You know the feeling: you decide to exercise three times a week. Week one works. Week two kind of. Week three – nothing. But what if someone is waiting for you?">Du kennst das Gefühl: Du nimmst dir vor dreimal pro Woche Sport zu machen. Woche eins klappt. Woche zwei noch halbwegs. Woche drei – nichts. Aber was wäre wenn jemand auf dich wartet?</p>
+
+  <div class="study-box">
+    <div class="study-label">Wissenschaftliche Studie</div>
+    <div class="study-title">Journal of Sport & Exercise Psychology, 2021</div>
+    <div class="study-text" data-de="Forscher untersuchten über 12 Wochen zwei Gruppen: Eine trainierte alleine, die andere in sozialen Gruppen mit wöchentlichen Challenges. Das Ergebnis war eindeutig – soziale Verbindlichkeit ist der stärkste Motivationsfaktor für langfristige sportliche Aktivität." data-en="Researchers studied two groups over 12 weeks: one trained alone, the other in social groups with weekly challenges. The result was clear – social accountability is the strongest motivational factor for long-term physical activity.">Forscher untersuchten über 12 Wochen zwei Gruppen: Allein-Training vs. soziale Gruppen-Challenges. Das Ergebnis war eindeutig.</div>
+    <div class="study-stats">
+      <div class="study-stat"><div class="study-stat-num">3x</div><div class="study-stat-label" data-de="mehr Durchhaltevermögen" data-en="more perseverance">mehr Durchhaltevermögen</div></div>
+      <div class="study-stat"><div class="study-stat-num">78%</div><div class="study-stat-label" data-de="weniger Abbrüche in Gruppen" data-en="fewer dropouts in groups">weniger Abbrüche in Gruppen</div></div>
+      <div class="study-stat"><div class="study-stat-num">+40%</div><div class="study-stat-label" data-de="mehr Spaß beim Sport" data-en="more fun during sport">mehr Spaß beim Sport</div></div>
+    </div>
+  </div>
+
+  <h2 data-de="Warum Gruppen<br><em>so stark</em> wirken." data-en="Why groups<br><em>work so powerfully.</em>">Warum Gruppen<br><em>so stark</em> wirken.</h2>
+
+  <div class="interactive-block">
+    <div class="interactive-label" data-de="Interaktiv – Motivation im Vergleich" data-en="Interactive – Motivation compared">Interaktiv – Motivation im Vergleich</div>
+    <div class="interactive-title" data-de="Solo vs. Gruppe – nach 4 Wochen:" data-en="Solo vs. Group – after 4 weeks:">Solo vs. Gruppe – nach 4 Wochen:</div>
+    <div class="interactive-sub" data-de="Die Balken laden automatisch – sieh den Unterschied." data-en="The bars load automatically – see the difference.">Die Balken laden automatisch – sieh den Unterschied.</div>
+    <div class="motive-bars" id="motiveBars">
+      <div class="motive-bar-item">
+        <div class="motive-bar-label" data-de="Solo 😐" data-en="Solo 😐">Solo 😐</div>
+        <div class="motive-bar-track"><div class="motive-bar-fill fill-orange" data-pct="32"></div></div>
+        <div class="motive-bar-pct" style="color:var(--accent3)">32%</div>
+      </div>
+      <div class="motive-bar-item">
+        <div class="motive-bar-label" data-de="Gruppe 🤝" data-en="Group 🤝">Gruppe 🤝</div>
+        <div class="motive-bar-track"><div class="motive-bar-fill fill-green" data-pct="89"></div></div>
+        <div class="motive-bar-pct" style="color:var(--accent)">89%</div>
+      </div>
+      <div class="motive-bar-item">
+        <div class="motive-bar-label" data-de="Challenge 🏆" data-en="Challenge 🏆">Challenge 🏆</div>
+        <div class="motive-bar-track"><div class="motive-bar-fill fill-green" data-pct="95"></div></div>
+        <div class="motive-bar-pct" style="color:var(--accent)">95%</div>
+      </div>
+    </div>
+    <div style="font-size:12px;color:var(--muted);margin-top:8px;" data-de="Durchhaltequote nach 4 Wochen aktiver Sport-Teilnahme" data-en="Completion rate after 4 weeks of active sport participation">Durchhaltequote nach 4 Wochen aktiver Sport-Teilnahme</div>
+  </div>
+
+  <h2 data-de="<em>Simuliere</em> eine<br>Community-Challenge." data-en="<em>Simulate</em> a<br>community challenge.">Simuliere eine<br>Community-Challenge.</h2>
+  <p data-de="So fühlt es sich an wenn deine Gruppe auf dich wartet:" data-en="This is what it feels like when your group is waiting for you:">So fühlt es sich an wenn deine Gruppe auf dich wartet:</p>
+
+  <div class="interactive-block">
+    <div class="interactive-label" data-de="Interaktiv – 21 Tage Bewegungs-Challenge" data-en="Interactive – 21 Day Movement Challenge">Interaktiv – 21 Tage Bewegungs-Challenge</div>
+    <div class="challenge-sim">
+      <div class="sim-header">
+        <div class="sim-title" data-de="🏆 21 Tage Bewegung – Tag 7" data-en="🏆 21 Days Movement – Day 7">🏆 21 Tage Bewegung – Tag 7</div>
+        <div class="sim-day" data-de="Heute: Montag" data-en="Today: Monday">Heute: Montag</div>
+      </div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:10px;" data-de="Deine Gruppe hat heute bereits trainiert:" data-en="Your group already trained today:">Deine Gruppe hat heute bereits trainiert:</div>
+      <div class="sim-members">
+        <div class="sim-member"><div class="sim-avatar done">🌿</div><div class="sim-name">Anna</div><div class="sim-check">✅</div></div>
+        <div class="sim-member"><div class="sim-avatar done">🔥</div><div class="sim-name">Marco</div><div class="sim-check">✅</div></div>
+        <div class="sim-member"><div class="sim-avatar done">💙</div><div class="sim-name">Sara</div><div class="sim-check">✅</div></div>
+        <div class="sim-member"><div class="sim-avatar you">⭐</div><div class="sim-name" data-de="Du" data-en="You">Du</div><div class="sim-check" id="youCheck">⏳</div></div>
+        <div class="sim-member"><div class="sim-avatar">🎯</div><div class="sim-name">Luca</div><div class="sim-check">⏳</div></div>
+      </div>
+      <button class="sim-btn" id="simBtn" onclick="doChallenge()" data-de="✓ Ich habe heute trainiert!" data-en="✓ I trained today!">✓ Ich habe heute trainiert!</button>
+      <div class="sim-feedback" id="simFeedback" data-de="🎉 Ja! Anna, Marco und Sara freuen sich! Du hast deinen Streak auf 7 Tage erhöht. Luca wird jetzt auch motiviert!" data-en="🎉 Yes! Anna, Marco and Sara are happy! You extended your streak to 7 days. Luca will be motivated now too!">🎉 Ja! Anna, Marco und Sara freuen sich! Du hast deinen Streak auf 7 Tage erhöht.</div>
+    </div>
+  </div>
+
+  <div class="pull-quote" data-de='"Wenn andere auf dich warten, läufst du auch an Tagen wo du es alleine nie getan hättest."' data-en='"When others are waiting for you, you run even on days when you would never have done it alone."'>"Wenn andere auf dich warten, läufst du auch an Tagen wo du es alleine nie getan hättest."</div>
+
+  <h2 data-de="<em>So startest du</em><br>deine erste Challenge." data-en="<em>How you start</em><br>your first challenge.">So startest du<br>deine erste Challenge.</h2>
+
+  <div class="tips-grid">
+    <div class="tip-card"><div class="tip-icon">👥</div><div class="tip-title" data-de="Klein anfangen" data-en="Start small">Klein anfangen</div><div class="tip-text" data-de="3-5 Menschen reichen. Kein riesiges Netzwerk nötig. Qualität vor Quantität." data-en="3-5 people are enough. No huge network needed. Quality over quantity.">3-5 Menschen reichen. Kein riesiges Netzwerk nötig.</div></div>
+    <div class="tip-card"><div class="tip-icon">📅</div><div class="tip-title" data-de="Klares Ziel" data-en="Clear goal">Klares Ziel</div><div class="tip-text" data-de="21 Tage Bewegung. Täglich 20 Minuten. Einfach, messbar, machbar." data-en="21 days of movement. 20 minutes daily. Simple, measurable, doable.">21 Tage, 20 Minuten täglich. Einfach und messbar.</div></div>
+    <div class="tip-card"><div class="tip-icon">💬</div><div class="tip-title" data-de="Täglich teilen" data-en="Share daily">Täglich teilen</div><div class="tip-text" data-de="Ein kurzes Update in der Gruppe. Foto, Text, Emoji. Das reicht für Accountability." data-en="A short update in the group. Photo, text, emoji. That's enough for accountability.">Ein kurzes Update. Foto, Text, Emoji. Das reicht.</div></div>
+    <div class="tip-card"><div class="tip-icon">🏆</div><div class="tip-title" data-de="Feiern" data-en="Celebrate">Feiern</div><div class="tip-text" data-de="Jeden Meilenstein feiern. Tag 7, Tag 14, Tag 21. Dein Gehirn liebt Belohnungen." data-en="Celebrate every milestone. Day 7, day 14, day 21. Your brain loves rewards.">Jeden Meilenstein feiern. Dein Gehirn liebt Belohnungen.</div></div>
+  </div>
+
+  <div class="author-block">
+    <div class="author-avatar">🌿</div>
+    <div>
+      <div class="author-name">BewegungVerbindet Team</div>
+      <div class="author-bio" data-de="Wir bauen die Community wo Bewegung Menschen zusammenbringt. Weltweit. Ehrlich." data-en="We build the community where movement connects people. Worldwide. Honest.">Wir bauen die Community wo Bewegung Menschen zusammenbringt.</div>
+    </div>
+  </div>
+
+  <div class="share-block">
+    <div class="share-title" data-de="Kennst du jemanden der das lesen sollte?" data-en="Do you know someone who should read this?">Kennst du jemanden der das lesen sollte?</div>
+    <div class="share-sub" data-de="Teile diesen Artikel und starte gemeinsam eine Challenge." data-en="Share this article and start a challenge together.">Teile diesen Artikel und starte gemeinsam eine Challenge.</div>
+    <button class="share-btn" onclick="navigator.share?navigator.share({title:document.title,url:location.href}):navigator.clipboard.writeText(location.href)">📤 <span data-de="Artikel teilen" data-en="Share article">Artikel teilen</span></button>
+  </div>
+
+  <a href="artikel-adhs-sport.html" class="next-article">
+    <div class="next-label" data-de="Nächster Artikel →" data-en="Next article →">Nächster Artikel →</div>
+    <div class="next-title" data-de="ADHS & Sport: Wie Bewegung das ADHS-Gehirn verändert" data-en="ADHD & Sport: How Movement Changes the ADHD Brain">ADHS & Sport: Wie Bewegung das ADHS-Gehirn verändert</div>
+  </a>
+</div>
+
+<script>
+let lang='de';
+function setLang(l){lang=l;document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));document.querySelector(`.lang-btn[onclick="setLang('${l}')"]`).classList.add('active');document.querySelectorAll('[data-de]').forEach(el=>{const t=el.getAttribute('data-'+l);if(t)el.innerHTML=t});document.documentElement.lang=l}
+window.addEventListener('scroll',()=>{const d=document.documentElement;document.getElementById('rp').style.width=((d.scrollTop||document.body.scrollTop)/(d.scrollHeight-d.clientHeight)*100)+'%'});
+
+// Animate bars on load
+window.addEventListener('load',()=>{
+  setTimeout(()=>{document.querySelectorAll('.motive-bar-fill').forEach(b=>{b.style.width=b.getAttribute('data-pct')+'%'})},400);
+});
+
+function doChallenge(){
+  document.getElementById('youCheck').textContent='✅';
+  document.querySelector('.sim-avatar.you').classList.add('done');
+  document.getElementById('simBtn').disabled=true;
+  const fb=document.getElementById('simFeedback');
+  fb.classList.add('show');
+  fb.textContent=lang==='en'?'🎉 Yes! Anna, Marco and Sara are happy! You extended your streak to 7 days. Luca will be motivated now too!':'🎉 Ja! Anna, Marco und Sara freuen sich! Du hast deinen Streak auf 7 Tage erhöht. Luca wird jetzt auch motiviert!';
+}
+</script>
+</body>
+</html>

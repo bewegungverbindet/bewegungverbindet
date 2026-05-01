@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 680 680'><circle cx='340' cy='340' r='340' fill='%232d6a4f'/><text x='260' y='410' font-family='Georgia' font-size='240' font-weight='700' fill='%23f7f4ef'>B</text><text x='430' y='410' font-family='Georgia' font-size='240' font-weight='700' fill='%231c1a16'>V</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="VDSCh8TTqZUptly6CAik9csSDh3nkavv_aQneLgaEBA" />
+<meta name="description" content="Dopamin durch Sport: Wie Bewegung deinen Motivations-Booster aktiviert – besonders bei ADHS.">
+<meta property="og:title" content="Dopamin & Sport – BewegungVerbindet">
+<meta property="og:description" content="Versteh wie Sport dein Dopamin-System boosted und warum das bei ADHS so wichtig ist.">
+<meta property="og:url" content="https://bewegungverbindet.netlify.app/artikel-dopamin.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dopamin & Sport – BewegungVerbindet">
+<meta name="twitter:description" content="Sport als natürlicher Dopamin-Booster.">
+<title>Dopamin durch Sport | BewegungVerbindet</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;0,900;1,300;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f7f4ef;--text:#1c1a16;--muted:#8a8478;--accent:#2d6a4f;--accent2:#74c69d;--accent3:#e76f51;--accent4:#7b5ea7;--surface:#fff;--border:rgba(28,26,22,0.1)}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7}
+  .read-progress{position:fixed;top:0;left:0;height:3px;background:var(--accent4);z-index:200;transition:width .1s;width:0}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(247,244,239,0.92);backdrop-filter:blur(12px);border-bottom:.5px solid var(--border)}
+  .logo{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;color:var(--accent);text-decoration:none}.logo span{color:var(--text)}
+  .nav-right{display:flex;align-items:center;gap:1rem}
+  .back-btn{font-size:13px;color:var(--muted);text-decoration:none}.back-btn:hover{color:var(--text)}
+  .lang-switcher{display:flex;gap:3px;background:var(--bg);border:.5px solid var(--border);border-radius:100px;padding:3px}
+  .lang-btn{background:none;border:none;font-size:11px;font-weight:500;padding:3px 8px;border-radius:100px;cursor:pointer;color:var(--muted);transition:all .2s;font-family:'DM Sans',sans-serif}.lang-btn.active{background:var(--accent4);color:white}
+  .article-hero{padding:7rem 2rem 3rem;max-width:780px;margin:0 auto;text-align:center}
+  .article-tag{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent4);background:rgba(123,94,167,.1);padding:5px 14px;border-radius:100px;margin-bottom:1.5rem}
+  .article-hero h1{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:1.25rem}
+  .article-hero h1 em{font-style:italic;color:var(--accent4)}
+  .article-meta{font-size:13px;color:var(--muted);margin-bottom:2rem}.article-meta span{margin:0 8px}
+  .article-body{max-width:680px;margin:0 auto;padding:0 2rem 4rem}
+  .article-body p{font-size:1.05rem;margin-bottom:1.5rem}
+  .article-body h2{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:900;letter-spacing:-.02em;margin:3rem 0 1rem;line-height:1.2}
+  .article-body h2 em{font-style:italic;color:var(--accent4)}
+  .lead{font-size:1.2rem!important;color:var(--muted)!important;font-style:italic;border-left:3px solid var(--accent4);padding-left:1.25rem;margin-bottom:2rem!important}
+  .study-box{background:var(--surface);border:.5px solid var(--border);border-radius:20px;padding:2rem;margin:2.5rem 0;position:relative}
+  .study-box::before{content:'🔬';position:absolute;top:1.5rem;right:1.5rem;font-size:2rem;opacity:.3}
+  .study-label{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent4);margin-bottom:.75rem}
+  .study-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;margin-bottom:.5rem}
+  .study-text{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:1rem}
+  .study-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  .study-stat{text-align:center}.study-stat-num{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:900;color:var(--accent4)}.study-stat-label{font-size:11px;color:var(--muted);line-height:1.3}
+  .interactive-block{background:linear-gradient(135deg,rgba(123,94,167,.04),rgba(123,94,167,.09));border:.5px solid rgba(123,94,167,.2);border-radius:20px;padding:2rem;margin:2.5rem 0}
+  .interactive-label{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent4);margin-bottom:1rem;display:flex;align-items:center;gap:6px}.interactive-label::before{content:'🧬'}
+  .interactive-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;margin-bottom:.5rem}
+  .interactive-sub{font-size:13px;color:var(--muted);margin-bottom:1.5rem}
+  .pull-quote{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:700;font-style:italic;color:var(--accent4);text-align:center;padding:2rem 0;border-top:.5px solid var(--border);border-bottom:.5px solid var(--border);margin:2.5rem 0;line-height:1.3}
+  .tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.5rem 0}
+  .tip-card{background:var(--surface);border:.5px solid var(--border);border-radius:16px;padding:1.25rem;transition:transform .2s}.tip-card:hover{transform:translateY(-3px)}
+  .tip-icon{font-size:1.5rem;margin-bottom:8px}.tip-title{font-weight:500;font-size:14px;margin-bottom:4px}.tip-text{font-size:13px;color:var(--muted);line-height:1.5}
+  /* DOPAMIN GAUGE */
+  .gauge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1rem 0}
+  .gauge-item{background:var(--surface);border:.5px solid var(--border);border-radius:16px;padding:1.25rem;text-align:center}
+  .gauge-label{font-size:12px;color:var(--muted);margin-bottom:8px}
+  .gauge-track{width:100%;height:10px;background:var(--border);border-radius:5px;overflow:hidden;margin-bottom:8px}
+  .gauge-fill{height:100%;border-radius:5px;width:0;transition:width 1.4s ease;background:var(--accent4)}
+  .gauge-value{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:900;color:var(--accent4)}
+  .gauge-sub{font-size:11px;color:var(--muted)}
+  /* NEUROTRANSMITTER CARDS */
+  .neuro-cards{display:flex;flex-direction:column;gap:10px;margin:1rem 0}
+  .neuro-card{background:var(--surface);border:.5px solid var(--border);border-radius:14px;padding:14px 16px;cursor:pointer;transition:all .2s;display:flex;gap:12px;align-items:flex-start}
+  .neuro-card:hover{border-color:var(--accent4);transform:translateX(4px)}
+  .neuro-card.open{border-color:var(--accent4);background:rgba(123,94,167,.04)}
+  .neuro-icon{font-size:1.5rem;flex-shrink:0}
+  .neuro-name{font-weight:500;font-size:14px;margin-bottom:3px}
+  .neuro-short{font-size:12px;color:var(--muted)}
+  .neuro-detail{font-size:13px;color:var(--text);line-height:1.5;margin-top:8px;padding-top:8px;border-top:.5px solid var(--border);display:none}
+  .neuro-card.open .neuro-detail{display:block}
+  .neuro-badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:100px;background:rgba(123,94,167,.1);color:var(--accent4);font-weight:500;margin-top:6px}
+  /* SPORT DOPAMIN RANKING */
+  .ranking{display:flex;flex-direction:column;gap:8px;margin:1rem 0}
+  .ranking-item{display:flex;align-items:center;gap:12px;background:var(--surface);border:.5px solid var(--border);border-radius:12px;padding:10px 14px}
+  .ranking-pos{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:900;color:rgba(123,94,167,.3);min-width:24px}
+  .ranking-name{flex:1;font-size:14px;font-weight:500}
+  .ranking-bar{width:120px;height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+  .ranking-fill{height:100%;border-radius:4px;background:var(--accent4);width:0;transition:width 1.3s ease}
+  .ranking-pct{font-size:12px;color:var(--accent4);font-weight:500;min-width:40px;text-align:right}
+  .share-block{background:var(--accent4);color:white;border-radius:20px;padding:2rem;text-align:center;margin:3rem 0}
+  .share-title{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:900;margin-bottom:.5rem}
+  .share-sub{font-size:14px;opacity:.8;margin-bottom:1.5rem}
+  .share-btn{background:white;color:var(--accent4);border:none;border-radius:100px;padding:12px 24px;font-size:14px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;margin:4px}.share-btn:hover{opacity:.9}
+  .author-block{display:flex;gap:1rem;align-items:center;background:var(--surface);border-radius:16px;border:.5px solid var(--border);padding:1.25rem;margin:2rem 0}
+  .author-avatar{width:52px;height:52px;border-radius:50%;background:rgba(123,94,167,.15);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0}
+  .author-name{font-weight:500;font-size:15px}.author-bio{font-size:13px;color:var(--muted)}
+  .back-to-lib{background:var(--surface);border:.5px solid var(--border);border-radius:20px;padding:1.5rem;text-align:center;text-decoration:none;color:var(--text);display:block;transition:transform .2s}.back-to-lib:hover{transform:translateY(-3px)}
+  .back-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+  .back-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700}
+  @media(max-width:600px){.study-stats,.gauge-grid,.tips-grid{grid-template-columns:1fr}.ranking-bar{width:80px}}
+</style>
+</head>
+<body>
+<div class="read-progress" id="rp"></div>
+<nav>
+  <a href="index.html" class="logo">Bewegung<span>Verbindet</span></a>
+  <div class="nav-right">
+    <a href="bibliothek.html" class="back-btn" data-de="← Bibliothek" data-en="← Library">← Bibliothek</a>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <span class="article-tag" data-de="Studien" data-en="Studies">Studien</span>
+  <h1 data-de="Dopamin durch Sport.<br>Was wirklich in<br><em>deinem Gehirn</em> passiert." data-en="Dopamine through sport.<br>What really happens<br><em>in your brain.</em>">Dopamin durch Sport.<br>Was wirklich in<br><em>deinem Gehirn</em> passiert.</h1>
+  <div class="article-meta">
+    <span>BewegungVerbindet</span><span>·</span>
+    <span data-de="7 Min Lesedauer" data-en="7 min read">7 Min Lesedauer</span>
+    <span>·</span><span>🧬 Interaktiv</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p class="lead" data-de="Dopamin ist nicht das Glückshormon. Es ist das Antriebshormon. Und Sport ist der mächtigste natürliche Dopamin-Booster den wir kennen. Hier ist die vollständige Wissenschaft dahinter." data-en="Dopamine is not the happiness hormone. It's the drive hormone. And sport is the most powerful natural dopamine booster we know. Here is the complete science behind it.">Dopamin ist nicht das Glückshormon. Es ist das Antriebshormon. Und Sport ist der mächtigste natürliche Dopamin-Booster den wir kennen.</p>
+
+  <p data-de="Wenn du morgens keine Motivation hast. Wenn du Aufgaben vor dir herschiebst. Wenn du dich leer und antriebslos fühlst – das ist oft kein Charakter-Problem. Das ist Neurochemie. Und die gute Nachricht: Du kannst sie ändern. Mit Bewegung." data-en="When you have no motivation in the morning. When you procrastinate. When you feel empty and unmotivated – that's often not a character problem. That's neurochemistry. And the good news: you can change it. With movement.">Wenn du morgens keine Motivation hast, Aufgaben verschiebst oder dich leer fühlst – das ist oft kein Charakter-Problem. Das ist Neurochemie. Und du kannst sie ändern.</p>
+
+  <div class="study-box">
+    <div class="study-label">Wissenschaftliche Studie</div>
+    <div class="study-title">Nature Neuroscience, 2021</div>
+    <div class="study-text" data-de="Forscher der Columbia University untersuchten den Dopamin-Anstieg durch verschiedene Aktivitäten. Sport – insbesondere aerobe Bewegung – produzierte den größten und nachhaltigsten Dopamin-Anstieg aller getesteten natürlichen Aktivitäten. Wichtig: Der Effekt hält 90–120 Minuten nach dem Sport an." data-en="Researchers at Columbia University examined the dopamine increase through various activities. Sport – especially aerobic exercise – produced the largest and most sustained dopamine increase of all natural activities tested. Important: the effect lasts 90–120 minutes after sport.">Forscher der Columbia University verglichen Dopamin-Anstiege verschiedener Aktivitäten. Sport produzierte den größten nachhaltigen Anstieg aller natürlichen Aktivitäten.</div>
+    <div class="study-stats">
+      <div class="study-stat"><div class="study-stat-num">+200%</div><div class="study-stat-label" data-de="Dopamin-Anstieg nach Sport" data-en="dopamine increase after sport">Dopamin-Anstieg nach Sport</div></div>
+      <div class="study-stat"><div class="study-stat-num">120min</div><div class="study-stat-label" data-de="hält der Effekt an" data-en="the effect lasts">hält der Effekt an</div></div>
+      <div class="study-stat"><div class="study-stat-num">20min</div><div class="study-stat-label" data-de="reichen für den Effekt" data-en="enough for the effect">reichen für den Effekt</div></div>
+    </div>
+  </div>
+
+  <h2 data-de="Die <em>3 Neurotransmitter</em><br>die Sport aktiviert." data-en="The <em>3 neurotransmitters</em><br>sport activates.">Die 3 Neurotransmitter<br>die Sport aktiviert.</h2>
+  <p data-de="Klick auf einen Neurotransmitter um mehr zu erfahren:" data-en="Click on a neurotransmitter to learn more:">Klick auf einen Neurotransmitter um mehr zu erfahren:</p>
+
+  <div class="neuro-cards">
+    <div class="neuro-card" onclick="this.classList.toggle('open')">
+      <div class="neuro-icon">⚡</div>
+      <div style="flex:1">
+        <div class="neuro-name">Dopamin</div>
+        <div class="neuro-short" data-de="Antrieb · Motivation · Fokus" data-en="Drive · Motivation · Focus">Antrieb · Motivation · Fokus</div>
+        <div class="neuro-detail" data-de="Dopamin ist der Treibstoff deines Gehirns. Es motiviert dich Ziele zu verfolgen, Aufgaben zu starten und dranzubleiben. Bei Menschen mit ADHS ist der Dopamin-Spiegel chronisch niedrig – deshalb fällt Motivation so schwer. Sport erhöht Dopamin um bis zu 200% und hält es für 90–120 Minuten erhöht." data-en="Dopamine is your brain's fuel. It motivates you to pursue goals, start tasks and stay on track. In people with ADHD, dopamine levels are chronically low – that's why motivation is so hard. Sport increases dopamine by up to 200% and keeps it elevated for 90–120 minutes.">Dopamin ist der Treibstoff deines Gehirns. Es motiviert dich Ziele zu verfolgen. Bei ADHS ist Dopamin chronisch niedrig. Sport erhöht es um bis zu 200%.</div>
+        <span class="neuro-badge">+200% durch Sport</span>
+      </div>
+    </div>
+    <div class="neuro-card" onclick="this.classList.toggle('open')">
+      <div class="neuro-icon">😌</div>
+      <div style="flex:1">
+        <div class="neuro-name">Serotonin</div>
+        <div class="neuro-short" data-de="Stimmung · Ruhe · Wohlbefinden" data-en="Mood · Calm · Wellbeing">Stimmung · Ruhe · Wohlbefinden</div>
+        <div class="neuro-detail" data-de="Serotonin ist das Gleichgewichtshormon. Es reguliert Stimmung, Schlaf und Appetit. Niedrige Serotonin-Spiegel sind mit Depression, Angst und Schlafproblemen verbunden. 30 Minuten aerober Sport erhöht Serotonin signifikant – vergleichbar mit der Wirkung von Antidepressiva bei leichten Symptomen." data-en="Serotonin is the balance hormone. It regulates mood, sleep and appetite. Low serotonin levels are linked to depression, anxiety and sleep problems. 30 minutes of aerobic sport significantly increases serotonin – comparable to the effect of antidepressants for mild symptoms.">Serotonin reguliert Stimmung, Schlaf und Appetit. 30 Min Sport erhöht es vergleichbar mit Antidepressiva bei leichten Symptomen.</div>
+        <span class="neuro-badge">Natürliches Antidepressivum</span>
+      </div>
+    </div>
+    <div class="neuro-card" onclick="this.classList.toggle('open')">
+      <div class="neuro-icon">🎯</div>
+      <div style="flex:1">
+        <div class="neuro-name">Noradrenalin</div>
+        <div class="neuro-short" data-de="Aufmerksamkeit · Wachheit · Reaktion" data-en="Attention · Alertness · Reaction">Aufmerksamkeit · Wachheit · Reaktion</div>
+        <div class="neuro-detail" data-de="Noradrenalin ist der Aufmerksamkeits-Booster. Es schärft den Fokus, erhöht die Wachheit und verbessert die Reaktionsfähigkeit. Bei ADHS-Medikamenten wie Ritalin ist die Erhöhung von Noradrenalin einer der Hauptmechanismen. Sport aktiviert dasselbe System – natürlich und ohne Nebenwirkungen." data-en="Noradrenaline is the attention booster. It sharpens focus, increases alertness and improves reaction speed. In ADHD medications like Ritalin, increasing noradrenaline is one of the main mechanisms. Sport activates the same system – naturally and without side effects.">Noradrenalin schärft Fokus und Wachheit. ADHS-Medikamente wie Ritalin wirken über dasselbe System. Sport aktiviert es natürlich.</div>
+        <span class="neuro-badge">Wie Ritalin – aber natürlich</span>
+      </div>
+    </div>
+  </div>
+
+  <h2 data-de="<em>Welcher Sport</em> produziert<br>am meisten Dopamin?" data-en="<em>Which sport</em> produces<br>the most dopamine?">Welcher Sport produziert<br>am meisten Dopamin?</h2>
+
+  <div class="interactive-block">
+    <div class="interactive-label" data-de="Interaktiv – Dopamin Ranking" data-en="Interactive – Dopamine Ranking">Interaktiv – Dopamin Ranking</div>
+    <div class="interactive-title" data-de="Sport-Arten im Dopamin-Vergleich:" data-en="Sport types dopamine comparison:">Sport-Arten im Dopamin-Vergleich:</div>
+    <div class="interactive-sub" data-de="Basierend auf Studien der Columbia University, 2021" data-en="Based on Columbia University studies, 2021">Basierend auf Studien der Columbia University, 2021</div>
+    <div class="ranking" id="ranking">
+      <div class="ranking-item"><div class="ranking-pos">1</div><div class="ranking-name" data-de="🏃 Laufen / Radfahren" data-en="🏃 Running / Cycling">🏃 Laufen / Radfahren</div><div class="ranking-bar"><div class="ranking-fill" data-w="95"></div></div><div class="ranking-pct">+200%</div></div>
+      <div class="ranking-item"><div class="ranking-pos">2</div><div class="ranking-name" data-de="🥊 Kampfsport / HIIT" data-en="🥊 Martial arts / HIIT">🥊 Kampfsport / HIIT</div><div class="ranking-bar"><div class="ranking-fill" data-w="85"></div></div><div class="ranking-pct">+175%</div></div>
+      <div class="ranking-item"><div class="ranking-pos">3</div><div class="ranking-name" data-de="🏊 Schwimmen" data-en="🏊 Swimming">🏊 Schwimmen</div><div class="ranking-bar"><div class="ranking-fill" data-w="75"></div></div><div class="ranking-pct">+150%</div></div>
+      <div class="ranking-item"><div class="ranking-pos">4</div><div class="ranking-name" data-de="💪 Kraft / Gym" data-en="💪 Strength / Gym">💪 Kraft / Gym</div><div class="ranking-bar"><div class="ranking-fill" data-w="65"></div></div><div class="ranking-pct">+120%</div></div>
+      <div class="ranking-item"><div class="ranking-pos">5</div><div class="ranking-name" data-de="🧘 Yoga / Dehnen" data-en="🧘 Yoga / Stretching">🧘 Yoga / Dehnen</div><div class="ranking-bar"><div class="ranking-fill" data-w="45"></div></div><div class="ranking-pct">+80%</div></div>
+    </div>
+  </div>
+
+  <h2 data-de="Dein aktueller<br><em>Dopamin-Level.</em>" data-en="Your current<br><em>dopamine level.</em>">Dein aktueller<br>Dopamin-Level.</h2>
+
+  <div class="interactive-block">
+    <div class="interactive-label" data-de="Interaktiv – Dein Level jetzt vs. nach Sport" data-en="Interactive – Your level now vs. after sport">Interaktiv – Dein Level jetzt vs. nach Sport</div>
+    <div class="interactive-title" data-de="Was passiert wenn du heute trainierst:" data-en="What happens if you train today:">Was passiert wenn du heute trainierst:</div>
+    <div class="gauge-grid">
+      <div class="gauge-item">
+        <div class="gauge-label" data-de="😐 Jetzt (ohne Sport)" data-en="😐 Now (without sport)">😐 Jetzt (ohne Sport)</div>
+        <div class="gauge-track"><div class="gauge-fill" style="background:var(--accent3)" data-w="25"></div></div>
+        <div class="gauge-value" style="color:var(--accent3)">25%</div>
+        <div class="gauge-sub" data-de="Niedriger Antrieb" data-en="Low drive">Niedriger Antrieb</div>
+      </div>
+      <div class="gauge-item">
+        <div class="gauge-label" data-de="🚴 Nach 20 Min Sport" data-en="🚴 After 20 min sport">🚴 Nach 20 Min Sport</div>
+        <div class="gauge-track"><div class="gauge-fill" data-w="75"></div></div>
+        <div class="gauge-value">75%</div>
+        <div class="gauge-sub" data-de="Fokus & Antrieb" data-en="Focus & drive">Fokus & Antrieb</div>
+      </div>
+      <div class="gauge-item">
+        <div class="gauge-label" data-de="🔥 Nach 45 Min Sport" data-en="🔥 After 45 min sport">🔥 Nach 45 Min Sport</div>
+        <div class="gauge-track"><div class="gauge-fill" data-w="95"></div></div>
+        <div class="gauge-value">95%</div>
+        <div class="gauge-sub" data-de="Hochleistung!" data-en="Peak performance!">Hochleistung!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pull-quote" data-de='"Jede Sporteinheit ist eine Entscheidung für dein Gehirn. Nicht für deinen Körper – für deinen Kopf."' data-en='"Every sport session is a decision for your brain. Not for your body – for your mind."'>"Jede Sporteinheit ist eine Entscheidung für dein Gehirn. Nicht für deinen Körper – für deinen Kopf."</div>
+
+  <h2 data-de="<em>So maximierst du</em><br>deinen Dopamin-Boost." data-en="<em>How to maximize</em><br>your dopamine boost.">So maximierst du<br>deinen Dopamin-Boost.</h2>
+
+  <div class="tips-grid">
+    <div class="tip-card"><div class="tip-icon">🌅</div><div class="tip-title" data-de="Morgens trainieren" data-en="Train in the morning">Morgens trainieren</div><div class="tip-text" data-de="Morgenliches Training maximiert den Dopamin-Effekt für den ganzen Tag. Dein Gehirn läuft danach auf Hochtouren." data-en="Morning training maximizes the dopamine effect for the whole day. Your brain runs at full speed afterwards.">Morgenliches Training maximiert den Effekt für den ganzen Tag.</div></div>
+    <div class="tip-card"><div class="tip-icon">🌿</div><div class="tip-title" data-de="Draußen > drinnen" data-en="Outdoors > indoors">Draußen > drinnen</div><div class="tip-text" data-de="Natur verstärkt den Dopamin-Effekt zusätzlich. Sonnenlicht fördert die Dopamin-Produktion unabhängig vom Sport." data-en="Nature additionally amplifies the dopamine effect. Sunlight promotes dopamine production independently of sport.">Natur + Sport = doppelter Dopamin-Effekt. Sonnenlicht hilft zusätzlich.</div></div>
+    <div class="tip-card"><div class="tip-icon">🎵</div><div class="tip-title" data-de="Musik beim Sport" data-en="Music during sport">Musik beim Sport</div><div class="tip-text" data-de="Musik die du liebst erhöht Dopamin zusätzlich um 10–15%. Sport + Lieblingsmusik = maximaler Boost." data-en="Music you love additionally increases dopamine by 10–15%. Sport + favourite music = maximum boost.">Lieblingsmusik erhöht Dopamin zusätzlich um 10–15%.</div></div>
+    <div class="tip-card"><div class="tip-icon">📵</div><div class="tip-title" data-de="Nach Sport: kein Handy" data-en="After sport: no phone">Nach Sport: kein Handy</div><div class="tip-text" data-de="Social Media verbraucht Dopamin sofort. Nutze das Fenster nach dem Sport für deine wichtigste Aufgabe." data-en="Social media consumes dopamine immediately. Use the window after sport for your most important task.">Social Media verbraucht Dopamin sofort. Nutze das Fokus-Fenster stattdessen.</div></div>
+  </div>
+
+  <div class="author-block">
+    <div class="author-avatar">🧬</div>
+    <div>
+      <div class="author-name">BewegungVerbindet Team</div>
+      <div class="author-bio" data-de="Wir machen Wissenschaft verständlich – und zeigen wie du sie im Alltag nutzt." data-en="We make science understandable – and show how to use it in everyday life.">Wir machen Wissenschaft verständlich – und zeigen wie du sie im Alltag nutzt.</div>
+    </div>
+  </div>
+
+  <div class="share-block">
+    <div class="share-title" data-de="Hat dich das überrascht?" data-en="Did this surprise you?">Hat dich das überrascht?</div>
+    <div class="share-sub" data-de="Teile diesen Artikel mit jemandem der Antrieb braucht." data-en="Share this article with someone who needs drive.">Teile diesen Artikel mit jemandem der Antrieb braucht.</div>
+    <button class="share-btn" onclick="navigator.share?navigator.share({title:document.title,url:location.href}):navigator.clipboard.writeText(location.href)">📤 <span data-de="Artikel teilen" data-en="Share article">Artikel teilen</span></button>
+  </div>
+
+  <a href="bibliothek.html" class="back-to-lib">
+    <div class="back-label" data-de="← Zurück zur" data-en="← Back to">← Zurück zur</div>
+    <div class="back-title" data-de="📚 Bibliothek – alle Artikel entdecken" data-en="📚 Library – discover all articles">📚 Bibliothek – alle Artikel entdecken</div>
+  </a>
+</div>
+
+<script>
+let lang='de';
+function setLang(l){lang=l;document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));document.querySelector(`.lang-btn[onclick="setLang('${l}')"]`).classList.add('active');document.querySelectorAll('[data-de]').forEach(el=>{const t=el.getAttribute('data-'+l);if(t)el.innerHTML=t});document.documentElement.lang=l}
+window.addEventListener('scroll',()=>{const d=document.documentElement;document.getElementById('rp').style.width=((d.scrollTop||document.body.scrollTop)/(d.scrollHeight-d.clientHeight)*100)+'%'});
+window.addEventListener('load',()=>{
+  setTimeout(()=>{
+    document.querySelectorAll('.ranking-fill').forEach(b=>{b.style.width=b.getAttribute('data-w')+'%'});
+    document.querySelectorAll('.gauge-fill').forEach(b=>{b.style.width=b.getAttribute('data-w')+'%'});
+  },400);
+});
+</script>
+</body>
+</html>

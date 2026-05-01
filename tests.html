@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 680 680'><circle cx='340' cy='340' r='340' fill='%232d6a4f'/><text x='260' y='410' font-family='Georgia' font-size='240' font-weight='700' fill='%23f7f4ef'>B</text><text x='430' y='410' font-family='Georgia' font-size='240' font-weight='700' fill='%231c1a16'>V</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="VDSCh8TTqZUptly6CAik9csSDh3nkavv_aQneLgaEBA" />
+<meta name="description" content="Mach unsere interaktiven Tests: ADHS & Sport, dein Sport-Typ und dein Fokus-Fenster. Kostenlos auf BewegungVerbindet.">
+<meta property="og:title" content="Interaktive Tests – BewegungVerbindet">
+<meta property="og:description" content="Finde deinen Sport-Typ, teste deinen Fokus und entdecke wie ADHS und Sport zusammenhängen.">
+<meta property="og:url" content="https://bewegungverbindet.netlify.app/tests.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tests – BewegungVerbindet">
+<meta name="twitter:description" content="Interaktive Tests zu Sport, ADHS und Fokus.">
+<title>Tests | BewegungVerbindet</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;0,900;1,300;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f4ef;
+    --text: #1c1a16;
+    --muted: #8a8478;
+    --accent: #2d6a4f;
+    --accent2: #74c69d;
+    --accent3: #e76f51;
+    --accent4: #5b7fa6;
+    --surface: #ffffff;
+    --border: rgba(28,26,22,0.1);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-weight: 300; min-height: 100vh; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 2.5rem;
+    background: rgba(247,244,239,0.95); backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+  }
+  .logo { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+  .logo span { color: var(--text); }
+  .nav-right { display: flex; align-items: center; gap: 1rem; }
+  .back-btn { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .back-btn:hover { color: var(--text); }
+  .lang-switcher { display: flex; gap: 3px; background: var(--bg); border: 0.5px solid var(--border); border-radius: 100px; padding: 3px; }
+  .lang-btn { background: none; border: none; font-size: 11px; font-weight: 500; padding: 3px 8px; border-radius: 100px; cursor: pointer; color: var(--muted); transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
+  .lang-btn.active { background: var(--accent); color: white; }
+
+  /* HERO */
+  .tests-hero {
+    padding: 7rem 2.5rem 3rem;
+    max-width: 900px; margin: 0 auto; text-align: center;
+  }
+  .tests-hero-tag {
+    display: inline-block; font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); background: rgba(45,106,79,0.1);
+    padding: 5px 14px; border-radius: 100px; margin-bottom: 1rem;
+  }
+  .tests-hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem;
+  }
+  .tests-hero h1 em { font-style: italic; color: var(--accent); }
+  .tests-hero p { font-size: 1rem; color: var(--muted); max-width: 480px; margin: 0 auto; line-height: 1.6; }
+
+  /* TEST CARDS OVERVIEW */
+  .tests-overview {
+    max-width: 1000px; margin: 0 auto; padding: 0 2.5rem 5rem;
+  }
+
+  .test-cards-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+    margin-bottom: 3rem;
+  }
+
+  .test-card {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: 24px; padding: 2rem; text-align: center;
+    cursor: pointer; transition: all 0.25s;
+    position: relative; overflow: hidden;
+  }
+  .test-card::before {
+    content: ''; position: absolute; inset: 0;
+    opacity: 0; transition: opacity 0.25s;
+  }
+  .test-card-1::before { background: linear-gradient(135deg, rgba(91,127,166,0.05), rgba(91,127,166,0.1)); }
+  .test-card-2::before { background: linear-gradient(135deg, rgba(231,111,81,0.05), rgba(231,111,81,0.1)); }
+  .test-card-3::before { background: linear-gradient(135deg, rgba(45,106,79,0.05), rgba(45,106,79,0.1)); }
+  .test-card:hover::before { opacity: 1; }
+  .test-card:hover { transform: translateY(-4px); border-color: var(--border); }
+  .test-card.active-1 { border-color: var(--accent4); background: rgba(91,127,166,0.05); }
+  .test-card.active-2 { border-color: var(--accent3); background: rgba(231,111,81,0.05); }
+  .test-card.active-3 { border-color: var(--accent); background: rgba(45,106,79,0.05); }
+
+  .test-card-emoji { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+  .test-card-num {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .num-1 { color: var(--accent4); }
+  .num-2 { color: var(--accent3); }
+  .num-3 { color: var(--accent); }
+  .test-card-title {
+    font-family: 'Fraunces', serif; font-size: 1.1rem;
+    font-weight: 700; line-height: 1.2; margin-bottom: 0.5rem;
+  }
+  .test-card-desc { font-size: 13px; color: var(--muted); line-height: 1.5; margin-bottom: 1rem; }
+  .test-card-meta { font-size: 11px; color: var(--muted); display: flex; justify-content: center; gap: 10px; }
+  .test-card-btn {
+    display: inline-block; margin-top: 1rem;
+    font-size: 13px; font-weight: 500; padding: 8px 20px;
+    border-radius: 100px; border: none; cursor: pointer;
+    font-family: 'DM Sans', sans-serif; transition: opacity 0.2s;
+  }
+  .btn-1 { background: var(--accent4); color: white; }
+  .btn-2 { background: var(--accent3); color: white; }
+  .btn-3 { background: var(--accent); color: white; }
+  .test-card-btn:hover { opacity: 0.85; }
+
+  /* TEST BOX */
+  .test-box {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: 28px; padding: 2.5rem;
+    display: none; animation: fadeUp 0.3s ease;
+    margin-bottom: 2rem;
+  }
+  .test-box.open { display: block; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  .test-header {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 2rem; padding-bottom: 1.5rem;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .test-header-icon { font-size: 2rem; }
+  .test-header-title { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 900; }
+  .test-header-sub { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .test-close {
+    margin-left: auto; background: none; border: 0.5px solid var(--border);
+    border-radius: 100px; padding: 6px 14px; font-size: 13px;
+    color: var(--muted); cursor: pointer; font-family: 'DM Sans', sans-serif;
+    transition: all 0.15s;
+  }
+  .test-close:hover { border-color: var(--text); color: var(--text); }
+
+  /* PROGRESS */
+  .test-progress { display: flex; gap: 5px; margin-bottom: 2rem; }
+  .prog-bar { flex: 1; height: 4px; background: var(--border); border-radius: 2px; transition: background 0.3s; }
+  .prog-bar.done-1 { background: var(--accent4); }
+  .prog-bar.done-2 { background: var(--accent3); }
+  .prog-bar.done-3 { background: var(--accent); }
+  .prog-bar.active-bar-1 { background: rgba(91,127,166,0.4); }
+  .prog-bar.active-bar-2 { background: rgba(231,111,81,0.4); }
+  .prog-bar.active-bar-3 { background: rgba(45,106,79,0.4); }
+
+  /* QUESTION */
+  .q-block { display: none; animation: fadeUp 0.25s ease; }
+  .q-block.show { display: block; }
+  .q-text {
+    font-family: 'Fraunces', serif; font-size: 1.2rem;
+    font-weight: 700; margin-bottom: 1.5rem; line-height: 1.3;
+  }
+  .q-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .q-opt {
+    background: var(--bg); border: 0.5px solid var(--border);
+    border-radius: 14px; padding: 13px 16px; font-size: 14px;
+    color: var(--text); cursor: pointer; transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif; text-align: left; line-height: 1.4;
+  }
+  .q-opt:hover { border-color: var(--muted); }
+  .q-opt.sel-1 { border-color: var(--accent4); background: rgba(91,127,166,0.08); color: var(--accent4); font-weight: 500; }
+  .q-opt.sel-2 { border-color: var(--accent3); background: rgba(231,111,81,0.08); color: var(--accent3); font-weight: 500; }
+  .q-opt.sel-3 { border-color: var(--accent); background: rgba(45,106,79,0.08); color: var(--accent); font-weight: 500; }
+
+  /* RESULT */
+  .result-block { display: none; animation: fadeUp 0.4s ease; text-align: center; }
+  .result-block.show { display: block; }
+  .result-circle {
+    width: 110px; height: 110px; border-radius: 50%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    margin: 0 auto 1.5rem; font-size: 2rem;
+  }
+  .rc-1 { background: var(--accent4); }
+  .rc-2 { background: var(--accent3); }
+  .rc-3 { background: var(--accent); }
+  .result-title { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 900; margin-bottom: 0.5rem; }
+  .result-desc { font-size: 14px; color: var(--muted); line-height: 1.6; max-width: 480px; margin: 0 auto 1.5rem; }
+  .result-tips-box {
+    background: var(--bg); border-radius: 16px; padding: 1.25rem;
+    text-align: left; margin-bottom: 1.5rem;
+  }
+  .result-tips-label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
+  .rtl-1 { color: var(--accent4); }
+  .rtl-2 { color: var(--accent3); }
+  .rtl-3 { color: var(--accent); }
+  .result-tip { font-size: 13px; padding: 8px 0; border-bottom: 0.5px solid var(--border); line-height: 1.5; }
+  .result-tip:last-child { border-bottom: none; }
+  .retry-btn {
+    background: none; border: 0.5px solid var(--border);
+    border-radius: 100px; padding: 9px 22px; font-size: 13px;
+    color: var(--muted); cursor: pointer; font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s; margin-top: 8px;
+  }
+  .retry-btn:hover { border-color: var(--text); color: var(--text); }
+  .cta-btn {
+    display: inline-block; background: var(--accent); color: white;
+    padding: 12px 24px; border-radius: 100px; font-size: 14px;
+    font-weight: 500; text-decoration: none; margin-right: 8px;
+    transition: opacity 0.2s;
+  }
+  .cta-btn:hover { opacity: 0.85; }
+
+  @media(max-width: 700px) {
+    nav { padding: 1rem 1.25rem; }
+    .tests-hero { padding: 6rem 1.25rem 2rem; }
+    .tests-overview { padding: 0 1.25rem 4rem; }
+    .test-cards-grid { grid-template-columns: 1fr; }
+    .q-grid { grid-template-columns: 1fr; }
+    .test-box { padding: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Bewegung<span>Verbindet</span></a>
+  <div class="nav-right">
+    <a href="index.html" class="back-btn" data-de="← Zurück" data-en="← Back">← Zurück</a>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+<div class="tests-hero">
+  <span class="tests-hero-tag" data-de="🧪 Kostenlos & Sofort" data-en="🧪 Free & Instant">🧪 Kostenlos & Sofort</span>
+  <h1 data-de="Finde heraus<br><em>wer du bist.</em>" data-en="Find out<br><em>who you are.</em>">Finde heraus<br><em>wer du bist.</em></h1>
+  <p data-de="3 wissenschaftlich basierte Tests – wähle deinen und bekomme sofort dein persönliches Ergebnis." data-en="3 science-based tests – choose yours and get your personal result instantly.">3 wissenschaftlich basierte Tests – wähle deinen und bekomme sofort dein persönliches Ergebnis.</p>
+</div>
+
+<div class="tests-overview">
+
+  <!-- TEST CARDS -->
+  <div class="test-cards-grid">
+    <div class="test-card test-card-1" onclick="openTest(1)">
+      <span class="test-card-emoji">⚡</span>
+      <div class="test-card-num num-1" data-de="TEST 01" data-en="TEST 01">TEST 01</div>
+      <div class="test-card-title" data-de="ADHS & Sport Test" data-en="ADHD & Sport Test">ADHS & Sport Test</div>
+      <div class="test-card-desc" data-de="Nutzt du Sport schon als Werkzeug für deinen Kopf? Finde heraus wie gut Sport und dein Geist zusammenarbeiten." data-en="Are you already using sport as a tool for your mind? Find out how well sport and your mind work together.">Nutzt du Sport schon als Werkzeug für deinen Kopf? Finde heraus wie gut Sport und dein Geist zusammenarbeiten.</div>
+      <div class="test-card-meta">
+        <span>⏱ 2 Min</span>
+        <span>❓ 6 Fragen</span>
+      </div>
+      <button class="test-card-btn btn-1" data-de="Test starten →" data-en="Start test →">Test starten →</button>
+    </div>
+
+    <div class="test-card test-card-2" onclick="openTest(2)">
+      <span class="test-card-emoji">🏃</span>
+      <div class="test-card-num num-2" data-de="TEST 02" data-en="TEST 02">TEST 02</div>
+      <div class="test-card-title" data-de="Welcher Sport-Typ bin ich?" data-en="What sport type am I?">Welcher Sport-Typ bin ich?</div>
+      <div class="test-card-desc" data-de="Solo oder Team? Draußen oder drinnen? Finde den Sport-Typ der wirklich zu deiner Persönlichkeit passt." data-en="Solo or team? Outdoors or indoors? Find the sport type that truly matches your personality.">Solo oder Team? Draußen oder drinnen? Finde den Sport-Typ der wirklich zu dir passt.</div>
+      <div class="test-card-meta">
+        <span>⏱ 2 Min</span>
+        <span>❓ 6 Fragen</span>
+      </div>
+      <button class="test-card-btn btn-2" data-de="Test starten →" data-en="Start test →">Test starten →</button>
+    </div>
+
+    <div class="test-card test-card-3" onclick="openTest(3)">
+      <span class="test-card-emoji">🎯</span>
+      <div class="test-card-num num-3" data-de="TEST 03" data-en="TEST 03">TEST 03</div>
+      <div class="test-card-title" data-de="Fokus-Level Test" data-en="Focus Level Test">Fokus-Level Test</div>
+      <div class="test-card-desc" data-de="Wie hoch ist dein natürlicher Fokus-Level? Und was raubt dir am meisten Energie? Finde es heraus." data-en="How high is your natural focus level? And what drains your energy the most? Find out.">Wie hoch ist dein natürlicher Fokus-Level? Was raubt dir am meisten Energie?</div>
+      <div class="test-card-meta">
+        <span>⏱ 2 Min</span>
+        <span>❓ 6 Fragen</span>
+      </div>
+      <button class="test-card-btn btn-3" data-de="Test starten →" data-en="Start test →">Test starten →</button>
+    </div>
+  </div>
+
+  <!-- ===== TEST 1: ADHS & SPORT ===== -->
+  <div class="test-box" id="test1">
+    <div class="test-header">
+      <div class="test-header-icon">⚡</div>
+      <div>
+        <div class="test-header-title" data-de="ADHS & Sport Test" data-en="ADHD & Sport Test">ADHS & Sport Test</div>
+        <div class="test-header-sub" data-de="6 Fragen · ~2 Minuten" data-en="6 questions · ~2 minutes">6 Fragen · ~2 Minuten</div>
+      </div>
+      <button class="test-close" onclick="closeTest(1)" data-de="✕ Schließen" data-en="✕ Close">✕ Schließen</button>
+    </div>
+    <div class="test-progress" id="prog1"></div>
+
+    <div id="questions1">
+      <div class="q-block show" id="t1q1">
+        <div class="q-text" data-de="Wie oft verlierst du bei alltäglichen Aufgaben schnell das Interesse?" data-en="How often do you quickly lose interest in everyday tasks?">Wie oft verlierst du bei alltäglichen Aufgaben schnell das Interesse?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(1,1,4)" data-de="Fast immer 😵" data-en="Almost always 😵">Fast immer 😵</button>
+          <button class="q-opt" onclick="ans(1,1,3)" data-de="Oft" data-en="Often">Oft</button>
+          <button class="q-opt" onclick="ans(1,1,2)" data-en="Sometimes">Manchmal</button>
+          <button class="q-opt" onclick="ans(1,1,1)" data-de="Selten" data-en="Rarely">Selten</button>
+        </div>
+      </div>
+      <div class="q-block" id="t1q2">
+        <div class="q-text" data-de="Hilft dir Sport dabei, dich danach besser zu konzentrieren?" data-en="Does sport help you concentrate better afterwards?">Hilft dir Sport dabei, dich danach besser zu konzentrieren?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(1,2,4)" data-de="Ja, sehr stark 🚀" data-en="Yes, very much 🚀">Ja, sehr stark 🚀</button>
+          <button class="q-opt" onclick="ans(1,2,3)" data-de="Meistens schon" data-en="Mostly yes">Meistens schon</button>
+          <button class="q-opt" onclick="ans(1,2,2)" data-de="Ein bisschen" data-en="A little">Ein bisschen</button>
+          <button class="q-opt" onclick="ans(1,2,1)" data-de="Nicht wirklich" data-en="Not really">Nicht wirklich</button>
+        </div>
+      </div>
+      <div class="q-block" id="t1q3">
+        <div class="q-text" data-de="Wie oft hast du das Gefühl, dass dein Kopf nie wirklich zur Ruhe kommt?" data-en="How often do you feel like your mind never really calms down?">Wie oft hast du das Gefühl, dass dein Kopf nie wirklich zur Ruhe kommt?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(1,3,4)" data-de="Fast täglich 😓" data-en="Almost daily 😓">Fast täglich 😓</button>
+          <button class="q-opt" onclick="ans(1,3,3)" data-de="Oft" data-en="Often">Oft</button>
+          <button class="q-opt" onclick="ans(1,3,2)" data-de="Manchmal" data-en="Sometimes">Manchmal</button>
+          <button class="q-opt" onclick="ans(1,3,1)" data-de="Selten" data-en="Rarely">Selten</button>
+        </div>
+      </div>
+      <div class="q-block" id="t1q4">
+        <div class="q-text" data-de="Kannst du dich für Dinge die dich interessieren stundenlang konzentrieren?" data-en="Can you concentrate for hours on things that interest you?">Kannst du dich für Dinge die dich interessieren stundenlang konzentrieren?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(1,4,4)" data-de="Ja – absoluter Hyperfokus ⚡" data-en="Yes – absolute hyperfocus ⚡">Ja – absoluter Hyperfokus ⚡</button>
+          <button class="q-opt" onclick="ans(1,4,3)" data-de="Meistens ja" data-en="Mostly yes">Meistens ja</button>
+          <button class="q-opt" onclick="ans(1,4,2)" data-de="Manchmal" data-en="Sometimes">Manchmal</button>
+          <button class="q-opt" onclick="ans(1,4,1)" data-de="Eher nein" data-en="Not really">Eher nein</button>
+        </div>
+      </div>
+      <div class="q-block" id="t1q5">
+        <div class="q-text" data-de="Wie fühlst du dich nach einer Sporteinheit?" data-en="How do you feel after a sport session?">Wie fühlst du dich nach einer Sporteinheit?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(1,5,4)" data-de="Viel klarer im Kopf 🧠" data-en="Much clearer in mind 🧠">Viel klarer im Kopf 🧠</button>
+          <button class="q-opt" onclick="ans(1,5,3)" data-de="Etwas besser" data-en="Somewhat better">Etwas besser</button>
+          <button class="q-opt" onclick="ans(1,5,2)" data-de="Kaum Unterschied" data-en="Barely any difference">Kaum Unterschied</button>
+          <button class="q-opt" onclick="ans(1,5,1)" data-de="Ich treibe kaum Sport" data-en="I barely exercise">Ich treibe kaum Sport</button>
+        </div>
+      </div>
+      <div class="q-block" id="t1q6">
+        <div class="q-text" data-de="Nutzt du Sport bewusst wenn du dich blockiert oder unruhig fühlst?" data-en="Do you consciously use sport when you feel blocked or restless?">Nutzt du Sport bewusst wenn du dich blockiert oder unruhig fühlst?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(1,6,4)" data-de="Ja, das ist meine Strategie ✅" data-en="Yes, that's my strategy ✅">Ja, das ist meine Strategie ✅</button>
+          <button class="q-opt" onclick="ans(1,6,3)" data-de="Manchmal" data-en="Sometimes">Manchmal</button>
+          <button class="q-opt" onclick="ans(1,6,2)" data-de="Noch nicht bewusst" data-en="Not consciously yet">Noch nicht bewusst</button>
+          <button class="q-opt" onclick="ans(1,6,1)" data-de="Nein, noch nicht" data-en="No, not yet">Nein, noch nicht</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-block" id="result1">
+      <div class="result-circle rc-1" id="rc1Icon"></div>
+      <div class="result-title" id="rt1"></div>
+      <div class="result-desc" id="rd1"></div>
+      <div class="result-tips-box">
+        <div class="result-tips-label rtl-1" data-de="DEINE NÄCHSTEN SCHRITTE" data-en="YOUR NEXT STEPS">DEINE NÄCHSTEN SCHRITTE</div>
+        <div id="rtips1"></div>
+      </div>
+      <a href="index.html#mitmachen" class="cta-btn" data-de="Community beitreten →" data-en="Join Community →">Community beitreten →</a>
+      <br><button class="retry-btn" onclick="retryTest(1)" data-de="Nochmal machen" data-en="Try again">Nochmal machen</button>
+    </div>
+  </div>
+
+  <!-- ===== TEST 2: SPORT-TYP ===== -->
+  <div class="test-box" id="test2">
+    <div class="test-header">
+      <div class="test-header-icon">🏃</div>
+      <div>
+        <div class="test-header-title" data-de="Welcher Sport-Typ bin ich?" data-en="What sport type am I?">Welcher Sport-Typ bin ich?</div>
+        <div class="test-header-sub" data-de="6 Fragen · ~2 Minuten" data-en="6 questions · ~2 minutes">6 Fragen · ~2 Minuten</div>
+      </div>
+      <button class="test-close" onclick="closeTest(2)" data-de="✕ Schließen" data-en="✕ Close">✕ Schließen</button>
+    </div>
+    <div class="test-progress" id="prog2"></div>
+
+    <div id="questions2">
+      <div class="q-block show" id="t2q1">
+        <div class="q-text" data-de="Was motiviert dich beim Sport am meisten?" data-en="What motivates you most during sport?">Was motiviert dich beim Sport am meisten?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(2,1,'natur')" data-de="Natur & frische Luft 🌿" data-en="Nature & fresh air 🌿">Natur & frische Luft 🌿</button>
+          <button class="q-opt" onclick="ans(2,1,'team')" data-de="Mit anderen zusammen 🤝" data-en="Together with others 🤝">Mit anderen zusammen 🤝</button>
+          <button class="q-opt" onclick="ans(2,1,'solo')" data-de="Alleine & fokussiert 🎯" data-en="Alone & focused 🎯">Alleine & fokussiert 🎯</button>
+          <button class="q-opt" onclick="ans(2,1,'natur')" data-de="Abwechslung & neue Orte 🗺️" data-en="Variety & new places 🗺️">Abwechslung & neue Orte 🗺️</button>
+        </div>
+      </div>
+      <div class="q-block" id="t2q2">
+        <div class="q-text" data-de="Wann bist du am liebsten aktiv?" data-en="When do you prefer to be active?">Wann bist du am liebsten aktiv?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(2,2,'solo')" data-de="Morgens alleine 🌅" data-en="Morning alone 🌅">Morgens alleine 🌅</button>
+          <button class="q-opt" onclick="ans(2,2,'team')" data-de="Abends mit Freunden 🌙" data-en="Evening with friends 🌙">Abends mit Freunden 🌙</button>
+          <button class="q-opt" onclick="ans(2,2,'natur')" data-de="Wann immer die Natur ruft 🚴" data-en="Whenever nature calls 🚴">Wann immer die Natur ruft 🚴</button>
+          <button class="q-opt" onclick="ans(2,2,'solo')" data-de="Spontan wenn ich Energie habe ⚡" data-en="Spontaneously when I have energy ⚡">Spontan wenn ich Energie habe ⚡</button>
+        </div>
+      </div>
+      <div class="q-block" id="t2q3">
+        <div class="q-text" data-de="Was nervt dich beim Sport am meisten?" data-en="What annoys you most about sport?">Was nervt dich beim Sport am meisten?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(2,3,'natur')" data-de="Drinnen zu sein & stickige Luft" data-en="Being indoors & stuffy air">Drinnen zu sein & stickige Luft</button>
+          <button class="q-opt" onclick="ans(2,3,'solo')" data-de="Auf andere warten müssen" data-en="Having to wait for others">Auf andere warten müssen</button>
+          <button class="q-opt" onclick="ans(2,3,'team')" data-de="Alleine keine Motivation haben" data-en="Having no motivation alone">Alleine keine Motivation haben</button>
+          <button class="q-opt" onclick="ans(2,3,'solo')" data-de="Zu viel Routine & immer dasselbe" data-en="Too much routine & always the same">Zu viel Routine & immer dasselbe</button>
+        </div>
+      </div>
+      <div class="q-block" id="t2q4">
+        <div class="q-text" data-de="Welche Sportart klingt am ansprechendsten?" data-en="Which sport sounds most appealing?">Welche Sportart klingt am ansprechendsten?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(2,4,'natur')" data-de="Radfahren / Wandern / Laufen 🚴" data-en="Cycling / Hiking / Running 🚴">Radfahren / Wandern / Laufen 🚴</button>
+          <button class="q-opt" onclick="ans(2,4,'team')" data-de="Fußball / Basketball / Volleyball 🏀" data-en="Football / Basketball / Volleyball 🏀">Fußball / Basketball / Volleyball 🏀</button>
+          <button class="q-opt" onclick="ans(2,4,'solo')" data-de="Gym / Kraft / Yoga 💪" data-en="Gym / Strength / Yoga 💪">Gym / Kraft / Yoga 💪</button>
+          <button class="q-opt" onclick="ans(2,4,'natur')" data-de="Schwimmen / Klettern / Kampfsport 🥊" data-en="Swimming / Climbing / Martial arts 🥊">Schwimmen / Klettern / Kampfsport 🥊</button>
+        </div>
+      </div>
+      <div class="q-block" id="t2q5">
+        <div class="q-text" data-de="Was ist dir beim Sport wichtiger?" data-en="What matters more to you in sport?">Was ist dir beim Sport wichtiger?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(2,5,'solo')" data-de="Leistung & persönliche Bestleistung 📈" data-en="Performance & personal records 📈">Leistung & persönliche Bestleistung 📈</button>
+          <button class="q-opt" onclick="ans(2,5,'team')" data-de="Spaß & soziale Verbindung 😄" data-en="Fun & social connection 😄">Spaß & soziale Verbindung 😄</button>
+          <button class="q-opt" onclick="ans(2,5,'natur')" data-de="Kopf frei & Natur erleben 🌿" data-en="Clear mind & nature experience 🌿">Kopf frei & Natur erleben 🌿</button>
+          <button class="q-opt" onclick="ans(2,5,'solo')" data-de="Routine & Disziplin aufbauen ⏰" data-en="Building routine & discipline ⏰">Routine & Disziplin aufbauen ⏰</button>
+        </div>
+      </div>
+      <div class="q-block" id="t2q6">
+        <div class="q-text" data-de="Wie oft gibst du auf wenn du alleine trainierst?" data-en="How often do you give up when training alone?">Wie oft gibst du auf wenn du alleine trainierst?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(2,6,'solo')" data-de="Selten – ich bin selbstdiszipliniert 💪" data-en="Rarely – I'm self-disciplined 💪">Selten – ich bin selbstdiszipliniert 💪</button>
+          <button class="q-opt" onclick="ans(2,6,'team')" data-de="Oft – ich brauche andere zur Motivation" data-en="Often – I need others for motivation">Oft – ich brauche andere zur Motivation</button>
+          <button class="q-opt" onclick="ans(2,6,'natur')" data-de="Nur wenn das Wetter schlecht ist 😅" data-en="Only when the weather is bad 😅">Nur wenn das Wetter schlecht ist 😅</button>
+          <button class="q-opt" onclick="ans(2,6,'team')" data-de="Meistens – Gruppentraining hilft mir sehr" data-en="Mostly – group training helps me a lot">Meistens – Gruppentraining hilft mir sehr</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-block" id="result2">
+      <div class="result-circle rc-2" id="rc2Icon"></div>
+      <div class="result-title" id="rt2"></div>
+      <div class="result-desc" id="rd2"></div>
+      <div class="result-tips-box">
+        <div class="result-tips-label rtl-2" data-de="DEINE SPORT-EMPFEHLUNGEN" data-en="YOUR SPORT RECOMMENDATIONS">DEINE SPORT-EMPFEHLUNGEN</div>
+        <div id="rtips2"></div>
+      </div>
+      <a href="index.html#mitmachen" class="cta-btn" data-de="Community beitreten →" data-en="Join Community →">Community beitreten →</a>
+      <br><button class="retry-btn" onclick="retryTest(2)" data-de="Nochmal machen" data-en="Try again">Nochmal machen</button>
+    </div>
+  </div>
+
+  <!-- ===== TEST 3: FOKUS LEVEL ===== -->
+  <div class="test-box" id="test3">
+    <div class="test-header">
+      <div class="test-header-icon">🎯</div>
+      <div>
+        <div class="test-header-title" data-de="Fokus-Level Test" data-en="Focus Level Test">Fokus-Level Test</div>
+        <div class="test-header-sub" data-de="6 Fragen · ~2 Minuten" data-en="6 questions · ~2 minutes">6 Fragen · ~2 Minuten</div>
+      </div>
+      <button class="test-close" onclick="closeTest(3)" data-de="✕ Schließen" data-en="✕ Close">✕ Schließen</button>
+    </div>
+    <div class="test-progress" id="prog3"></div>
+
+    <div id="questions3">
+      <div class="q-block show" id="t3q1">
+        <div class="q-text" data-de="Wie lange kannst du ohne Ablenkung an einer Aufgabe arbeiten?" data-en="How long can you work on a task without distraction?">Wie lange kannst du ohne Ablenkung an einer Aufgabe arbeiten?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(3,1,4)" data-de="60+ Minuten problemlos 🔥" data-en="60+ minutes no problem 🔥">60+ Minuten problemlos 🔥</button>
+          <button class="q-opt" onclick="ans(3,1,3)" data-de="25–60 Minuten" data-en="25–60 minutes">25–60 Minuten</button>
+          <button class="q-opt" onclick="ans(3,1,2)" data-de="10–25 Minuten" data-en="10–25 minutes">10–25 Minuten</button>
+          <button class="q-opt" onclick="ans(3,1,1)" data-de="Kaum 10 Minuten 😓" data-en="Barely 10 minutes 😓">Kaum 10 Minuten 😓</button>
+        </div>
+      </div>
+      <div class="q-block" id="t3q2">
+        <div class="q-text" data-de="Was stört deinen Fokus am meisten?" data-en="What disrupts your focus the most?">Was stört deinen Fokus am meisten?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(3,2,2)" data-de="Handy & Social Media 📱" data-en="Phone & Social Media 📱">Handy & Social Media 📱</button>
+          <button class="q-opt" onclick="ans(3,2,2)" data-de="Gedanken & innere Unruhe 🌀" data-en="Thoughts & inner restlessness 🌀">Gedanken & innere Unruhe 🌀</button>
+          <button class="q-opt" onclick="ans(3,2,3)" data-de="Lärm & Umgebung 🔊" data-en="Noise & environment 🔊">Lärm & Umgebung 🔊</button>
+          <button class="q-opt" onclick="ans(3,2,4)" data-de="Kaum etwas – ich bin gut fokussiert" data-en="Barely anything – I focus well">Kaum etwas – ich bin gut fokussiert</button>
+        </div>
+      </div>
+      <div class="q-block" id="t3q3">
+        <div class="q-text" data-de="Wie oft checkst du dein Handy während der Arbeit?" data-en="How often do you check your phone while working?">Wie oft checkst du dein Handy während der Arbeit?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(3,3,1)" data-de="Alle paar Minuten 😬" data-en="Every few minutes 😬">Alle paar Minuten 😬</button>
+          <button class="q-opt" onclick="ans(3,3,2)" data-de="Alle 15–30 Minuten" data-en="Every 15–30 minutes">Alle 15–30 Minuten</button>
+          <button class="q-opt" onclick="ans(3,3,3)" data-de="Nur in Pausen" data-en="Only during breaks">Nur in Pausen</button>
+          <button class="q-opt" onclick="ans(3,3,4)" data-de="Fast nie – Handy ist weg 💪" data-en="Almost never – phone is away 💪">Fast nie – Handy ist weg 💪</button>
+        </div>
+      </div>
+      <div class="q-block" id="t3q4">
+        <div class="q-text" data-de="Merkst du einen Fokus-Unterschied nach dem Sport?" data-en="Do you notice a focus difference after sport?">Merkst du einen Fokus-Unterschied nach dem Sport?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(3,4,4)" data-de="Ja – riesiger Unterschied! 🚀" data-en="Yes – huge difference! 🚀">Ja – riesiger Unterschied! 🚀</button>
+          <button class="q-opt" onclick="ans(3,4,3)" data-de="Ja, deutlich besser" data-en="Yes, clearly better">Ja, deutlich besser</button>
+          <button class="q-opt" onclick="ans(3,4,2)" data-de="Ein bisschen" data-en="A little">Ein bisschen</button>
+          <button class="q-opt" onclick="ans(3,4,1)" data-de="Noch nicht ausprobiert" data-en="Haven't tried yet">Noch nicht ausprobiert</button>
+        </div>
+      </div>
+      <div class="q-block" id="t3q5">
+        <div class="q-text" data-de="Wie startest du normalerweise in einen Arbeitstag?" data-en="How do you normally start a work day?">Wie startest du normalerweise in einen Arbeitstag?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(3,5,4)" data-de="Mit Sport & klarem Plan 🎯" data-en="With sport & clear plan 🎯">Mit Sport & klarem Plan 🎯</button>
+          <button class="q-opt" onclick="ans(3,5,3)" data-de="Kaffee & kurze Planung ☕" data-en="Coffee & quick planning ☕">Kaffee & kurze Planung ☕</button>
+          <button class="q-opt" onclick="ans(3,5,2)" data-de="Direkt rein ohne Vorbereitung" data-en="Straight in without preparation">Direkt rein ohne Vorbereitung</button>
+          <button class="q-opt" onclick="ans(3,5,1)" data-de="Langsam & unstrukturiert 😴" data-en="Slowly & unstructured 😴">Langsam & unstrukturiert 😴</button>
+        </div>
+      </div>
+      <div class="q-block" id="t3q6">
+        <div class="q-text" data-de="Wie oft erreichst du deine täglichen Ziele?" data-en="How often do you reach your daily goals?">Wie oft erreichst du deine täglichen Ziele?</div>
+        <div class="q-grid">
+          <button class="q-opt" onclick="ans(3,6,4)" data-de="Fast immer ✅" data-en="Almost always ✅">Fast immer ✅</button>
+          <button class="q-opt" onclick="ans(3,6,3)" data-en="Mostly">Meistens</button>
+          <button class="q-opt" onclick="ans(3,6,2)" data-de="Manchmal" data-en="Sometimes">Manchmal</button>
+          <button class="q-opt" onclick="ans(3,6,1)" data-de="Selten – Fokus fehlt 😔" data-en="Rarely – focus is missing 😔">Selten – Fokus fehlt 😔</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-block" id="result3">
+      <div class="result-circle rc-3" id="rc3Icon"></div>
+      <div class="result-title" id="rt3"></div>
+      <div class="result-desc" id="rd3"></div>
+      <div class="result-tips-box">
+        <div class="result-tips-label rtl-3" data-de="DEINE FOKUS-TIPPS" data-en="YOUR FOCUS TIPS">DEINE FOKUS-TIPPS</div>
+        <div id="rtips3"></div>
+      </div>
+      <a href="index.html#mitmachen" class="cta-btn" data-de="Community beitreten →" data-en="Join Community →">Community beitreten →</a>
+      <br><button class="retry-btn" onclick="retryTest(3)" data-de="Nochmal machen" data-en="Try again">Nochmal machen</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+let lang = 'de';
+let testScores = { 1: [], 2: [], 3: [] };
+let testQ = { 1: 1, 2: 1, 3: 1 };
+const totalQ = 6;
+
+function setLang(l) {
+  lang = l;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.lang-btn[onclick="setLang('${l}')"]`).classList.add('active');
+  document.querySelectorAll('[data-de]').forEach(el => {
+    const t = el.getAttribute('data-' + l);
+    if (t) el.innerHTML = t;
+  });
+  document.documentElement.lang = l;
+}
+
+function buildProgress(t, current) {
+  const p = document.getElementById('prog' + t);
+  p.innerHTML = '';
+  for (let i = 0; i < totalQ; i++) {
+    const bar = document.createElement('div');
+    bar.className = 'prog-bar' +
+      (i < current ? ` done-${t}` : i === current ? ` active-bar-${t}` : '');
+    p.appendChild(bar);
+  }
+}
+
+function openTest(t) {
+  [1,2,3].forEach(i => {
+    document.getElementById('test'+i).classList.remove('open');
+    document.querySelector(`.test-card-${i}`).classList.remove(`active-${i}`);
+  });
+  document.getElementById('test'+t).classList.add('open');
+  document.querySelector(`.test-card-${t}`).classList.add(`active-${t}`);
+  document.getElementById('test'+t).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  buildProgress(t, 0);
+}
+
+function closeTest(t) {
+  document.getElementById('test'+t).classList.remove('open');
+  document.querySelector(`.test-card-${t}`).classList.remove(`active-${t}`);
+}
+
+function ans(t, q, val) {
+  const block = document.getElementById(`t${t}q${q}`);
+  block.querySelectorAll('.q-opt').forEach(b => b.classList.remove(`sel-${t}`));
+  event.target.classList.add(`sel-${t}`);
+  testScores[t][q-1] = val;
+
+  setTimeout(() => {
+    if (q < totalQ) {
+      block.classList.remove('show');
+      const next = document.getElementById(`t${t}q${q+1}`);
+      if (next) next.classList.add('show');
+      testQ[t] = q + 1;
+      buildProgress(t, q);
+    } else {
+      showResult(t);
+    }
+  }, 380);
+}
+
+function showResult(t) {
+  buildProgress(t, totalQ);
+  document.getElementById('questions'+t).style.display = 'none';
+  document.getElementById('result'+t).classList.add('show');
+  const isEn = lang === 'en';
+
+  if (t === 1) {
+    const total = testScores[1].reduce((a,b) => a+(b||0), 0);
+    let icon, title, desc, tips;
+    if (total >= 20) {
+      icon = '⚡'; title = isEn ? 'Sport is your superpower!' : 'Sport ist deine Superkraft!';
+      desc = isEn ? 'You already use movement as a tool for your mind. Your brain thrives through exercise – you know it and you live it.' : 'Du nutzt Bewegung bereits als Werkzeug für deinen Kopf. Dein Gehirn floriert durch Sport – du weißt es und du lebst es.';
+      tips = [
+        isEn ? '✅ Keep your sport routine – it\'s your biggest strength' : '✅ Halte deine Sport-Routine – sie ist deine größte Stärke',
+        isEn ? '🤝 Share your experience with the community' : '🤝 Teile deine Erfahrung mit der Community',
+        isEn ? '📖 Read: How to use the 90-minute focus window optimally' : '📖 Lies: Wie du das 90-Minuten-Fokusfenster optimal nutzt'
+      ];
+    } else if (total >= 13) {
+      icon = '🌱'; title = isEn ? 'You\'re on the right path!' : 'Du bist auf dem richtigen Weg!';
+      desc = isEn ? 'You feel the connection between sport and your mind – but there\'s still untapped potential. A little more consistency and you\'ll feel the full power.' : 'Du spürst die Verbindung zwischen Sport und Kopf – aber es gibt noch ungenutztes Potenzial. Etwas mehr Konstanz und du spürst die volle Kraft.';
+      tips = [
+        isEn ? '🎯 Try sport consciously when you feel blocked' : '🎯 Probiere Sport bewusst wenn du dich blockiert fühlst',
+        isEn ? '⏱️ 20 minutes is enough – no marathon needed' : '⏱️ 20 Minuten reichen – kein Marathon nötig',
+        isEn ? '📊 Track how you feel before and after sport' : '📊 Tracke wie du dich vor und nach dem Sport fühlst'
+      ];
+    } else {
+      icon = '🚀'; title = isEn ? 'Your journey starts now!' : 'Deine Reise beginnt jetzt!';
+      desc = isEn ? 'You haven\'t yet discovered the full power of sport for your mind. The good news: the effect comes faster than you think – even with 10 minutes.' : 'Du hast die volle Kraft des Sports für deinen Kopf noch nicht entdeckt. Die gute Nachricht: Der Effekt kommt schneller als du denkst – schon mit 10 Minuten.';
+      tips = [
+        isEn ? '🏃 Start with 10 minutes daily – outdoors if possible' : '🏃 Starte mit 10 Minuten täglich – wenn möglich draußen',
+        isEn ? '📝 Write down how you feel after sport' : '📝 Schreib auf wie du dich nach dem Sport fühlst',
+        isEn ? '💬 Join the community – you\'re not alone' : '💬 Tritt der Community bei – du bist nicht allein'
+      ];
+    }
+    document.getElementById('rc1Icon').textContent = icon;
+    document.getElementById('rt1').textContent = title;
+    document.getElementById('rd1').textContent = desc;
+    document.getElementById('rtips1').innerHTML = tips.map(tip => `<div class="result-tip">${tip}</div>`).join('');
+  }
+
+  if (t === 2) {
+    const scores = testScores[2];
+    const counts = { natur: 0, team: 0, solo: 0 };
+    scores.forEach(s => { if (s && counts[s] !== undefined) counts[s]++; });
+    const top = Object.entries(counts).sort((a,b) => b[1]-a[1])[0][0];
+    let icon, title, desc, tips;
+    if (top === 'natur') {
+      icon = '🌿'; title = isEn ? 'The Nature Athlete!' : 'Der Natur-Athlet!';
+      desc = isEn ? 'You find your energy outdoors. Fresh air, green surroundings and freedom are what drive you. Sport in nature is your medicine.' : 'Du findest deine Energie draußen. Frische Luft, grüne Umgebung und Freiheit sind was dich antreibt. Sport in der Natur ist deine Medizin.';
+      tips = [
+        isEn ? '🚴 Cycling, hiking, trail running – these are your sports' : '🚴 Radfahren, Wandern, Trail Running – das sind deine Sports',
+        isEn ? '🌅 Morning in nature = best start to the day' : '🌅 Morgens in der Natur = bester Tagesstart',
+        isEn ? '📱 Leave the phone at home – pure nature experience' : '📱 Handy zu Hause lassen – pures Naturerlebnis'
+      ];
+    } else if (top === 'team') {
+      icon = '🤝'; title = isEn ? 'The Team Player!' : 'Der Team-Player!';
+      desc = isEn ? 'You thrive through social energy. Sport with others motivates you infinitely more than alone. Community is your biggest driver.' : 'Du blühst durch soziale Energie auf. Sport mit anderen motiviert dich unendlich mehr als alleine. Community ist dein größter Antrieb.';
+      tips = [
+        isEn ? '⚽ Team sports, group training, running groups – perfect for you' : '⚽ Teamsport, Gruppentraining, Laufgruppen – perfekt für dich',
+        isEn ? '🤝 Find an accountability partner for your workouts' : '🤝 Finde einen Accountability-Partner für dein Training',
+        isEn ? '💬 Our community is ideal for you – join in!' : '💬 Unsere Community ist ideal für dich – mach mit!'
+      ];
+    } else {
+      icon = '💪'; title = isEn ? 'The Solo Warrior!' : 'Der Solo-Warrior!';
+      desc = isEn ? 'You love the focus and freedom of training alone. You set your own pace, your own goals. Discipline is your strength.' : 'Du liebst den Fokus und die Freiheit beim Alleintraining. Du setzt dein eigenes Tempo, deine eigenen Ziele. Disziplin ist deine Stärke.';
+      tips = [
+        isEn ? '🏋️ Gym, yoga, swimming, cycling solo – your world' : '🏋️ Gym, Yoga, Schwimmen, Solo-Rad – deine Welt',
+        isEn ? '📊 Track your progress – you love seeing development' : '📊 Tracke deinen Fortschritt – du liebst Entwicklung zu sehen',
+        isEn ? '🎧 The right music or podcast makes solo training perfect' : '🎧 Die richtige Musik oder Podcast macht Solo-Training perfekt'
+      ];
+    }
+    document.getElementById('rc2Icon').textContent = icon;
+    document.getElementById('rt2').textContent = title;
+    document.getElementById('rd2').textContent = desc;
+    document.getElementById('rtips2').innerHTML = tips.map(tip => `<div class="result-tip">${tip}</div>`).join('');
+  }
+
+  if (t === 3) {
+    const total = testScores[3].reduce((a,b) => a+(b||0), 0);
+    let icon, title, desc, tips;
+    if (total >= 20) {
+      icon = '🎯'; title = isEn ? 'Focus Master!' : 'Fokus-Meister!';
+      desc = isEn ? 'Your focus is already at a high level. You have good strategies and use sport as a tool. Share this with others!' : 'Dein Fokus ist bereits auf hohem Niveau. Du hast gute Strategien und nutzt Sport als Werkzeug. Teile das mit anderen!';
+      tips = [
+        isEn ? '🏆 You\'re already doing great – inspire others' : '🏆 Du machst es bereits gut – inspiriere andere',
+        isEn ? '📖 Deep work: try 90-minute focus blocks' : '📖 Deep Work: Versuche 90-Minuten-Fokus-Blöcke',
+        isEn ? '🌿 Maintain your sport routine – it\'s your foundation' : '🌿 Erhalte deine Sport-Routine – sie ist dein Fundament'
+      ];
+    } else if (total >= 13) {
+      icon = '📈'; title = isEn ? 'Growing Focus!' : 'Wachsender Fokus!';
+      desc = isEn ? 'You have a solid foundation but there\'s still room to grow. Small adjustments in your routine can make a big difference.' : 'Du hast eine solide Basis aber es gibt noch Wachstumspotenzial. Kleine Anpassungen in deiner Routine können viel bewirken.';
+      tips = [
+        isEn ? '⏱️ Try the Pomodoro technique: 25 min on, 5 min off' : '⏱️ Probiere Pomodoro-Technik: 25 Min an, 5 Min aus',
+        isEn ? '📵 Phone in another room during focus time' : '📵 Handy in einen anderen Raum während Fokus-Zeit',
+        isEn ? '🚴 Sport before important tasks = 40% more focus' : '🚴 Sport vor wichtigen Aufgaben = 40% mehr Fokus'
+      ];
+    } else {
+      icon = '🌱'; title = isEn ? 'Focus Potential!' : 'Fokus-Potenzial!';
+      desc = isEn ? 'Your focus needs some support – and that\'s completely normal. The good news: simple changes can make a huge difference. Sport is the fastest way.' : 'Dein Fokus braucht etwas Unterstützung – das ist völlig normal. Die gute Nachricht: Einfache Änderungen können einen riesigen Unterschied machen. Sport ist der schnellste Weg.';
+      tips = [
+        isEn ? '🏃 Start with 15 min sport daily – this is step 1' : '🏃 Starte mit 15 Min Sport täglich – das ist Schritt 1',
+        isEn ? '📝 Write down ONE goal every morning' : '📝 Schreibe jeden Morgen EIN Ziel auf',
+        isEn ? '📵 Airplane mode during work – just try it once' : '📵 Flugmodus während der Arbeit – probiere es einmal'
+      ];
+    }
+    document.getElementById('rc3Icon').textContent = icon;
+    document.getElementById('rt3').textContent = title;
+    document.getElementById('rd3').textContent = desc;
+    document.getElementById('rtips3').innerHTML = tips.map(tip => `<div class="result-tip">${tip}</div>`).join('');
+  }
+}
+
+function retryTest(t) {
+  testScores[t] = [];
+  testQ[t] = 1;
+  document.getElementById('questions'+t).style.display = 'block';
+  document.getElementById('result'+t).classList.remove('show');
+  document.querySelectorAll(`#test${t} .q-block`).forEach(b => b.classList.remove('show'));
+  document.getElementById(`t${t}q1`).classList.add('show');
+  buildProgress(t, 0);
+}
+
+// Init
+buildProgress(1, 0); buildProgress(2, 0); buildProgress(3, 0);
+</script>
+</body>
+</html>

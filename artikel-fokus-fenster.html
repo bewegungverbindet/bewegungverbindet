@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 680 680'><circle cx='340' cy='340' r='340' fill='%232d6a4f'/><text x='260' y='410' font-family='Georgia' font-size='240' font-weight='700' fill='%23f7f4ef'>B</text><text x='430' y='410' font-family='Georgia' font-size='240' font-weight='700' fill='%231c1a16'>V</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="VDSCh8TTqZUptly6CAik9csSDh3nkavv_aQneLgaEBA" />
+<meta name="description" content="Das Fokus-Fenster: Wann bist du am produktivsten? Lerne deinen optimalen Fokus-Rhythmus mit Sport zu nutzen.">
+<meta property="og:title" content="Das Fokus-Fenster – BewegungVerbindet">
+<meta property="og:description" content="Finde dein persönliches Fokus-Fenster und werde produktiver durch Bewegung.">
+<meta property="og:url" content="https://bewegungverbindet.netlify.app/artikel-fokus-fenster.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fokus-Fenster – BewegungVerbindet">
+<meta name="twitter:description" content="Finde deinen optimalen Fokus-Rhythmus.">
+<title>Das Fokus-Fenster nach dem Sport | BewegungVerbindet</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;0,900;1,300;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#f7f4ef;--text:#1c1a16;--muted:#8a8478;--accent:#2d6a4f;--accent2:#74c69d;--accent3:#e76f51;--surface:#fff;--border:rgba(28,26,22,0.1); }
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7}
+  .read-progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);z-index:200;transition:width .1s;width:0}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(247,244,239,0.92);backdrop-filter:blur(12px);border-bottom:.5px solid var(--border)}
+  .logo{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;color:var(--accent);text-decoration:none}.logo span{color:var(--text)}
+  .nav-right{display:flex;align-items:center;gap:1rem}
+  .back-btn{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s}.back-btn:hover{color:var(--text)}
+  .lang-switcher{display:flex;gap:3px;background:var(--bg);border:.5px solid var(--border);border-radius:100px;padding:3px}
+  .lang-btn{background:none;border:none;font-size:11px;font-weight:500;padding:3px 8px;border-radius:100px;cursor:pointer;color:var(--muted);transition:all .2s;font-family:'DM Sans',sans-serif}.lang-btn.active{background:var(--accent);color:white}
+  .article-hero{padding:7rem 2rem 3rem;max-width:780px;margin:0 auto;text-align:center}
+  .article-tag{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:rgba(45,106,79,.1);padding:5px 14px;border-radius:100px;margin-bottom:1.5rem}
+  .article-hero h1{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:1.25rem}
+  .article-hero h1 em{font-style:italic;color:var(--accent)}
+  .article-meta{font-size:13px;color:var(--muted);margin-bottom:2rem}.article-meta span{margin:0 8px}
+  .article-body{max-width:680px;margin:0 auto;padding:0 2rem 4rem}
+  .article-body p{font-size:1.05rem;margin-bottom:1.5rem}
+  .article-body h2{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:900;letter-spacing:-.02em;margin:3rem 0 1rem;line-height:1.2}
+  .article-body h2 em{font-style:italic;color:var(--accent)}
+  .lead{font-size:1.2rem!important;color:var(--muted)!important;font-style:italic;border-left:3px solid var(--accent);padding-left:1.25rem;margin-bottom:2rem!important}
+  .study-box{background:var(--surface);border:.5px solid var(--border);border-radius:20px;padding:2rem;margin:2.5rem 0;position:relative;overflow:hidden}
+  .study-box::before{content:'🔬';position:absolute;top:1.5rem;right:1.5rem;font-size:2rem;opacity:.3}
+  .study-label{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem}
+  .study-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;margin-bottom:.5rem}
+  .study-text{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:1rem}
+  .study-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  .study-stat{text-align:center}.study-stat-num{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:900;color:var(--accent)}.study-stat-label{font-size:11px;color:var(--muted);line-height:1.3}
+  .interactive-block{background:linear-gradient(135deg,rgba(45,106,79,.05),rgba(116,198,157,.08));border:.5px solid rgba(45,106,79,.2);border-radius:20px;padding:2rem;margin:2.5rem 0}
+  .interactive-label{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;display:flex;align-items:center;gap:6px}.interactive-label::before{content:'⚡'}
+  .interactive-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;margin-bottom:.5rem}
+  .interactive-sub{font-size:13px;color:var(--muted);margin-bottom:1.5rem}
+  .pull-quote{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:700;font-style:italic;color:var(--accent);text-align:center;padding:2rem 0;border-top:.5px solid var(--border);border-bottom:.5px solid var(--border);margin:2.5rem 0;line-height:1.3}
+  .tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.5rem 0}
+  .tip-card{background:var(--surface);border:.5px solid var(--border);border-radius:16px;padding:1.25rem;transition:transform .2s}.tip-card:hover{transform:translateY(-3px)}
+  .tip-icon{font-size:1.5rem;margin-bottom:8px}.tip-title{font-weight:500;font-size:14px;margin-bottom:4px}.tip-text{font-size:13px;color:var(--muted);line-height:1.5}
+  /* CLOCK INTERACTIVE */
+  .clock-container{display:flex;flex-direction:column;align-items:center;gap:1rem}
+  .clock{width:180px;height:180px;border-radius:50%;border:3px solid var(--accent);position:relative;background:var(--surface);display:flex;align-items:center;justify-content:center}
+  .clock-hand{position:absolute;bottom:50%;left:50%;transform-origin:bottom center;background:var(--accent);border-radius:3px;transition:transform 1s ease}
+  .clock-time{font-family:'Fraunces',serif;font-size:2rem;font-weight:900;color:var(--accent)}
+  .clock-label{font-size:13px;color:var(--muted);text-align:center}
+  .clock-phases{display:flex;flex-direction:column;gap:8px;width:100%;max-width:300px}
+  .clock-phase{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;border:.5px solid var(--border);background:var(--surface);font-size:13px;transition:all .3s;cursor:pointer}
+  .clock-phase.active{border-color:var(--accent);background:rgba(45,106,79,.08);font-weight:500}
+  .phase-dot{width:8px;height:8px;border-radius:50%;background:var(--border);flex-shrink:0;transition:background .3s}
+  .clock-phase.active .phase-dot{background:var(--accent)}
+  /* TASK MATCHER */
+  .task-matcher{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1rem 0}
+  .task-item{background:var(--surface);border:.5px solid var(--border);border-radius:12px;padding:12px 14px;font-size:13px;cursor:pointer;transition:all .2s;text-align:left}
+  .task-item:hover{border-color:var(--accent);background:rgba(45,106,79,.04)}
+  .task-item.matched{border-color:var(--accent);background:rgba(45,106,79,.08);color:var(--accent);font-weight:500}
+  .task-item.wrong{border-color:var(--accent3);background:rgba(231,111,81,.08)}
+  .match-result{margin-top:1rem;font-size:14px;padding:12px 16px;border-radius:12px;display:none;line-height:1.5}
+  .match-result.show{display:block;background:rgba(45,106,79,.08);color:var(--accent)}
+  .share-block{background:var(--accent);color:white;border-radius:20px;padding:2rem;text-align:center;margin:3rem 0}
+  .share-title{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:900;margin-bottom:.5rem}
+  .share-sub{font-size:14px;opacity:.8;margin-bottom:1.5rem}
+  .share-btn{background:white;color:var(--accent);border:none;border-radius:100px;padding:12px 24px;font-size:14px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity .2s;margin:4px}.share-btn:hover{opacity:.9}
+  .author-block{display:flex;gap:1rem;align-items:center;background:var(--surface);border-radius:16px;border:.5px solid var(--border);padding:1.25rem;margin:2rem 0}
+  .author-avatar{width:52px;height:52px;border-radius:50%;background:rgba(45,106,79,.15);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0}
+  .author-name{font-weight:500;font-size:15px}.author-bio{font-size:13px;color:var(--muted)}
+  .next-article{background:var(--surface);border:.5px solid var(--border);border-radius:20px;padding:1.5rem;text-align:center;text-decoration:none;color:var(--text);display:block;transition:transform .2s}.next-article:hover{transform:translateY(-3px)}
+  .next-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+  .next-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700}
+  @media(max-width:600px){.study-stats{grid-template-columns:1fr}.tips-grid{grid-template-columns:1fr}.task-matcher{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="read-progress" id="rp"></div>
+<nav>
+  <a href="index.html" class="logo">Bewegung<span>Verbindet</span></a>
+  <div class="nav-right">
+    <a href="bibliothek.html" class="back-btn" data-de="← Bibliothek" data-en="← Library">← Bibliothek</a>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <span class="article-tag" data-de="Fokus & Alltag" data-en="Focus & Life">Fokus & Alltag</span>
+  <h1 data-de="Das Fokus-Fenster.<br><em>Deine goldene Stunde</em><br>nach dem Sport." data-en="The Focus Window.<br><em>Your golden hour</em><br>after sport.">Das Fokus-Fenster.<br><em>Deine goldene Stunde</em><br>nach dem Sport.</h1>
+  <div class="article-meta">
+    <span>BewegungVerbindet</span><span>·</span>
+    <span data-de="4 Min Lesedauer" data-en="4 min read">4 Min Lesedauer</span>
+    <span>·</span><span>⚡ Interaktiv</span>
+  </div>
+</div>
+
+<div class="article-body">
+  <p class="lead" data-de="Nach dem Sport gibt es ein Zeitfenster in dem dein Gehirn auf Hochleistung läuft. Die meisten Menschen verschwenden es. Du nicht mehr." data-en="After sport there is a time window when your brain runs at peak performance. Most people waste it. Not you anymore.">Nach dem Sport gibt es ein Zeitfenster in dem dein Gehirn auf Hochleistung läuft. Die meisten Menschen verschwenden es. Du nicht mehr.</p>
+
+  <p data-de="Stell dir vor: Du kommst vom Radfahren zurück, schwitzt noch ein bisschen, und dein Kopf fühlt sich plötzlich klar an. Keine Gedanken die durcheinander rasen. Nur Klarheit. Das ist kein Zufall – das ist Neurochemie." data-en="Imagine: You come back from cycling, still sweating a little, and your head suddenly feels clear. No racing thoughts. Just clarity. That's not a coincidence – that's neurochemistry.">Stell dir vor: Du kommst vom Radfahren zurück, schwitzt noch ein bisschen, und dein Kopf fühlt sich plötzlich klar an. Keine Gedanken die durcheinander rasen. Nur Klarheit. Das ist kein Zufall – das ist Neurochemie.</p>
+
+  <div class="study-box">
+    <div class="study-label">Wissenschaftliche Studie</div>
+    <div class="study-title">University of Illinois, 2022</div>
+    <div class="study-text" data-de="Forscher der University of Illinois untersuchten kognitive Leistung vor und nach aerober Bewegung. Sie entdeckten ein klar definiertes Zeitfenster erhöhter Konzentration und Gedächtnisleistung nach dem Sport – das sogenannte Post-Exercise Cognitive Enhancement Window." data-en="Researchers at the University of Illinois studied cognitive performance before and after aerobic exercise. They discovered a clearly defined time window of increased concentration and memory performance after sport – the so-called Post-Exercise Cognitive Enhancement Window.">Forscher der University of Illinois untersuchten kognitive Leistung vor und nach aerober Bewegung. Sie entdeckten ein klar definiertes Zeitfenster erhöhter Konzentration nach dem Sport.</div>
+    <div class="study-stats">
+      <div class="study-stat"><div class="study-stat-num">90</div><div class="study-stat-label" data-de="Minuten Fokus-Fenster" data-en="minutes focus window">Minuten Fokus-Fenster</div></div>
+      <div class="study-stat"><div class="study-stat-num">+35%</div><div class="study-stat-label" data-de="mehr Gedächtnisleistung" data-en="more memory performance">mehr Gedächtnisleistung</div></div>
+      <div class="study-stat"><div class="study-stat-num">20min</div><div class="study-stat-label" data-de="Sport reichen bereits" data-en="of sport already enough">Sport reichen bereits</div></div>
+    </div>
+  </div>
+
+  <h2 data-de="Die <em>4 Phasen</em><br>nach dem Sport." data-en="The <em>4 phases</em><br>after sport.">Die <em>4 Phasen</em><br>nach dem Sport.</h2>
+
+  <div class="interactive-block">
+    <div class="interactive-label" data-de="Interaktiv – klick auf eine Phase" data-en="Interactive – click on a phase">Interaktiv – klick auf eine Phase</div>
+    <div class="interactive-title" data-de="Deine 90 Minuten nach dem Sport:" data-en="Your 90 minutes after sport:">Deine 90 Minuten nach dem Sport:</div>
+    <div class="interactive-sub" data-de="Klick auf eine Phase und sieh was in deinem Gehirn passiert." data-en="Click on a phase and see what happens in your brain.">Klick auf eine Phase und sieh was in deinem Gehirn passiert.</div>
+
+    <div class="clock-container">
+      <div style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap;justify-content:center;">
+        <div class="clock">
+          <div class="clock-time" id="clockTime">0</div>
+        </div>
+        <div style="background:var(--surface);border-radius:14px;padding:1rem;max-width:220px;border:.5px solid var(--border);">
+          <div style="font-size:11px;color:var(--muted);margin-bottom:4px;" id="phaseLabel" data-de="Wähle eine Phase →" data-en="Choose a phase →">Wähle eine Phase →</div>
+          <div style="font-size:14px;line-height:1.5;" id="phaseDesc"></div>
+        </div>
+      </div>
+      <div class="clock-phases">
+        <div class="clock-phase" onclick="setPhase(0)"><div class="phase-dot"></div><span data-de="0–10 Min: Aktivierung 🔥" data-en="0–10 min: Activation 🔥">0–10 Min: Aktivierung 🔥</span></div>
+        <div class="clock-phase" onclick="setPhase(1)"><div class="phase-dot"></div><span data-de="10–45 Min: Peak-Fokus 🎯" data-en="10–45 min: Peak Focus 🎯">10–45 Min: Peak-Fokus 🎯</span></div>
+        <div class="clock-phase" onclick="setPhase(2)"><div class="phase-dot"></div><span data-de="45–90 Min: Kreativität 💡" data-en="45–90 min: Creativity 💡">45–90 Min: Kreativität 💡</span></div>
+        <div class="clock-phase" onclick="setPhase(3)"><div class="phase-dot"></div><span data-de="90+ Min: Erholung 😌" data-en="90+ min: Recovery 😌">90+ Min: Erholung 😌</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h2 data-de="<em>Was gehört</em><br>in welche Phase?" data-en="<em>What belongs</em><br>in which phase?">Was gehört<br>in welche Phase?</h2>
+  <p data-de="Nicht jede Aufgabe profitiert gleich vom Fokus-Fenster. Hier ist wie du es optimal einsetzt:" data-en="Not every task benefits equally from the focus window. Here's how to use it optimally:">Nicht jede Aufgabe profitiert gleich vom Fokus-Fenster. Hier ist wie du es optimal einsetzt:</p>
+
+  <div class="interactive-block">
+    <div class="interactive-label" data-de="Interaktiv – finde die richtige Phase" data-en="Interactive – find the right phase">Interaktiv – finde die richtige Phase</div>
+    <div class="interactive-title" data-de="Wann machst du was?" data-en="When do you do what?">Wann machst du was?</div>
+    <div class="interactive-sub" data-de="Klick auf die Aufgabe die am besten in Phase 1 (0–45 Min) passt:" data-en="Click on the task that best fits Phase 1 (0–45 min):">Klick auf die Aufgabe die am besten in Phase 1 (0–45 Min) passt:</div>
+    <div class="task-matcher" id="taskMatcher">
+      <button class="task-item" onclick="matchTask(this, false)" data-de="📱 Social Media checken" data-en="📱 Check social media">📱 Social Media checken</button>
+      <button class="task-item" onclick="matchTask(this, true)" data-de="📝 Wichtigste Aufgabe des Tages" data-en="📝 Most important task of the day">📝 Wichtigste Aufgabe des Tages</button>
+      <button class="task-item" onclick="matchTask(this, false)" data-de="😴 Kurz entspannen" data-en="😴 Relax briefly">😴 Kurz entspannen</button>
+      <button class="task-item" onclick="matchTask(this, false)" data-de="🍕 Mittagessen" data-en="🍕 Have lunch">🍕 Mittagessen</button>
+    </div>
+    <div class="match-result" id="matchResult"></div>
+  </div>
+
+  <div class="pull-quote" data-de='"Das Fokus-Fenster ist deine tägliche Superstunde. Du entscheidest ob du sie nutzt oder verschwendest."' data-en='"The focus window is your daily super hour. You decide whether you use it or waste it."'>"Das Fokus-Fenster ist deine tägliche Superstunde. Du entscheidest ob du sie nutzt oder verschwendest."</div>
+
+  <h2 data-de="<em>Dein Plan</em><br>ab heute." data-en="<em>Your plan</em><br>from today.">Dein Plan<br>ab heute.</h2>
+
+  <div class="tips-grid">
+    <div class="tip-card"><div class="tip-icon">📝</div><div class="tip-title" data-de="Vorher planen" data-en="Plan before">Vorher planen</div><div class="tip-text" data-de="Bevor du zum Sport gehst: schreib auf was du danach erledigst. Eine Aufgabe. Dein Gehirn bereitet sich vor." data-en="Before you go to sport: write down what you'll do after. One task. Your brain prepares itself.">Bevor du zum Sport gehst: schreib auf was du danach erledigst.</div></div>
+    <div class="tip-card"><div class="tip-icon">📵</div><div class="tip-title" data-de="Kein Handy" data-en="No phone">Kein Handy</div><div class="tip-text" data-de="Direkt nach dem Sport kein Social Media. Das Dopamin gehört der Aufgabe – nicht dem Feed." data-en="Directly after sport no social media. The dopamine belongs to the task – not the feed.">Direkt nach dem Sport kein Social Media. Das Dopamin gehört der Aufgabe.</div></div>
+    <div class="tip-card"><div class="tip-icon">⏱️</div><div class="tip-title" data-de="Sofort starten" data-en="Start immediately">Sofort starten</div><div class="tip-text" data-de="Maximal 10 Minuten nach dem Sport mit der Aufgabe beginnen. Je länger du wartest, desto mehr verpufft das Fenster." data-en="Start the task maximum 10 minutes after sport. The longer you wait, the more the window fades.">Maximal 10 Minuten nach dem Sport beginnen. Je länger du wartest, desto mehr verpufft das Fenster.</div></div>
+    <div class="tip-card"><div class="tip-icon">🌿</div><div class="tip-title" data-de="Draußen = stärker" data-en="Outdoors = stronger">Draußen = stärker</div><div class="tip-text" data-de="Sport in der Natur verlängert das Fokus-Fenster um bis zu 20%. Radfahren, Laufen, Spazieren – raus!" data-en="Sport in nature extends the focus window by up to 20%. Cycling, running, walking – get outside!">Sport in der Natur verlängert das Fokus-Fenster um bis zu 20%.</div></div>
+  </div>
+
+  <div class="author-block">
+    <div class="author-avatar">🌿</div>
+    <div>
+      <div class="author-name">BewegungVerbindet Team</div>
+      <div class="author-bio" data-de="Wir teilen Erfahrungen, Studien und echte Geschichten rund um Sport und mentales Wohlbefinden." data-en="We share experiences, studies and real stories around sport and mental wellbeing.">Wir teilen Erfahrungen, Studien und echte Geschichten rund um Sport und mentales Wohlbefinden.</div>
+    </div>
+  </div>
+
+  <div class="share-block">
+    <div class="share-title" data-de="Hat dir das geholfen?" data-en="Did this help you?">Hat dir das geholfen?</div>
+    <div class="share-sub" data-de="Teile diesen Artikel mit jemandem der sein Fokus-Fenster besser nutzen will." data-en="Share this article with someone who wants to use their focus window better.">Teile diesen Artikel mit jemandem der sein Fokus-Fenster besser nutzen will.</div>
+    <button class="share-btn" onclick="navigator.share?navigator.share({title:document.title,url:location.href}):navigator.clipboard.writeText(location.href)">📤 <span data-de="Artikel teilen" data-en="Share article">Artikel teilen</span></button>
+  </div>
+
+  <a href="artikel-adhs-sport.html" class="next-article">
+    <div class="next-label" data-de="Nächster Artikel →" data-en="Next article →">Nächster Artikel →</div>
+    <div class="next-title" data-de="ADHS & Sport: Wie Bewegung das ADHS-Gehirn verändert" data-en="ADHD & Sport: How Movement Changes the ADHD Brain">ADHS & Sport: Wie Bewegung das ADHS-Gehirn verändert</div>
+  </a>
+</div>
+
+<script>
+let lang='de';
+function setLang(l){lang=l;document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));document.querySelector(`.lang-btn[onclick="setLang('${l}')"]`).classList.add('active');document.querySelectorAll('[data-de]').forEach(el=>{const t=el.getAttribute('data-'+l);if(t)el.innerHTML=t});document.documentElement.lang=l}
+window.addEventListener('scroll',()=>{const d=document.documentElement;document.getElementById('rp').style.width=((d.scrollTop||document.body.scrollTop)/(d.scrollHeight-d.clientHeight)*100)+'%'});
+
+const phases=[
+  {time:'5 min',de:'🔥 Dopamin steigt stark an. Puls normalisiert sich. Dein Gehirn schaltet von Standby auf Aktiv. Perfekt um schwierige Aufgaben zu starten.',en:'🔥 Dopamine rises strongly. Heart rate normalizes. Your brain switches from standby to active. Perfect for starting difficult tasks.'},
+  {time:'45 min',de:'🎯 PEAK! Das ist dein goldenes Fenster. Starte jetzt deine wichtigste Aufgabe. Kein Handy, kein Ablenkung – nur fokussierte Arbeit.',en:'🎯 PEAK! This is your golden window. Start your most important task now. No phone, no distraction – just focused work.'},
+  {time:'90 min',de:'💡 Fokus bleibt, aber Kreativität steigt. Ideal für Brainstorming, kreative Projekte und neue Ideen.',en:'💡 Focus remains but creativity increases. Ideal for brainstorming, creative projects and new ideas.'},
+  {time:'90+ min',de:'😌 Das Fenster schließt sich. Kurze Pause einlegen. Dann die nächste Sporteinheit planen!',en:'😌 The window is closing. Take a short break. Then plan the next sport session!'}
+];
+
+function setPhase(i){
+  document.querySelectorAll('.clock-phase').forEach((p,j)=>p.classList.toggle('active',i===j));
+  document.getElementById('clockTime').textContent=phases[i].time;
+  document.getElementById('phaseDesc').textContent=phases[i][lang];
+}
+
+let matchDone=false;
+function matchTask(btn,correct){
+  if(matchDone)return;matchDone=true;
+  const isEn=lang==='en';
+  document.querySelectorAll('.task-item').forEach(b=>b.disabled=true);
+  btn.classList.add(correct?'matched':'wrong');
+  const r=document.getElementById('matchResult');
+  r.classList.add('show');
+  r.textContent=correct?(isEn?'✅ Correct! The most important task of the day belongs in the peak focus window. Save social media for later.':'✅ Richtig! Die wichtigste Aufgabe gehört ins Peak-Fokus-Fenster. Social Media kommt später.'):(isEn?'❌ Not quite. The peak focus window is too valuable for that. Save it for your most important task.':'❌ Nicht ganz. Das Peak-Fokus-Fenster ist zu wertvoll dafür. Nutze es für deine wichtigste Aufgabe.');
+}
+</script>
+</body>
+</html>

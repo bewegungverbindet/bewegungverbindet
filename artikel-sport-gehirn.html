@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 680 680'><circle cx='340' cy='340' r='340' fill='%232d6a4f'/><text x='260' y='410' font-family='Georgia' font-size='240' font-weight='700' fill='%23f7f4ef'>B</text><text x='430' y='410' font-family='Georgia' font-size='240' font-weight='700' fill='%231c1a16'>V</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="VDSCh8TTqZUptly6CAik9csSDh3nkavv_aQneLgaEBA" />
+<meta name="description" content="Wie verändert Sport dein Gehirn? Studien, Fakten und praktische Tipps – auf BewegungVerbindet.">
+<meta property="og:title" content="Sport & Gehirn – BewegungVerbindet">
+<meta property="og:description" content="Was Bewegung mit deinem Gehirn macht – wissenschaftlich erklärt.">
+<meta property="og:url" content="https://bewegungverbindet.netlify.app/artikel-sport-gehirn.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sport & Gehirn – BewegungVerbindet">
+<meta name="twitter:description" content="Was Sport mit deinem Gehirn macht.">
+<title>20 Minuten Sport = 2 Stunden Fokus | BewegungVerbindet</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;0,900;1,300;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f4ef;
+    --text: #1c1a16;
+    --muted: #8a8478;
+    --accent: #2d6a4f;
+    --accent2: #74c69d;
+    --accent3: #e76f51;
+    --surface: #ffffff;
+    --border: rgba(28,26,22,0.1);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.7; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 2rem;
+    background: rgba(247,244,239,0.92); backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+  }
+  .logo { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+  .logo span { color: var(--text); }
+  .nav-right { display: flex; align-items: center; gap: 1rem; }
+  .lang-switcher { display: flex; gap: 3px; background: var(--bg); border: 0.5px solid var(--border); border-radius: 100px; padding: 3px; }
+  .lang-btn { background: none; border: none; font-size: 11px; font-weight: 500; padding: 3px 8px; border-radius: 100px; cursor: pointer; color: var(--muted); transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
+  .lang-btn.active { background: var(--accent); color: white; }
+  .back-btn { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .back-btn:hover { color: var(--text); }
+
+  /* HERO */
+  .article-hero {
+    padding: 7rem 2rem 3rem;
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .article-tag {
+    display: inline-block; font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); background: rgba(45,106,79,0.1);
+    padding: 5px 14px; border-radius: 100px; margin-bottom: 1.5rem;
+  }
+  .article-hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900; letter-spacing: -0.03em; line-height: 1.1;
+    margin-bottom: 1.25rem;
+  }
+  .article-hero h1 em { font-style: italic; color: var(--accent); }
+  .article-meta { font-size: 13px; color: var(--muted); margin-bottom: 2rem; }
+  .article-meta span { margin: 0 8px; }
+
+  /* READ PROGRESS */
+  .read-progress {
+    position: fixed; top: 0; left: 0; height: 3px;
+    background: var(--accent); z-index: 200;
+    transition: width 0.1s;
+    width: 0%;
+  }
+
+  /* ARTICLE BODY */
+  .article-body {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+  }
+
+  .article-body p { font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--text); }
+  .article-body h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.8rem; font-weight: 900;
+    letter-spacing: -0.02em; margin: 3rem 0 1rem;
+    line-height: 1.2;
+  }
+  .article-body h2 em { font-style: italic; color: var(--accent); }
+  .article-body h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.2rem; font-weight: 700; margin: 2rem 0 0.75rem;
+  }
+
+  /* LEAD / INTRO */
+  .lead {
+    font-size: 1.2rem !important;
+    color: var(--muted) !important;
+    font-style: italic;
+    border-left: 3px solid var(--accent);
+    padding-left: 1.25rem;
+    margin-bottom: 2rem !important;
+  }
+
+  /* STUDY BOX */
+  .study-box {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2.5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .study-box::before {
+    content: '🔬';
+    position: absolute; top: 1.5rem; right: 1.5rem;
+    font-size: 2rem; opacity: 0.3;
+  }
+  .study-label {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+  .study-title { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .study-text { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 1rem; }
+  .study-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .study-stat { text-align: center; }
+  .study-stat-num { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 900; color: var(--accent); }
+  .study-stat-label { font-size: 11px; color: var(--muted); line-height: 1.3; }
+
+  /* INTERACTIVE: DOPAMIN METER */
+  .interactive-block {
+    background: linear-gradient(135deg, rgba(45,106,79,0.05), rgba(116,198,157,0.08));
+    border: 0.5px solid rgba(45,106,79,0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2.5rem 0;
+  }
+  .interactive-label {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .interactive-label::before { content: '⚡'; }
+  .interactive-title { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .interactive-sub { font-size: 13px; color: var(--muted); margin-bottom: 1.5rem; }
+
+  /* SLIDER */
+  .slider-wrap { margin-bottom: 1rem; }
+  .slider-label { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+  input[type=range] {
+    width: 100%; -webkit-appearance: none; height: 6px;
+    border-radius: 3px; background: var(--border); outline: none;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 20px; height: 20px;
+    border-radius: 50%; background: var(--accent); cursor: pointer;
+  }
+  .slider-result {
+    margin-top: 1.25rem; background: var(--surface);
+    border-radius: 14px; padding: 1rem 1.25rem;
+    font-size: 14px; line-height: 1.5;
+    border: 0.5px solid var(--border);
+    min-height: 60px;
+    transition: all 0.3s;
+  }
+  .slider-result strong { color: var(--accent); }
+
+  /* BRAIN ANIMATION */
+  .brain-viz {
+    display: flex; align-items: center; justify-content: center;
+    gap: 2rem; margin: 1.5rem 0; flex-wrap: wrap;
+  }
+  .brain-state {
+    text-align: center; padding: 1rem 1.5rem;
+    background: var(--surface); border-radius: 16px;
+    border: 0.5px solid var(--border); min-width: 120px;
+    transition: all 0.4s;
+  }
+  .brain-state.active { border-color: var(--accent); background: rgba(45,106,79,0.05); }
+  .brain-icon { font-size: 2rem; margin-bottom: 6px; }
+  .brain-label { font-size: 12px; color: var(--muted); }
+  .brain-value { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700; }
+  .brain-arrow { font-size: 1.5rem; color: var(--accent2); }
+
+  /* QUIZ */
+  .quiz-block {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: 20px; padding: 2rem; margin: 2.5rem 0;
+  }
+  .quiz-label {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent3); margin-bottom: 1rem;
+  }
+  .quiz-q { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 1.25rem; }
+  .quiz-options { display: flex; flex-direction: column; gap: 8px; }
+  .quiz-opt {
+    background: var(--bg); border: 0.5px solid var(--border);
+    border-radius: 12px; padding: 12px 16px; font-size: 14px;
+    cursor: pointer; transition: all 0.2s; color: var(--text);
+    font-family: 'DM Sans', sans-serif; text-align: left;
+  }
+  .quiz-opt:hover { border-color: var(--accent3); }
+  .quiz-opt.correct { border-color: var(--accent); background: rgba(45,106,79,0.08); color: var(--accent); font-weight: 500; }
+  .quiz-opt.wrong { border-color: var(--accent3); background: rgba(231,111,81,0.08); color: var(--accent3); }
+  .quiz-feedback { margin-top: 1rem; font-size: 14px; padding: 12px 16px; border-radius: 12px; display: none; line-height: 1.5; }
+  .quiz-feedback.show { display: block; }
+  .quiz-feedback.correct { background: rgba(45,106,79,0.08); color: var(--accent); }
+  .quiz-feedback.wrong { background: rgba(231,111,81,0.08); color: var(--accent3); }
+
+  /* TIMELINE */
+  .timeline { margin: 2rem 0; }
+  .timeline-item {
+    display: flex; gap: 1rem; margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem; border-bottom: 0.5px solid var(--border);
+    cursor: pointer; transition: all 0.2s;
+  }
+  .timeline-item:last-child { border-bottom: none; margin-bottom: 0; }
+  .timeline-item:hover .timeline-content { transform: translateX(4px); }
+  .timeline-time {
+    font-family: 'Fraunces', serif; font-size: 1.1rem;
+    font-weight: 700; color: var(--accent); min-width: 60px;
+    line-height: 1.2;
+  }
+  .timeline-content { flex: 1; transition: transform 0.2s; }
+  .timeline-title { font-weight: 500; font-size: 15px; margin-bottom: 3px; }
+  .timeline-text { font-size: 13px; color: var(--muted); line-height: 1.5; }
+  .timeline-bar {
+    height: 4px; border-radius: 2px; background: var(--border);
+    margin-top: 8px; overflow: hidden;
+  }
+  .timeline-bar-fill {
+    height: 100%; border-radius: 2px; background: var(--accent);
+    width: 0%; transition: width 1s ease;
+  }
+
+  /* HIGHLIGHT QUOTE */
+  .pull-quote {
+    font-family: 'Fraunces', serif;
+    font-size: 1.6rem; font-weight: 700; font-style: italic;
+    color: var(--accent); text-align: center;
+    padding: 2rem 0; border-top: 0.5px solid var(--border);
+    border-bottom: 0.5px solid var(--border); margin: 2.5rem 0;
+    line-height: 1.3;
+  }
+
+  /* TIPS */
+  .tips-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 1.5rem 0; }
+  .tip-card {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: 16px; padding: 1.25rem;
+    transition: transform 0.2s;
+  }
+  .tip-card:hover { transform: translateY(-3px); }
+  .tip-icon { font-size: 1.5rem; margin-bottom: 8px; }
+  .tip-title { font-weight: 500; font-size: 14px; margin-bottom: 4px; }
+  .tip-text { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  /* SHARE */
+  .share-block {
+    background: var(--accent); color: white;
+    border-radius: 20px; padding: 2rem; text-align: center; margin: 3rem 0;
+  }
+  .share-title { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 900; margin-bottom: 0.5rem; }
+  .share-sub { font-size: 14px; opacity: 0.8; margin-bottom: 1.5rem; }
+  .share-btn {
+    background: white; color: var(--accent);
+    border: none; border-radius: 100px;
+    padding: 12px 24px; font-size: 14px; font-weight: 500;
+    cursor: pointer; font-family: 'DM Sans', sans-serif;
+    transition: opacity 0.2s; margin: 4px;
+  }
+  .share-btn:hover { opacity: 0.9; }
+
+  /* AUTHOR */
+  .author-block {
+    display: flex; gap: 1rem; align-items: center;
+    background: var(--surface); border-radius: 16px;
+    border: 0.5px solid var(--border); padding: 1.25rem;
+    margin: 2rem 0;
+  }
+  .author-avatar {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: rgba(45,106,79,0.15);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; flex-shrink: 0;
+  }
+  .author-name { font-weight: 500; font-size: 15px; }
+  .author-bio { font-size: 13px; color: var(--muted); }
+
+  /* NEXT ARTICLE */
+  .next-article {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: 20px; padding: 1.5rem; text-align: center;
+    text-decoration: none; color: var(--text); display: block;
+    transition: transform 0.2s;
+  }
+  .next-article:hover { transform: translateY(-3px); }
+  .next-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  .next-title { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700; }
+
+  @media(max-width:600px){
+    .study-stats { grid-template-columns: 1fr; }
+    .tips-grid { grid-template-columns: 1fr; }
+    .brain-viz { flex-direction: column; gap: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="read-progress" id="readProgress"></div>
+
+<nav>
+  <a href="index.html" class="logo">Bewegung<span>Verbindet</span></a>
+  <div class="nav-right">
+    <a href="index.html" class="back-btn" data-de="← Zurück" data-en="← Back">← Zurück</a>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="article-hero">
+  <span class="article-tag" data-de="Sport & Gehirn" data-en="Sport & Brain">Sport & Gehirn</span>
+  <h1 data-de="20 Minuten Sport –<br><em>2 Stunden Fokus.</em><br>Die Wissenschaft dahinter." data-en="20 Minutes of Sport –<br><em>2 Hours of Focus.</em><br>The Science Behind It.">
+    20 Minuten Sport –<br><em>2 Stunden Fokus.</em><br>Die Wissenschaft dahinter.
+  </h1>
+  <div class="article-meta">
+    <span data-de="BewegungVerbindet Team" data-en="BewegungVerbindet Team">BewegungVerbindet Team</span>
+    <span>·</span>
+    <span data-de="5 Min Lesedauer" data-en="5 min read">5 Min Lesedauer</span>
+    <span>·</span>
+    <span data-de="Interaktiver Artikel" data-en="Interactive Article">⚡ Interaktiver Artikel</span>
+  </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article-body">
+
+  <p class="lead" data-de="Du sitzt seit einer Stunde am Schreibtisch. Nichts geht. Der Kopf ist voll – aber leer. Kennst du dieses Gefühl? Was wäre, wenn 20 Minuten Bewegung das in 2 Stunden produktive Arbeit verwandeln könnten?" data-en="You've been sitting at your desk for an hour. Nothing works. Your head is full – but empty. Do you know this feeling? What if 20 minutes of movement could turn that into 2 hours of productive work?">
+    Du sitzt seit einer Stunde am Schreibtisch. Nichts geht. Der Kopf ist voll – aber leer. Kennst du dieses Gefühl? Was wäre, wenn 20 Minuten Bewegung das in 2 Stunden produktive Arbeit verwandeln könnten?
+  </p>
+
+  <p data-de="Es ist kein Mythos. Es ist Neurochemie. Und es verändert gerade das Leben von tausenden Menschen die ihren Kopf durch Bewegung befreien." data-en="It's not a myth. It's neurochemistry. And it's currently changing the lives of thousands of people who free their minds through movement.">
+    Es ist kein Mythos. Es ist Neurochemie. Und es verändert gerade das Leben von tausenden Menschen die ihren Kopf durch Bewegung befreien.
+  </p>
+
+  <!-- STUDY BOX -->
+  <div class="study-box">
+    <div class="study-label" data-de="Wissenschaftliche Studie" data-en="Scientific Study">Wissenschaftliche Studie</div>
+    <div class="study-title" data-de="Harvard Medical School, 2023" data-en="Harvard Medical School, 2023">Harvard Medical School, 2023</div>
+    <div class="study-text" data-de='Forscher der Harvard Medical School untersuchten den Effekt von aerober Bewegung auf kognitive Leistung und Aufmerksamkeit. Das Ergebnis war eindeutig: Bereits 20 Minuten moderater Sport steigern Dopamin, Serotonin und Noradrenalin – die drei wichtigsten Neurotransmitter für Fokus und Motivation.' data-en='Researchers at Harvard Medical School studied the effect of aerobic exercise on cognitive performance and attention. The result was clear: just 20 minutes of moderate sport increases dopamine, serotonin and noradrenaline – the three most important neurotransmitters for focus and motivation.'>
+      Forscher der Harvard Medical School untersuchten den Effekt von aerober Bewegung auf kognitive Leistung und Aufmerksamkeit. Das Ergebnis war eindeutig: Bereits 20 Minuten moderater Sport steigern Dopamin, Serotonin und Noradrenalin – die drei wichtigsten Neurotransmitter für Fokus und Motivation.
+    </div>
+    <div class="study-stats">
+      <div class="study-stat">
+        <div class="study-stat-num">+40%</div>
+        <div class="study-stat-label" data-de="mehr Fokus nach dem Sport" data-en="more focus after sport">mehr Fokus nach dem Sport</div>
+      </div>
+      <div class="study-stat">
+        <div class="study-stat-num">90 Min</div>
+        <div class="study-stat-label" data-de="durchschnittliches Fokus-Fenster" data-en="average focus window">durchschnittliches Fokus-Fenster</div>
+      </div>
+      <div class="study-stat">
+        <div class="study-stat-num">20 Min</div>
+        <div class="study-stat-label" data-de="reichen bereits für den Effekt" data-en="already enough for the effect">reichen bereits für den Effekt</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 data-de="Was passiert in deinem<br><em>Gehirn?</em>" data-en="What happens in your<br><em>brain?</em>">Was passiert in deinem<br><em>Gehirn?</em></h2>
+
+  <p data-de="Wenn du dich bewegst, schüttet dein Gehirn sofort drei Substanzen aus die normalerweise durch Medikamente oder externe Stimulation ausgelöst werden müssen." data-en="When you move, your brain immediately releases three substances that normally have to be triggered by medication or external stimulation.">
+    Wenn du dich bewegst, schüttet dein Gehirn sofort drei Substanzen aus die normalerweise durch Medikamente oder externe Stimulation ausgelöst werden müssen.
+  </p>
+
+  <!-- INTERACTIVE: SLIDER -->
+  <div class="interactive-block">
+    <div class="interactive-label" data-de="Interaktiv – probier es aus" data-en="Interactive – try it out">Interaktiv – probier es aus</div>
+    <div class="interactive-title" data-de="Wie lange bewegst du dich?" data-en="How long do you exercise?">Wie lange bewegst du dich?</div>
+    <div class="interactive-sub" data-de="Zieh den Slider und sieh was in deinem Gehirn passiert." data-en="Drag the slider and see what happens in your brain.">Zieh den Slider und sieh was in deinem Gehirn passiert.</div>
+
+    <div class="slider-wrap">
+      <div class="slider-label">
+        <span data-de="0 Minuten" data-en="0 minutes">0 Minuten</span>
+        <span id="sliderVal">10 min</span>
+        <span data-de="60 Minuten" data-en="60 minutes">60 Minuten</span>
+      </div>
+      <input type="range" min="0" max="60" value="10" id="sportSlider" oninput="updateSlider(this.value)" />
+    </div>
+
+    <div class="brain-viz">
+      <div class="brain-state" id="brainBefore">
+        <div class="brain-icon">😵</div>
+        <div class="brain-label" data-de="Vorher" data-en="Before">Vorher</div>
+        <div class="brain-value" data-de="Blockiert" data-en="Blocked">Blockiert</div>
+      </div>
+      <div class="brain-arrow">→</div>
+      <div class="brain-state" id="brainAfter">
+        <div class="brain-icon" id="brainIcon">🚴</div>
+        <div class="brain-label" data-de="Nach Sport" data-en="After sport">Nach Sport</div>
+        <div class="brain-value" id="brainValue">–</div>
+      </div>
+    </div>
+
+    <div class="slider-result" id="sliderResult">
+      <span data-de="👆 Zieh den Slider um zu sehen was passiert!" data-en="👆 Drag the slider to see what happens!">👆 Zieh den Slider um zu sehen was passiert!</span>
+    </div>
+  </div>
+
+  <h2 data-de="Das <em>Fokus-Fenster</em> –<br>dein geheimes Zeitfenster." data-en="The <em>Focus Window</em> –<br>your secret time slot.">Das <em>Fokus-Fenster</em> –<br>dein geheimes Zeitfenster.</h2>
+
+  <p data-de="Nach dem Sport hast du ein Zeitfenster höchster Konzentration. Dein Gehirn ist aufgewärmt, die Neurotransmitter sind erhöht. Wenn du das richtig nutzt, kannst du in 90 Minuten mehr schaffen als in einem ganzen normalen Tag." data-en="After sport you have a window of peak concentration. Your brain is warmed up, neurotransmitters are elevated. If you use this correctly, you can achieve more in 90 minutes than in an entire normal day.">
+    Nach dem Sport hast du ein Zeitfenster höchster Konzentration. Dein Gehirn ist aufgewärmt, die Neurotransmitter sind erhöht. Wenn du das richtig nutzt, kannst du in 90 Minuten mehr schaffen als in einem ganzen normalen Tag.
+  </p>
+
+  <!-- TIMELINE -->
+  <div class="interactive-block">
+    <div class="interactive-label" data-de="Dein Zeitplan nach dem Sport" data-en="Your timeline after sport">Dein Zeitplan nach dem Sport</div>
+    <div class="interactive-title" data-de="Klick auf eine Phase um mehr zu erfahren:" data-en="Click on a phase to learn more:">Klick auf eine Phase um mehr zu erfahren:</div>
+    <br>
+    <div class="timeline" id="timeline">
+      <div class="timeline-item" onclick="showPhase(0)">
+        <div class="timeline-time">0–5<br>Min</div>
+        <div class="timeline-content">
+          <div class="timeline-title" data-de="🔥 Aktivierungsphase" data-en="🔥 Activation phase">🔥 Aktivierungsphase</div>
+          <div class="timeline-text" data-de="Puls normalisiert sich, Dopamin steigt stark an." data-en="Heart rate normalizes, dopamine rises sharply.">Puls normalisiert sich, Dopamin steigt stark an.</div>
+          <div class="timeline-bar"><div class="timeline-bar-fill" data-width="95"></div></div>
+        </div>
+      </div>
+      <div class="timeline-item" onclick="showPhase(1)">
+        <div class="timeline-time">5–45<br>Min</div>
+        <div class="timeline-content">
+          <div class="timeline-title" data-de="🎯 Peak-Fokus-Fenster" data-en="🎯 Peak focus window">🎯 Peak-Fokus-Fenster</div>
+          <div class="timeline-text" data-de="Höchste Konzentration. Jetzt die wichtigste Aufgabe angehen!" data-en="Highest concentration. Now tackle the most important task!">Höchste Konzentration. Jetzt die wichtigste Aufgabe angehen!</div>
+          <div class="timeline-bar"><div class="timeline-bar-fill" data-width="100"></div></div>
+        </div>
+      </div>
+      <div class="timeline-item" onclick="showPhase(2)">
+        <div class="timeline-time">45–90<br>Min</div>
+        <div class="timeline-content">
+          <div class="timeline-title" data-de="💡 Kreativ-Phase" data-en="💡 Creative phase">💡 Kreativ-Phase</div>
+          <div class="timeline-text" data-de="Fokus bleibt, kreatives Denken nimmt zu. Ideal für Ideen." data-en="Focus remains, creative thinking increases. Ideal for ideas.">Fokus bleibt, kreatives Denken nimmt zu. Ideal für Ideen.</div>
+          <div class="timeline-bar"><div class="timeline-bar-fill" data-width="70"></div></div>
+        </div>
+      </div>
+      <div class="timeline-item" onclick="showPhase(3)">
+        <div class="timeline-time">90+<br>Min</div>
+        <div class="timeline-content">
+          <div class="timeline-title" data-de="😌 Erholungsphase" data-en="😌 Recovery phase">😌 Erholungsphase</div>
+          <div class="timeline-text" data-de="Effekt lässt nach. Kurze Pause – dann neue Sport-Einheit planen." data-en="Effect fades. Short break – then plan a new sport session.">Effekt lässt nach. Kurze Pause – dann neue Sport-Einheit planen.</div>
+          <div class="timeline-bar"><div class="timeline-bar-fill" data-width="30"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pull-quote" data-de='"Bewegung ist keine Ablenkung von der Arbeit – sie ist die beste Vorbereitung dafür."' data-en='"Movement is not a distraction from work – it is the best preparation for it."'>
+    "Bewegung ist keine Ablenkung von der Arbeit – sie ist die beste Vorbereitung dafür."
+  </div>
+
+  <!-- QUIZ -->
+  <div class="quiz-block">
+    <div class="quiz-label" data-de="Quick Quiz – teste dein Wissen" data-en="Quick Quiz – test your knowledge">Quick Quiz – teste dein Wissen</div>
+    <div class="quiz-q" data-de="Welcher Neurotransmitter ist am wichtigsten für Fokus und Motivation?" data-en="Which neurotransmitter is most important for focus and motivation?">Welcher Neurotransmitter ist am wichtigsten für Fokus und Motivation?</div>
+    <div class="quiz-options">
+      <button class="quiz-opt" onclick="checkAnswer(this, false)" data-de="Adrenalin" data-en="Adrenaline">Adrenalin</button>
+      <button class="quiz-opt" onclick="checkAnswer(this, true)" data-de="Dopamin ✓" data-en="Dopamine ✓">Dopamin</button>
+      <button class="quiz-opt" onclick="checkAnswer(this, false)" data-de="Kortisol" data-en="Cortisol">Kortisol</button>
+      <button class="quiz-opt" onclick="checkAnswer(this, false)" data-de="Melatonin" data-en="Melatonin">Melatonin</button>
+    </div>
+    <div class="quiz-feedback" id="quizFeedback"></div>
+  </div>
+
+  <h2 data-de="<em>Wie du</em> das heute<br>anwenden kannst." data-en="<em>How you</em> can apply<br>this today.">
+    <em>Wie du</em> das heute<br>anwenden kannst.
+  </h2>
+
+  <p data-de="Die Wissenschaft ist klar. Aber wie setzt du das konkret um – besonders wenn Motivation fehlt?" data-en="The science is clear. But how do you implement this concretely – especially when motivation is lacking?">
+    Die Wissenschaft ist klar. Aber wie setzt du das konkret um – besonders wenn Motivation fehlt?
+  </p>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <div class="tip-icon">🚴</div>
+      <div class="tip-title" data-de="Klein starten" data-en="Start small">Klein starten</div>
+      <div class="tip-text" data-de="10 Minuten Rad, Spaziergang oder Treppe reichen. Kein Marathon nötig." data-en="10 minutes cycling, walking or stairs are enough. No marathon needed.">10 Minuten Rad, Spaziergang oder Treppe reichen. Kein Marathon nötig.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">📋</div>
+      <div class="tip-title" data-de="Aufgabe vorher definieren" data-en="Define task beforehand">Aufgabe vorher definieren</div>
+      <div class="tip-text" data-de="Bevor du gehst: Schreib auf was du danach tun wirst. Dein Gehirn bereitet sich vor." data-en="Before you go: write down what you will do afterwards. Your brain prepares itself.">Bevor du gehst: Schreib auf was du danach tun wirst. Dein Gehirn bereitet sich vor.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">⏱️</div>
+      <div class="tip-title" data-de="Sofort danach starten" data-en="Start immediately after">Sofort danach starten</div>
+      <div class="tip-text" data-de="Kein Handy, kein Social Media. Direkt nach dem Sport in die wichtigste Aufgabe." data-en="No phone, no social media. Straight into the most important task after sport.">Kein Handy, kein Social Media. Direkt nach dem Sport in die Aufgabe.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-icon">🌿</div>
+      <div class="tip-title" data-de="Draußen ist besser" data-en="Outdoors is better">Draußen ist besser</div>
+      <div class="tip-text" data-de="Natur verstärkt den Effekt. Grüne Umgebung senkt Kortisol zusätzlich um bis zu 20%." data-en="Nature amplifies the effect. Green surroundings additionally reduce cortisol by up to 20%.">Natur verstärkt den Effekt. Grüne Umgebung senkt Kortisol zusätzlich.</div>
+    </div>
+  </div>
+
+  <!-- AUTHOR -->
+  <div class="author-block">
+    <div class="author-avatar">🌿</div>
+    <div>
+      <div class="author-name">BewegungVerbindet Team</div>
+      <div class="author-bio" data-de="Wir teilen Erfahrungen, Studien und echte Geschichten rund um Sport und mentales Wohlbefinden. Weltweit. Ehrlich." data-en="We share experiences, studies and real stories around sport and mental wellbeing. Worldwide. Honest.">Wir teilen Erfahrungen, Studien und echte Geschichten rund um Sport und mentales Wohlbefinden. Weltweit. Ehrlich.</div>
+    </div>
+  </div>
+
+  <!-- SHARE -->
+  <div class="share-block">
+    <div class="share-title" data-de="Hat dir das geholfen?" data-en="Did this help you?">Hat dir das geholfen?</div>
+    <div class="share-sub" data-de="Teile diesen Artikel mit jemandem der einen klareren Kopf braucht." data-en="Share this article with someone who needs a clearer mind.">Teile diesen Artikel mit jemandem der einen klareren Kopf braucht.</div>
+    <button class="share-btn" onclick="shareArticle()">📤 <span data-de="Artikel teilen" data-en="Share article">Artikel teilen</span></button>
+    <button class="share-btn" onclick="copyLink()">🔗 <span data-de="Link kopieren" data-en="Copy link">Link kopieren</span></button>
+  </div>
+
+  <!-- NEXT ARTICLE -->
+  <div class="next-label" data-de="Nächster Artikel" data-en="Next article">Nächster Artikel</div>
+  <a href="#" class="next-article">
+    <div class="next-label" data-de="Kommt bald →" data-en="Coming soon →">Kommt bald →</div>
+    <div class="next-title" data-de="Das Fokus-Fenster nach dem Sport: Wie du die besten 90 Minuten deines Tages nutzt" data-en="The focus window after sport: How to use the best 90 minutes of your day">Das Fokus-Fenster nach dem Sport: Wie du die besten 90 Minuten deines Tages nutzt</div>
+  </a>
+
+</div>
+
+<script>
+// LANG
+let currentLang = 'de';
+function setLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+  document.querySelectorAll('[data-de]').forEach(el => {
+    const text = el.getAttribute('data-' + lang);
+    if (text) el.innerHTML = text;
+  });
+  document.documentElement.lang = lang;
+  updateSlider(document.getElementById('sportSlider').value);
+}
+
+// READ PROGRESS
+window.addEventListener('scroll', () => {
+  const doc = document.documentElement;
+  const scrollTop = doc.scrollTop || document.body.scrollTop;
+  const scrollHeight = doc.scrollHeight - doc.clientHeight;
+  const progress = (scrollTop / scrollHeight) * 100;
+  document.getElementById('readProgress').style.width = progress + '%';
+});
+
+// SLIDER
+function updateSlider(val) {
+  const isEn = currentLang === 'en';
+  document.getElementById('sliderVal').textContent = val + ' min';
+  const result = document.getElementById('sliderResult');
+  const icon = document.getElementById('brainIcon');
+  const value = document.getElementById('brainValue');
+  const after = document.getElementById('brainAfter');
+
+  after.classList.add('active');
+
+  if (val == 0) {
+    icon.textContent = '😵'; value.textContent = isEn ? 'Blocked' : 'Blockiert';
+    result.innerHTML = isEn ? '😴 No movement yet – your brain is still in standby mode.' : '😴 Noch keine Bewegung – dein Gehirn ist noch im Standby-Modus.';
+    after.classList.remove('active');
+  } else if (val <= 10) {
+    icon.textContent = '🚶'; value.textContent = isEn ? 'Waking up' : 'Aufwachen';
+    result.innerHTML = isEn ? '⚡ <strong>First dopamine release!</strong> Your brain is starting to activate. Concentration increases slightly.' : '⚡ <strong>Erste Dopamin-Ausschüttung!</strong> Dein Gehirn beginnt sich zu aktivieren. Konzentration steigt leicht.';
+  } else if (val <= 20) {
+    icon.textContent = '🚴'; value.textContent = isEn ? 'Focused' : 'Fokussiert';
+    result.innerHTML = isEn ? '🎯 <strong>The sweet spot!</strong> 20 minutes is enough for a full focus window of up to 90 minutes. Dopamine and serotonin are at their peak.' : '🎯 <strong>Der Sweet Spot!</strong> 20 Minuten reichen für ein volles Fokus-Fenster von bis zu 90 Minuten. Dopamin und Serotonin auf dem Höhepunkt.';
+  } else if (val <= 40) {
+    icon.textContent = '🏃'; value.textContent = isEn ? 'High performance' : 'Hochleistung';
+    result.innerHTML = isEn ? '🚀 <strong>Maximum effect!</strong> Your brain is in full performance mode. BDNF (brain-derived neurotrophic factor) is released – new neural connections are formed.' : '🚀 <strong>Maximaler Effekt!</strong> Dein Gehirn ist im Hochleistungsmodus. BDNF (brain-derived neurotrophic factor) wird ausgeschüttet – neue neuronale Verbindungen entstehen.';
+  } else {
+    icon.textContent = '🌟'; value.textContent = isEn ? 'Flow state' : 'Flow-Zustand';
+    result.innerHTML = isEn ? '🌟 <strong>Flow state!</strong> 60 minutes of sport puts your brain in an exceptional state. But warning: recovery is now also important.' : '🌟 <strong>Flow-Zustand!</strong> 60 Minuten Sport bringen dein Gehirn in einen außergewöhnlichen Zustand. Aber Achtung: Erholung ist jetzt auch wichtig.';
+  }
+}
+
+// TIMELINE BARS
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.timeline-bar-fill').forEach(bar => {
+      bar.style.width = bar.getAttribute('data-width') + '%';
+    });
+  }, 500);
+});
+
+function showPhase(idx) {
+  const phases = [
+    { de: '💊 Dopamin steigt um bis zu 200% an. Dein Gehirn schaltet von Standby auf Aktiv. Perfekt um schwierige Aufgaben zu starten.', en: '💊 Dopamine rises by up to 200%. Your brain switches from standby to active. Perfect for starting difficult tasks.' },
+    { de: '🎯 Dies ist dein goldenes Zeitfenster. Starte jetzt deine wichtigste Aufgabe des Tages. Kein Handy, kein Social Media.', en: '🎯 This is your golden time window. Start your most important task of the day now. No phone, no social media.' },
+    { de: '💡 Kreativität und Querdenken steigen an. Ideal für Brainstorming, neue Ideen und kreative Projekte.', en: '💡 Creativity and lateral thinking increase. Ideal for brainstorming, new ideas and creative projects.' },
+    { de: '😌 Plane jetzt die nächste Bewegungseinheit. Der Kreislauf wiederholt sich – du baust täglich mehr Kapazität auf.', en: '😌 Now plan your next movement session. The cycle repeats itself – you build more capacity every day.' }
+  ];
+  const isEn = currentLang === 'en';
+  alert(isEn ? phases[idx].en : phases[idx].de);
+}
+
+// QUIZ
+let quizAnswered = false;
+function checkAnswer(btn, correct) {
+  if (quizAnswered) return;
+  quizAnswered = true;
+  const isEn = currentLang === 'en';
+  const feedback = document.getElementById('quizFeedback');
+  document.querySelectorAll('.quiz-opt').forEach(b => b.disabled = true);
+
+  if (correct) {
+    btn.classList.add('correct');
+    feedback.className = 'quiz-feedback show correct';
+    feedback.textContent = isEn
+      ? '✅ Correct! Dopamine is the key neurotransmitter for motivation, focus and reward – and sport is the most natural way to boost it.'
+      : '✅ Richtig! Dopamin ist der wichtigste Neurotransmitter für Motivation, Fokus und Belohnung – und Sport ist der natürlichste Weg es zu steigern.';
+  } else {
+    btn.classList.add('wrong');
+    feedback.className = 'quiz-feedback show wrong';
+    feedback.textContent = isEn
+      ? '❌ Not quite. The answer is dopamine – the happiness hormone that sport releases naturally and immediately.'
+      : '❌ Nicht ganz. Die Antwort ist Dopamin – das Glückshormon das Sport natürlich und sofort ausschüttet.';
+  }
+}
+
+// SHARE
+function shareArticle() {
+  if (navigator.share) {
+    navigator.share({ title: '20 Minuten Sport = 2 Stunden Fokus', url: window.location.href });
+  } else {
+    copyLink();
+  }
+}
+
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const isEn = currentLang === 'en';
+    alert(isEn ? '✓ Link copied!' : '✓ Link kopiert!');
+  });
+}
+
+// Init
+updateSlider(10);
+</script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 680 680'><circle cx='340' cy='340' r='340' fill='%232d6a4f'/><text x='260' y='410' font-family='Georgia' font-size='240' font-weight='700' fill='%23f7f4ef'>B</text><text x='430' y='410' font-family='Georgia' font-size='240' font-weight='700' fill='%231c1a16'>V</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="VDSCh8TTqZUptly6CAik9csSDh3nkavv_aQneLgaEBA" />
+<meta name="description" content="ADHS und Sport: Warum Bewegung die beste natürliche Therapie sein kann. Studien, Tipps und persönliche Einblicke.">
+<meta property="og:title" content="ADHS & Sport – BewegungVerbindet">
+<meta property="og:description" content="Sport als natürliche ADHS-Therapie – was die Wissenschaft sagt und wie du es umsetzt.">
+<meta property="og:url" content="https://bewegungverbindet.netlify.app/artikel-adhs-sport.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ADHS & Sport – BewegungVerbindet">
+<meta name="twitter:description" content="Warum Sport bei ADHS so wirksam ist.">
+<title>ADHS & Sport – Wie Bewegung das ADHS-Gehirn verändert | BewegungVerbindet</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;0,900;1,300;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f7f4ef;--text:#1c1a16;--muted:#8a8478;--accent:#2d6a4f;--accent2:#74c69d;--accent3:#e76f51;--accent4:#5b7fa6;--surface:#fff;--border:rgba(28,26,22,0.1)}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7}
+  .read-progress{position:fixed;top:0;left:0;height:3px;background:var(--accent4);z-index:200;transition:width .1s;width:0}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(247,244,239,0.92);backdrop-filter:blur(12px);border-bottom:.5px solid var(--border)}
+  .logo{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;color:var(--accent);text-decoration:none}.logo span{color:var(--text)}
+  .nav-right{display:flex;align-items:center;gap:1rem}
+  .back-btn{font-size:13px;color:var(--muted);text-decoration:none}.back-btn:hover{color:var(--text)}
+  .lang-switcher{display:flex;gap:3px;background:var(--bg);border:.5px solid var(--border);border-radius:100px;padding:3px}
+  .lang-btn{background:none;border:none;font-size:11px;font-weight:500;padding:3px 8px;border-radius:100px;cursor:pointer;color:var(--muted);transition:all .2s;font-family:'DM Sans',sans-serif}.lang-btn.active{background:var(--accent4);color:white}
+  .article-hero{padding:7rem 2rem 3rem;max-width:780px;margin:0 auto;text-align:center}
+  .article-tag{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent4);background:rgba(91,127,166,.1);padding:5px 14px;border-radius:100px;margin-bottom:1.5rem}
+  .article-hero h1{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:1.25rem}
+  .article-hero h1 em{font-style:italic;color:var(--accent4)}
+  .article-meta{font-size:13px;color:var(--muted);margin-bottom:2rem}.article-meta span{margin:0 8px}
+  .article-body{max-width:680px;margin:0 auto;padding:0 2rem 4rem}
+  .article-body p{font-size:1.05rem;margin-bottom:1.5rem}
+  .article-body h2{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:900;letter-spacing:-.02em;margin:3rem 0 1rem;line-height:1.2}
+  .article-body h2 em{font-style:italic;color:var(--accent4)}
+  .lead{font-size:1.2rem!important;color:var(--muted)!important;font-style:italic;border-left:3px solid var(--accent4);padding-left:1.25rem;margin-bottom:2rem!important}
+  .study-box{background:var(--surface);border:.5px solid var(--border);border-radius:20px;padding:2rem;margin:2.5rem 0;position:relative}
+  .study-box::before{content:'🔬';position:absolute;top:1.5rem;right:1.5rem;font-size:2rem;opacity:.3}
+  .study-label{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent4);margin-bottom:.75rem}
+  .study-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;margin-bottom:.5rem}
+  .study-text{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:1rem}
+  .study-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  .study-stat{text-align:center}.study-stat-num{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:900;color:var(--accent4)}.study-stat-label{font-size:11px;color:var(--muted);line-height:1.3}
+  .interactive-block{background:linear-gradient(135deg,rgba(91,127,166,.05),rgba(91,127,166,.1));border:.5px solid rgba(91,127,166,.2);border-radius:20px;padding:2rem;margin:2.5rem 0}
+  .interactive-label{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent4);margin-bottom:1rem;display:flex;align-items:center;gap:6px}.interactive-label::before{content:'⚡'}
+  .interactive-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;margin-bottom:.5rem}
+  .interactive-sub{font-size:13px;color:var(--muted);margin-bottom:1.5rem}
+  .pull-quote{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:700;font-style:italic;color:var(--accent4);text-align:center;padding:2rem 0;border-top:.5px solid var(--border);border-bottom:.5px solid var(--border);margin:2.5rem 0;line-height:1.3}
+  .tips-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.5rem 0}
+  .tip-card{background:var(--surface);border:.5px solid var(--border);border-radius:16px;padding:1.25rem;transition:transform .2s}.tip-card:hover{transform:translateY(-3px)}
+  .tip-icon{font-size:1.5rem;margin-bottom:8px}.tip-title{font-weight:500;font-size:14px;margin-bottom:4px}.tip-text{font-size:13px;color:var(--muted);line-height:1.5}
+  /* BRAIN COMPARE */
+  .brain-compare{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0}
+  .brain-col{background:var(--surface);border-radius:16px;padding:1.25rem;border:.5px solid var(--border)}
+  .brain-col-title{font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;margin-bottom:1rem;text-align:center}
+  .brain-col-title.before{color:var(--accent3)}.brain-col-title.after{color:var(--accent4)}
+  .brain-meter{display:flex;flex-direction:column;gap:8px}
+  .brain-row{display:flex;align-items:center;gap:8px;font-size:12px}
+  .brain-row-label{min-width:80px;color:var(--muted)}
+  .brain-bar{flex:1;height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+  .brain-fill{height:100%;border-radius:4px;width:0;transition:width 1.2s ease}
+  .fill-low{background:var(--accent3)}.fill-high{background:var(--accent4)}
+  /* MYTH BUSTER */
+  .myth-cards{display:flex;flex-direction:column;gap:10px;margin:1rem 0}
+  .myth-card{background:var(--surface);border:.5px solid var(--border);border-radius:14px;padding:14px 16px;cursor:pointer;transition:all .2s}
+  .myth-card:hover{border-color:var(--accent4)}
+  .myth-question{font-size:14px;font-weight:500;display:flex;align-items:center;gap:8px}
+  .myth-answer{font-size:13px;color:var(--muted);line-height:1.5;margin-top:8px;display:none;padding-top:8px;border-top:.5px solid var(--border)}
+  .myth-card.open .myth-answer{display:block}
+  .myth-card.open{border-color:var(--accent4);background:rgba(91,127,166,.04)}
+  .myth-icon{font-size:16px;transition:transform .2s}
+  .myth-card.open .myth-icon{transform:rotate(180deg)}
+  .share-block{background:var(--accent4);color:white;border-radius:20px;padding:2rem;text-align:center;margin:3rem 0}
+  .share-title{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:900;margin-bottom:.5rem}
+  .share-sub{font-size:14px;opacity:.8;margin-bottom:1.5rem}
+  .share-btn{background:white;color:var(--accent4);border:none;border-radius:100px;padding:12px 24px;font-size:14px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;margin:4px}.share-btn:hover{opacity:.9}
+  .author-block{display:flex;gap:1rem;align-items:center;background:var(--surface);border-radius:16px;border:.5px solid var(--border);padding:1.25rem;margin:2rem 0}
+  .author-avatar{width:52px;height:52px;border-radius:50%;background:rgba(91,127,166,.15);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0}
+  .author-name{font-weight:500;font-size:15px}.author-bio{font-size:13px;color:var(--muted)}
+  .next-article{background:var(--surface);border:.5px solid var(--border);border-radius:20px;padding:1.5rem;text-align:center;text-decoration:none;color:var(--text);display:block;transition:transform .2s}.next-article:hover{transform:translateY(-3px)}
+  .next-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+  .next-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700}
+  @media(max-width:600px){.study-stats,.brain-compare,.tips-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="read-progress" id="rp"></div>
+<nav>
+  <a href="index.html" class="logo">Bewegung<span>Verbindet</span></a>
+  <div class="nav-right">
+    <a href="bibliothek.html" class="back-btn" data-de="← Bibliothek" data-en="← Library">← Bibliothek</a>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <span class="article-tag">⚡ ADHS</span>
+  <h1 data-de="ADHS & Sport.<br>Wie Bewegung das<br><em>ADHS-Gehirn verändert.</em>" data-en="ADHD & Sport.<br>How movement<br><em>changes the ADHD brain.</em>">ADHS & Sport.<br>Wie Bewegung das<br><em>ADHS-Gehirn verändert.</em></h1>
+  <div class="article-meta">
+    <span>BewegungVerbindet</span><span>·</span>
+    <span data-de="5 Min Lesedauer" data-en="5 min read">5 Min Lesedauer</span>
+    <span>·</span><span>⚡ Interaktiv</span>
+  </div>
+</div>
+
+<div class="article-body">
+  <p class="lead" data-de="Das ADHS-Gehirn hat zu wenig Dopamin. Sport produziert Dopamin. Das ist keine Metapher – das ist Biochemie. Und es verändert alles." data-en="The ADHD brain has too little dopamine. Sport produces dopamine. That's not a metaphor – that's biochemistry. And it changes everything.">Das ADHS-Gehirn hat zu wenig Dopamin. Sport produziert Dopamin. Das ist keine Metapher – das ist Biochemie. Und es verändert alles.</p>
+
+  <p data-de="Menschen mit ADHS haben ein Gehirn das ständig nach Stimulation sucht. Es braucht mehr Reiz um denselben Dopaminpegel zu erreichen wie andere. Das führt zu Ablenkbarkeit, Impulsivität und Motivationsproblemen. Aber Sport – besonders aerober Sport – ist einer der wirkungsvollsten Wege dieses Ungleichgewicht zu korrigieren." data-en="People with ADHD have a brain that constantly seeks stimulation. It needs more stimulation to reach the same dopamine level as others. This leads to distractibility, impulsivity and motivation problems. But sport – especially aerobic sport – is one of the most powerful ways to correct this imbalance.">Menschen mit ADHS haben ein Gehirn das ständig nach Stimulation sucht. Sport ist einer der wirkungsvollsten Wege dieses Ungleichgewicht zu korrigieren.</p>
+
+  <div class="study-box">
+    <div class="study-label">Wissenschaftliche Studie</div>
+    <div class="study-title">Journal of Attention Disorders, 2020</div>
+    <div class="study-text" data-de="Eine Metaanalyse von 27 Studien untersuchte den Effekt von Sport auf ADHS-Symptome bei Kindern und Erwachsenen. Das Ergebnis: Regelmäßige aerobe Bewegung reduziert Unaufmerksamkeit, Hyperaktivität und Impulsivität signifikant – vergleichbar mit niedrigen Dosen von ADHS-Medikamenten." data-en="A meta-analysis of 27 studies examined the effect of sport on ADHD symptoms in children and adults. The result: regular aerobic exercise significantly reduces inattention, hyperactivity and impulsivity – comparable to low doses of ADHD medication.">Eine Metaanalyse von 27 Studien untersuchte Sport-Effekte auf ADHS. Aerobe Bewegung reduziert ADHS-Symptome signifikant – vergleichbar mit niedrigen Dosen ADHS-Medikamenten.</div>
+    <div class="study-stats">
+      <div class="study-stat"><div class="study-stat-num">41%</div><div class="study-stat-label" data-de="weniger Unaufmerksamkeit" data-en="less inattention">weniger Unaufmerksamkeit</div></div>
+      <div class="study-stat"><div class="study-stat-num">+60%</div><div class="study-stat-label" data-de="mehr Dopamin nach Sport" data-en="more dopamine after sport">mehr Dopamin nach Sport</div></div>
+      <div class="study-stat"><div class="study-stat-num">20min</div><div class="study-stat-label" data-de="reichen für den Effekt" data-en="enough for the effect">reichen für den Effekt</div></div>
+    </div>
+  </div>
+
+  <h2 data-de="Das ADHS-Gehirn<br><em>vor und nach</em> dem Sport." data-en="The ADHD brain<br><em>before and after</em> sport.">Das ADHS-Gehirn<br><em>vor und nach</em> dem Sport.</h2>
+
+  <div class="interactive-block">
+    <div class="interactive-label" data-de="Interaktiv – Gehirn Vergleich" data-en="Interactive – Brain comparison">Interaktiv – Gehirn Vergleich</div>
+    <div class="interactive-title" data-de="Was Sport im ADHS-Gehirn verändert:" data-en="What sport changes in the ADHD brain:">Was Sport im ADHS-Gehirn verändert:</div>
+    <div class="brain-compare">
+      <div class="brain-col">
+        <div class="brain-col-title before" data-de="😵 Vor dem Sport" data-en="😵 Before sport">😵 Vor dem Sport</div>
+        <div class="brain-meter">
+          <div class="brain-row"><div class="brain-row-label">Dopamin</div><div class="brain-bar"><div class="brain-fill fill-low" data-w="25"></div></div></div>
+          <div class="brain-row"><div class="brain-row-label">Fokus</div><div class="brain-bar"><div class="brain-fill fill-low" data-w="20"></div></div></div>
+          <div class="brain-row"><div class="brain-row-label" data-de="Ruhe" data-en="Calm">Ruhe</div><div class="brain-bar"><div class="brain-fill fill-low" data-w="15"></div></div></div>
+          <div class="brain-row"><div class="brain-row-label">Motivation</div><div class="brain-bar"><div class="brain-fill fill-low" data-w="20"></div></div></div>
+        </div>
+      </div>
+      <div class="brain-col">
+        <div class="brain-col-title after" data-de="🚀 Nach dem Sport" data-en="🚀 After sport">🚀 Nach dem Sport</div>
+        <div class="brain-meter">
+          <div class="brain-row"><div class="brain-row-label">Dopamin</div><div class="brain-bar"><div class="brain-fill fill-high" data-w="85"></div></div></div>
+          <div class="brain-row"><div class="brain-row-label">Fokus</div><div class="brain-bar"><div class="brain-fill fill-high" data-w="75"></div></div></div>
+          <div class="brain-row"><div class="brain-row-label" data-de="Ruhe" data-en="Calm">Ruhe</div><div class="brain-bar"><div class="brain-fill fill-high" data-w="70"></div></div></div>
+          <div class="brain-row"><div class="brain-row-label">Motivation</div><div class="brain-bar"><div class="brain-fill fill-high" data-w="80"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 data-de="<em>Mythen</em> über<br>ADHS & Sport." data-en="<em>Myths</em> about<br>ADHD & sport.">Mythen über<br>ADHS & Sport.</h2>
+  <p data-de="Klick auf einen Mythos und finde die Wahrheit:" data-en="Click on a myth and find the truth:">Klick auf einen Mythos und finde die Wahrheit:</p>
+
+  <div class="myth-cards">
+    <div class="myth-card" onclick="toggleMyth(this)">
+      <div class="myth-question"><span>❌</span><span data-de='"Menschen mit ADHS können sich nicht auf Sport konzentrieren."' data-en='"People with ADHD cannot concentrate on sport."'>"Menschen mit ADHS können sich nicht auf Sport konzentrieren."</span><span class="myth-icon">▼</span></div>
+      <div class="myth-answer" data-de="Falsch! Sport ist oft genau die Stimulation die das ADHS-Gehirn braucht. Bewegung, Rhythmus, Körpergefühl – das hält ADHSler besser fokussiert als viele andere Aktivitäten." data-en="Wrong! Sport is often exactly the stimulation the ADHD brain needs. Movement, rhythm, body awareness – this keeps people with ADHD more focused than many other activities.">Falsch! Sport ist oft genau die Stimulation die das ADHS-Gehirn braucht.</div>
+    </div>
+    <div class="myth-card" onclick="toggleMyth(this)">
+      <div class="myth-question"><span>❌</span><span data-de='"Sport ersetzt keine Medikamente bei ADHS."' data-en='"Sport cannot replace ADHD medication."'>"Sport ersetzt keine Medikamente bei ADHS."</span><span class="myth-icon">▼</span></div>
+      <div class="myth-answer" data-de="Teilweise wahr, aber vereinfacht. Studien zeigen: Regelmäßiger Sport kann bei leichten bis mittleren ADHS-Symptomen eine vergleichbare Wirkung haben. Er ist keine Entweder-oder-Entscheidung – Sport und Medikamente ergänzen sich optimal." data-en="Partly true, but simplified. Studies show: regular exercise can have comparable effects for mild to moderate ADHD symptoms. It's not an either-or decision – sport and medication complement each other optimally.">Teilweise wahr. Studien zeigen: Sport kann bei leichten ADHS-Symptomen vergleichbare Wirkung haben. Er ergänzt Medikamente optimal.</div>
+    </div>
+    <div class="myth-card" onclick="toggleMyth(this)">
+      <div class="myth-question"><span>❌</span><span data-de='"Man muss täglich trainieren damit es etwas bringt."' data-en='"You have to train daily for it to work."'>"Man muss täglich trainieren damit es etwas bringt."</span><span class="myth-icon">▼</span></div>
+      <div class="myth-answer" data-de="Nicht nötig! Schon 3 mal pro Woche 20 Minuten aerober Sport zeigen messbare Verbesserungen bei ADHS-Symptomen. Qualität und Regelmäßigkeit zählen mehr als Intensität." data-en="Not necessary! Even 3 times per week for 20 minutes of aerobic exercise shows measurable improvements in ADHD symptoms. Quality and regularity count more than intensity.">Nicht nötig! 3x pro Woche, 20 Minuten reichen für messbare Verbesserungen bei ADHS.</div>
+    </div>
+    <div class="myth-card" onclick="toggleMyth(this)">
+      <div class="myth-question"><span>❌</span><span data-de='"ADHS ist eine Schwäche."' data-en='"ADHD is a weakness."'>"ADHS ist eine Schwäche."</span><span class="myth-icon">▼</span></div>
+      <div class="myth-answer" data-de="Absolut falsch. ADHS bedeutet ein anderes Betriebssystem – nicht ein schlechteres. Hyperfokus, Kreativität, Out-of-the-box Denken und Energie sind echte Stärken. Mit Sport als Werkzeug werden sie noch kraftvoller." data-en="Absolutely wrong. ADHD means a different operating system – not a worse one. Hyperfocus, creativity, out-of-the-box thinking and energy are real strengths. With sport as a tool, they become even more powerful.">Absolut falsch. ADHS bedeutet ein anderes Betriebssystem. Hyperfokus, Kreativität, Energie – echte Stärken.</div>
+    </div>
+  </div>
+
+  <div class="pull-quote" data-de='"Sport ist für das ADHS-Gehirn wie Laden für ein leeres Handy. Ohne geht nichts. Mit – alles."' data-en='"Sport for the ADHD brain is like charging an empty phone. Without it – nothing works. With it – everything."'>"Sport ist für das ADHS-Gehirn wie Laden für ein leeres Handy. Ohne geht nichts. Mit – alles."</div>
+
+  <h2 data-de="<em>Die besten</em> Sport-Arten<br>bei ADHS." data-en="<em>The best</em> sport types<br>for ADHD.">Die besten Sport-Arten<br>bei ADHS.</h2>
+
+  <div class="tips-grid">
+    <div class="tip-card"><div class="tip-icon">🚴</div><div class="tip-title" data-de="Radfahren" data-en="Cycling">Radfahren</div><div class="tip-text" data-de="Rhythmisch, draußen, Dopamin-Boost durch Natur und Bewegung kombiniert. Ideal für ADHS." data-en="Rhythmic, outdoors, dopamine boost through nature and movement combined. Ideal for ADHD.">Rhythmisch, draußen, Dopamin-Boost durch Natur und Bewegung kombiniert.</div></div>
+    <div class="tip-card"><div class="tip-icon">🏃</div><div class="tip-title" data-de="Laufen" data-en="Running">Laufen</div><div class="tip-text" data-de="Einfach, solo, sofort startbar. Kein Equipment, kein Gym. Starker Fokus-Effekt danach." data-en="Simple, solo, instantly startable. No equipment, no gym. Strong focus effect afterwards.">Einfach, solo, sofort startbar. Starker Fokus-Effekt danach.</div></div>
+    <div class="tip-card"><div class="tip-icon">🥋</div><div class="tip-title" data-de="Kampfsport" data-en="Martial arts">Kampfsport</div><div class="tip-text" data-de="Koordination + Fokus + Adrenalin. Kampfsport fordert das ADHS-Gehirn auf perfekte Weise." data-en="Coordination + focus + adrenaline. Martial arts challenges the ADHD brain in the perfect way.">Koordination, Fokus, Adrenalin. Fordert das ADHS-Gehirn perfekt.</div></div>
+    <div class="tip-card"><div class="tip-icon">🏊</div><div class="tip-title" data-de="Schwimmen" data-en="Swimming">Schwimmen</div><div class="tip-text" data-de="Rhythmisch, meditativ, alle Sinne beschäftigt. Reduziert Hyperaktivität besonders stark." data-en="Rhythmic, meditative, all senses occupied. Reduces hyperactivity particularly strongly.">Rhythmisch, meditativ. Reduziert Hyperaktivität besonders stark.</div></div>
+  </div>
+
+  <div class="author-block">
+    <div class="author-avatar">⚡</div>
+    <div>
+      <div class="author-name">BewegungVerbindet Team</div>
+      <div class="author-bio" data-de="Wir verbinden Sport und mentale Gesundheit – ehrlich, wissenschaftlich und aus eigener Erfahrung." data-en="We connect sport and mental health – honest, scientific and from personal experience.">Wir verbinden Sport und mentale Gesundheit – ehrlich, wissenschaftlich und aus eigener Erfahrung.</div>
+    </div>
+  </div>
+
+  <div class="share-block">
+    <div class="share-title" data-de="Kennst du jemanden mit ADHS?" data-en="Do you know someone with ADHD?">Kennst du jemanden mit ADHS?</div>
+    <div class="share-sub" data-de="Teile diesen Artikel – er könnte ihr Leben verändern." data-en="Share this article – it could change their life.">Teile diesen Artikel – er könnte ihr Leben verändern.</div>
+    <button class="share-btn" onclick="navigator.share?navigator.share({title:document.title,url:location.href}):navigator.clipboard.writeText(location.href)">📤 <span data-de="Artikel teilen" data-en="Share article">Artikel teilen</span></button>
+  </div>
+
+  <a href="artikel-radfahren.html" class="next-article">
+    <div class="next-label" data-de="Nächster Artikel →" data-en="Next article →">Nächster Artikel →</div>
+    <div class="next-title" data-de="Radfahren & mentale Gesundheit: 5 Studien im Überblick" data-en="Cycling & Mental Health: 5 Studies at a Glance">Radfahren & mentale Gesundheit: 5 Studien im Überblick</div>
+  </a>
+</div>
+
+<script>
+let lang='de';
+function setLang(l){lang=l;document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));document.querySelector(`.lang-btn[onclick="setLang('${l}')"]`).classList.add('active');document.querySelectorAll('[data-de]').forEach(el=>{const t=el.getAttribute('data-'+l);if(t)el.innerHTML=t});document.documentElement.lang=l}
+window.addEventListener('scroll',()=>{const d=document.documentElement;document.getElementById('rp').style.width=((d.scrollTop||document.body.scrollTop)/(d.scrollHeight-d.clientHeight)*100)+'%'});
+window.addEventListener('load',()=>{setTimeout(()=>{document.querySelectorAll('.brain-fill').forEach(b=>{b.style.width=b.getAttribute('data-w')+'%'})},500)});
+function toggleMyth(card){card.classList.toggle('open')}
+</script>
+</body>
+</html>

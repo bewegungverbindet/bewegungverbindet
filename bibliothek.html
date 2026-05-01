@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 680 680'><circle cx='340' cy='340' r='340' fill='%232d6a4f'/><text x='260' y='410' font-family='Georgia' font-size='240' font-weight='700' fill='%23f7f4ef'>B</text><text x='430' y='410' font-family='Georgia' font-size='240' font-weight='700' fill='%231c1a16'>V</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="VDSCh8TTqZUptly6CAik9csSDh3nkavv_aQneLgaEBA" />
+<meta name="description" content="Die BewegungVerbindet Bibliothek – Artikel, Videos und Ressourcen zu Sport, ADHS, Fokus und Bewegung.">
+<meta property="og:title" content="Bibliothek – BewegungVerbindet">
+<meta property="og:description" content="Alle Artikel und Ressourcen zu Sport, ADHS und Fokus auf einen Blick.">
+<meta property="og:url" content="https://bewegungverbindet.netlify.app/bibliothek.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bibliothek – BewegungVerbindet">
+<meta name="twitter:description" content="Alle Artikel zu Sport, ADHS und Fokus.">
+<title>Bibliothek | BewegungVerbindet</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;0,900;1,300;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f4ef;
+    --text: #1c1a16;
+    --muted: #8a8478;
+    --accent: #2d6a4f;
+    --accent2: #74c69d;
+    --accent3: #e76f51;
+    --surface: #ffffff;
+    --border: rgba(28,26,22,0.1);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-weight: 300; min-height: 100vh; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 2.5rem;
+    background: rgba(247,244,239,0.95); backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+  }
+  .logo { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; color: var(--accent); text-decoration: none; letter-spacing: -0.02em; }
+  .logo span { color: var(--text); }
+  .nav-right { display: flex; align-items: center; gap: 1rem; }
+  .back-btn { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .back-btn:hover { color: var(--text); }
+  .lang-switcher { display: flex; gap: 3px; background: var(--bg); border: 0.5px solid var(--border); border-radius: 100px; padding: 3px; }
+  .lang-btn { background: none; border: none; font-size: 11px; font-weight: 500; padding: 3px 8px; border-radius: 100px; cursor: pointer; color: var(--muted); transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
+  .lang-btn.active { background: var(--accent); color: white; }
+
+  /* HERO */
+  .lib-hero {
+    padding: 7rem 2.5rem 2rem;
+    max-width: 900px; margin: 0 auto; text-align: center;
+  }
+  .lib-tag {
+    display: inline-block; font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); background: rgba(45,106,79,0.1);
+    padding: 5px 14px; border-radius: 100px; margin-bottom: 1rem;
+  }
+  .lib-hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 900; letter-spacing: -0.03em; line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .lib-hero h1 em { font-style: italic; color: var(--accent); }
+  .lib-hero p { font-size: 1rem; color: var(--muted); max-width: 480px; margin: 0 auto; line-height: 1.6; }
+
+  /* MAIN TOGGLE: LESEN / SEHEN */
+  .mode-toggle {
+    display: flex; justify-content: center; gap: 0; margin: 2rem auto 0;
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: 100px; padding: 4px; width: fit-content;
+  }
+  .mode-btn {
+    background: none; border: none; font-family: 'DM Sans', sans-serif;
+    font-size: 14px; font-weight: 500; padding: 10px 28px;
+    border-radius: 100px; cursor: pointer; color: var(--muted);
+    transition: all 0.25s; display: flex; align-items: center; gap: 6px;
+  }
+  .mode-btn.active { background: var(--accent); color: white; }
+
+  /* LIBRARY CONTAINER */
+  .lib-container { max-width: 1100px; margin: 0 auto; padding: 2rem 2.5rem 5rem; }
+
+  /* SEARCH */
+  .search-wrap { position: relative; margin-bottom: 1.5rem; }
+  .search-input {
+    width: 100%; background: var(--surface);
+    border: 0.5px solid var(--border); border-radius: 100px;
+    padding: 12px 20px 12px 44px;
+    font-family: 'DM Sans', sans-serif; font-size: 14px;
+    color: var(--text); outline: none; transition: border-color 0.2s;
+  }
+  .search-input:focus { border-color: var(--accent); }
+  .search-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-size: 16px; }
+  .search-count { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); font-size: 12px; color: var(--muted); }
+
+  /* FÄCHER (CATEGORY FILTERS) */
+  .faecher-label {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem;
+  }
+  .faecher { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 2rem; }
+  .fach-btn {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: 100px; padding: 7px 16px; font-size: 13px;
+    color: var(--muted); cursor: pointer; transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif; font-weight: 400;
+    display: flex; align-items: center; gap: 5px;
+  }
+  .fach-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .fach-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
+  .fach-count {
+    background: rgba(255,255,255,0.2); border-radius: 100px;
+    padding: 1px 6px; font-size: 10px; font-weight: 500;
+  }
+  .fach-btn:not(.active) .fach-count { background: var(--bg); color: var(--muted); }
+
+  /* RESULTS INFO */
+  .results-info { font-size: 13px; color: var(--muted); margin-bottom: 1.25rem; }
+  .results-info strong { color: var(--text); }
+
+  /* FEATURED ARTICLE */
+  .featured-card {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: 24px; overflow: hidden; margin-bottom: 1.5rem;
+    display: grid; grid-template-columns: 1fr 1.2fr;
+    transition: transform 0.2s; text-decoration: none; color: var(--text);
+  }
+  .featured-card:hover { transform: translateY(-3px); }
+  .featured-img {
+    min-height: 260px; display: flex; align-items: center;
+    justify-content: center; font-size: 4rem;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    position: relative;
+  }
+  .featured-badge {
+    position: absolute; top: 1rem; left: 1rem;
+    background: var(--accent); color: white;
+    font-size: 10px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 4px 10px; border-radius: 100px;
+  }
+  .featured-body { padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
+  .card-tag-pill {
+    display: inline-block; font-size: 11px; font-weight: 500;
+    padding: 4px 12px; border-radius: 100px; margin-bottom: 0.75rem;
+    background: rgba(45,106,79,0.1); color: var(--accent);
+  }
+  .featured-title {
+    font-family: 'Fraunces', serif; font-size: 1.4rem;
+    font-weight: 900; line-height: 1.2; margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+  .featured-excerpt { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 1.25rem; }
+  .card-meta { display: flex; gap: 1rem; font-size: 12px; color: var(--muted); flex-wrap: wrap; }
+  .card-meta span { display: flex; align-items: center; gap: 4px; }
+
+  /* ARTICLE GRID */
+  .articles-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+  }
+  .article-card {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: 20px; overflow: hidden; transition: transform 0.2s;
+    text-decoration: none; color: var(--text); display: flex; flex-direction: column;
+  }
+  .article-card:hover { transform: translateY(-3px); }
+  .article-img {
+    height: 130px; display: flex; align-items: center;
+    justify-content: center; font-size: 2.5rem;
+  }
+  .img-green { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
+  .img-orange { background: linear-gradient(135deg, #fff3e0, #ffe0b2); }
+  .img-blue { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
+  .img-purple { background: linear-gradient(135deg, #f3e5f5, #e1bee7); }
+  .img-red { background: linear-gradient(135deg, #fce4ec, #f8bbd0); }
+  .article-body { padding: 1.1rem; flex: 1; display: flex; flex-direction: column; }
+  .article-tag-sm {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
+  }
+  .article-title {
+    font-family: 'Fraunces', serif; font-size: 0.95rem;
+    font-weight: 700; line-height: 1.3; margin-bottom: 6px; flex: 1;
+  }
+  .article-excerpt { font-size: 12px; color: var(--muted); line-height: 1.5; margin-bottom: 10px; }
+  .article-meta-sm { font-size: 11px; color: var(--muted); display: flex; gap: 8px; }
+
+  /* VIDEO GRID */
+  .videos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .video-card {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: 20px; overflow: hidden; transition: transform 0.2s;
+    text-decoration: none; color: var(--text); cursor: pointer;
+  }
+  .video-card:hover { transform: translateY(-3px); }
+  .video-thumb {
+    height: 160px; display: flex; align-items: center; justify-content: center;
+    position: relative; background: linear-gradient(135deg, #1c1a16, #2d2b26);
+    font-size: 2.5rem;
+  }
+  .play-btn {
+    position: absolute; width: 50px; height: 50px;
+    background: rgba(255,255,255,0.9); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; transition: transform 0.2s;
+  }
+  .video-card:hover .play-btn { transform: scale(1.1); }
+  .coming-soon-overlay {
+    position: absolute; inset: 0;
+    background: rgba(28,26,22,0.6);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 13px; font-weight: 500;
+  }
+  .video-body { padding: 1.1rem; }
+  .video-tag { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent3); margin-bottom: 6px; }
+  .video-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 700; line-height: 1.3; margin-bottom: 6px; }
+  .video-meta { font-size: 11px; color: var(--muted); }
+
+  /* EMPTY STATE */
+  .empty-state { text-align: center; padding: 4rem 2rem; }
+  .empty-icon { font-size: 3rem; margin-bottom: 1rem; }
+  .empty-title { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .empty-text { font-size: 14px; color: var(--muted); }
+
+  /* NO RESULTS */
+  .no-results { display: none; text-align: center; padding: 3rem; }
+  .no-results.show { display: block; }
+
+  /* COMING SOON SECTION */
+  .coming-soon-section {
+    border: 1.5px dashed var(--border); border-radius: 20px;
+    padding: 2rem; text-align: center; margin-top: 2rem; color: var(--muted);
+  }
+  .coming-soon-section h3 { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text); }
+  .coming-soon-section p { font-size: 13px; }
+
+  /* HIDDEN */
+  .hidden { display: none !important; }
+
+  @media(max-width:768px){
+    nav { padding: 1rem 1.25rem; }
+    .lib-hero { padding: 6rem 1.25rem 1.5rem; }
+    .lib-container { padding: 1.5rem 1.25rem 4rem; }
+    .featured-card { grid-template-columns: 1fr; }
+    .featured-img { min-height: 180px; }
+    .articles-grid { grid-template-columns: 1fr 1fr; }
+    .videos-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media(max-width:500px){
+    .articles-grid { grid-template-columns: 1fr; }
+    .videos-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Bewegung<span>Verbindet</span></a>
+  <div class="nav-right">
+    <a href="index.html" class="back-btn" data-de="← Zurück" data-en="← Back">← Zurück</a>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="lib-hero">
+  <span class="lib-tag" data-de="📚 Wissen das bewegt" data-en="📚 Knowledge that moves">📚 Wissen das bewegt</span>
+  <h1 data-de="Die <em>Bibliothek.</em>" data-en="The <em>Library.</em>">Die <em>Bibliothek.</em></h1>
+  <p data-de="Artikel, Studien und Videos rund um Sport, Fokus und mentales Wohlbefinden. Kuratiert von der Community." data-en="Articles, studies and videos around sport, focus and mental wellbeing. Curated by the community.">Artikel, Studien und Videos rund um Sport, Fokus und mentales Wohlbefinden. Kuratiert von der Community.</p>
+
+  <!-- MAIN TOGGLE -->
+  <div class="mode-toggle">
+    <button class="mode-btn active" onclick="setMode('lesen')" id="btnLesen">
+      📖 <span data-de="Lesen" data-en="Read">Lesen</span>
+    </button>
+    <button class="mode-btn" onclick="setMode('sehen')" id="btnSehen">
+      🎥 <span data-de="Sehen" data-en="Watch">Sehen</span>
+    </button>
+  </div>
+</div>
+
+<!-- LIBRARY -->
+<div class="lib-container">
+
+  <!-- SEARCH -->
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input class="search-input" id="searchInput" type="text"
+      placeholder="Artikel suchen..."
+      oninput="filterContent()" />
+    <span class="search-count" id="searchCount"></span>
+  </div>
+
+  <!-- FÄCHER -->
+  <div class="faecher-label" data-de="FÄCHER" data-en="CATEGORIES">FÄCHER</div>
+  <div class="faecher" id="faecherContainer">
+    <!-- Generated by JS -->
+  </div>
+
+  <div class="results-info" id="resultsInfo"></div>
+
+  <!-- LESEN SECTION -->
+  <div id="lesenSection">
+    <div id="articlesContainer"></div>
+    <div class="no-results" id="noResults">
+      <div style="font-size:2rem;margin-bottom:0.75rem;">🔍</div>
+      <div style="font-weight:500;margin-bottom:4px;" data-de="Keine Artikel gefunden" data-en="No articles found">Keine Artikel gefunden</div>
+      <div style="font-size:13px;color:var(--muted);" data-de="Versuch ein anderes Stichwort oder Filter" data-en="Try a different keyword or filter">Versuch ein anderes Stichwort oder Filter</div>
+    </div>
+  </div>
+
+  <!-- SEHEN SECTION -->
+  <div id="sehenSection" class="hidden">
+    <div class="videos-grid" id="videosContainer"></div>
+    <div class="coming-soon-section" style="margin-top:1.5rem;">
+      <div style="font-size:2rem;margin-bottom:0.75rem;">🎬</div>
+      <h3 data-de="Mehr Videos kommen bald!" data-en="More videos coming soon!">Mehr Videos kommen bald!</h3>
+      <p data-de="Wir arbeiten an Video-Inhalten für die Community." data-en="We're working on video content for the community.">Wir arbeiten an Video-Inhalten für die Community.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ============================================================
+// DATEN – NUR HIER ÄNDERN UM NEUE INHALTE HINZUZUFÜGEN
+// ============================================================
+
+const ARTICLES = [
+  // ↓↓↓ ARTIKEL HINZUFÜGEN: { ...daten } KOPIEREN UND ANPASSEN ↓↓↓
+  {
+    id: 1,
+    featured: true,
+    title_de: "20 Minuten Sport – 2 Stunden Fokus. Die Wissenschaft dahinter.",
+    title_en: "20 Minutes Sport – 2 Hours Focus. The Science Behind It.",
+    excerpt_de: "Bewegung verändert dein Gehirn chemisch – schneller als du denkst. Mit interaktivem Test und echter Studie.",
+    excerpt_en: "Movement changes your brain chemically – faster than you think. With interactive test and real study.",
+    tag_de: "Sport & Kopf",
+    tag_en: "Sport & Mind",
+    category: "sport-kopf",
+    emoji: "🚴",
+    imgClass: "img-green",
+    lesezeit: "5 min",
+    level_de: "Einsteiger",
+    level_en: "Beginner",
+    url: "artikel-sport-gehirn.html",
+    datum: "2025"
+  },
+  // ↓↓↓ BEISPIEL PLATZHALTER – ERSETZE MIT ECHTEN ARTIKELN ↓↓↓
+  {
+    id: 2,
+    featured: false,
+    title_de: "Das Fokus-Fenster: Wie du die 90 Minuten nach dem Sport optimal nutzt",
+    title_en: "The Focus Window: How to Use the 90 Minutes After Sport Optimally",
+    excerpt_de: "Du hast ein goldenes Zeitfenster nach dem Sport. Hier erfährst du wie du es richtig nutzt.",
+    excerpt_en: "You have a golden time window after sport. Here's how to use it correctly.",
+    tag_de: "Fokus & Alltag",
+    tag_en: "Focus & Life",
+    category: "fokus",
+    emoji: "⏱️",
+    imgClass: "img-orange",
+    lesezeit: "4 min",
+    level_de: "Einsteiger",
+    level_en: "Beginner",
+    url: "artikel-fokus-fenster.html",
+    datum: "2025",
+    comingSoon: false
+  },
+  {
+    id: 3,
+    featured: false,
+    title_de: "Warum soziale Challenges dich 3x motivierter machen",
+    title_en: "Why Social Challenges Make You 3x More Motivated",
+    excerpt_de: "Alleine scheitern viele. Mit einer Gruppe fast niemand. Die Wissenschaft dahinter.",
+    excerpt_en: "Many fail alone. Hardly anyone fails with a group. The science behind it.",
+    tag_de: "Community",
+    tag_en: "Community",
+    category: "community",
+    emoji: "🤝",
+    imgClass: "img-blue",
+    lesezeit: "3 min",
+    level_de: "Einsteiger",
+    level_en: "Beginner",
+    url: "artikel-challenges.html",
+    datum: "2025",
+    comingSoon: false
+  },
+  {
+    id: 4,
+    featured: false,
+    title_de: "Dopamin durch Sport: Was wirklich in deinem Gehirn passiert",
+    title_en: "Dopamine Through Sport: What Really Happens in Your Brain",
+    excerpt_de: "Eine deep-dive in die Neurochemie hinter Bewegung und mentaler Gesundheit.",
+    excerpt_en: "A deep-dive into the neurochemistry behind movement and mental health.",
+    tag_de: "Studien",
+    tag_en: "Studies",
+    category: "studien",
+    emoji: "🧬",
+    imgClass: "img-purple",
+    lesezeit: "7 min",
+    level_de: "Fortgeschritten",
+    level_en: "Advanced",
+    url: "artikel-dopamin.html",
+    datum: "2025",
+    comingSoon: false
+  },
+  {
+    id: 5,
+    featured: false,
+    title_de: "Radfahren & mentale Gesundheit: 5 Studien im Überblick",
+    title_en: "Cycling & Mental Health: 5 Studies at a Glance",
+    excerpt_de: "Was sagt die Forschung wirklich über Radfahren und psychisches Wohlbefinden?",
+    excerpt_en: "What does research really say about cycling and psychological wellbeing?",
+    tag_de: "Studien",
+    tag_en: "Studies",
+    category: "studien",
+    emoji: "📊",
+    imgClass: "img-green",
+    lesezeit: "6 min",
+    level_de: "Mittel",
+    level_en: "Intermediate",
+    url: "artikel-radfahren.html",
+    datum: "2025",
+    comingSoon: false
+  },
+  {
+    id: 6,
+    featured: false,
+    title_de: "ADHS & Sport: Wie Bewegung das ADHS-Gehirn verändert",
+    title_en: "ADHD & Sport: How Movement Changes the ADHD Brain",
+    excerpt_de: "Sport ist eine der wirkungsvollsten natürlichen Strategien für Menschen mit ADHS. Hier ist die Wissenschaft dahinter.",
+    excerpt_en: "Sport is one of the most effective natural strategies for people with ADHD. Here is the science behind it.",
+    tag_de: "ADHS",
+    tag_en: "ADHD",
+    category: "adhs",
+    emoji: "⚡",
+    imgClass: "img-purple",
+    lesezeit: "5 min",
+    level_de: "Einsteiger",
+    level_en: "Beginner",
+    url: "artikel-adhs-sport.html",
+    datum: "2025",
+    comingSoon: false
+  },
+  // ↑↑↑ NEUE ARTIKEL OBEN EINFÜGEN ↑↑↑
+];
+
+const VIDEOS = [
+  {
+    id: 1,
+    title_de: "Wie 20 Minuten Sport deinen Tag verändern",
+    title_en: "How 20 Minutes of Sport Change Your Day",
+    tag_de: "Sport & Kopf",
+    tag_en: "Sport & Mind",
+    category: "sport-kopf",
+    emoji: "🚴",
+    dauer: "8 min",
+    url: "#",
+    comingSoon: false
+  },
+  {
+    id: 2,
+    title_de: "Community-Gespräch: Bewegung als Alltags-Werkzeug",
+    title_en: "Community Talk: Movement as an Everyday Tool",
+    tag_de: "Community",
+    tag_en: "Community",
+    category: "community",
+    emoji: "🤝",
+    dauer: "12 min",
+    url: "#",
+    comingSoon: false
+  },
+  {
+    id: 3,
+    title_de: "Studie erklärt: Das Fokus-Fenster nach dem Sport",
+    title_en: "Study Explained: The Focus Window After Sport",
+    tag_de: "Studien",
+    tag_en: "Studies",
+    category: "studien",
+    emoji: "🧬",
+    dauer: "6 min",
+    url: "#",
+    comingSoon: false
+  },
+];
+
+// KATEGORIEN – automatisch aus Artikeln generiert
+const CATEGORIES = [
+  { key: "alle", label_de: "Alle", label_en: "All", emoji: "✨" },
+  { key: "sport-kopf", label_de: "Sport & Kopf", label_en: "Sport & Mind", emoji: "🧠" },
+  { key: "fokus", label_de: "Fokus & Alltag", label_en: "Focus & Life", emoji: "🎯" },
+  { key: "community", label_de: "Community", label_en: "Community", emoji: "🤝" },
+  { key: "studien", label_de: "Studien", label_en: "Studies", emoji: "🔬" },
+  { key: "adhs", label_de: "ADHS", label_en: "ADHD", emoji: "⚡" },
+];
+
+// ============================================================
+// STATE
+// ============================================================
+let currentLang = 'de';
+let currentMode = 'lesen';
+let currentCategory = 'alle';
+let searchQuery = '';
+
+// ============================================================
+// LANG
+// ============================================================
+function setLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+  document.querySelectorAll('[data-de]').forEach(el => {
+    const text = el.getAttribute('data-' + lang);
+    if (text) el.innerHTML = text;
+  });
+  document.getElementById('searchInput').placeholder = lang === 'de' ? 'Artikel suchen...' : 'Search articles...';
+  document.documentElement.lang = lang;
+  renderAll();
+}
+
+// ============================================================
+// MODE TOGGLE
+// ============================================================
+function setMode(mode) {
+  currentMode = mode;
+  document.getElementById('btnLesen').classList.toggle('active', mode === 'lesen');
+  document.getElementById('btnSehen').classList.toggle('active', mode === 'sehen');
+  document.getElementById('lesenSection').classList.toggle('hidden', mode !== 'lesen');
+  document.getElementById('sehenSection').classList.toggle('hidden', mode !== 'sehen');
+  renderAll();
+}
+
+// ============================================================
+// FÄCHER
+// ============================================================
+function renderFaecher() {
+  const container = document.getElementById('faecherContainer');
+  const items = currentMode === 'lesen' ? ARTICLES : VIDEOS;
+
+  container.innerHTML = CATEGORIES.map(cat => {
+    const count = cat.key === 'alle'
+      ? items.length
+      : items.filter(a => a.category === cat.key).length;
+    if (count === 0 && cat.key !== 'alle') return '';
+    return `<button class="fach-btn ${currentCategory === cat.key ? 'active' : ''}"
+      onclick="setCategory('${cat.key}')">
+      ${cat.emoji} ${cat['label_' + currentLang]}
+      <span class="fach-count">${count}</span>
+    </button>`;
+  }).join('');
+}
+
+function setCategory(key) {
+  currentCategory = key;
+  renderAll();
+}
+
+// ============================================================
+// FILTER
+// ============================================================
+function filterContent() {
+  searchQuery = document.getElementById('searchInput').value.toLowerCase();
+  renderAll();
+}
+
+function getFilteredArticles() {
+  return ARTICLES.filter(a => {
+    const matchCat = currentCategory === 'alle' || a.category === currentCategory;
+    const matchSearch = !searchQuery ||
+      a['title_' + currentLang].toLowerCase().includes(searchQuery) ||
+      a['excerpt_' + currentLang].toLowerCase().includes(searchQuery) ||
+      a['tag_' + currentLang].toLowerCase().includes(searchQuery);
+    return matchCat && matchSearch;
+  });
+}
+
+function getFilteredVideos() {
+  return VIDEOS.filter(v => {
+    const matchCat = currentCategory === 'alle' || v.category === currentCategory;
+    const matchSearch = !searchQuery ||
+      v['title_' + currentLang].toLowerCase().includes(searchQuery);
+    return matchCat && matchSearch;
+  });
+}
+
+// ============================================================
+// RENDER
+// ============================================================
+function renderAll() {
+  renderFaecher();
+  if (currentMode === 'lesen') renderArticles();
+  else renderVideos();
+}
+
+function renderArticles() {
+  const filtered = getFilteredArticles();
+  const container = document.getElementById('articlesContainer');
+  const noResults = document.getElementById('noResults');
+  const info = document.getElementById('resultsInfo');
+  const isEn = currentLang === 'en';
+
+  const count = filtered.length;
+  info.innerHTML = `<strong>${count}</strong> ${isEn ? (count === 1 ? 'article' : 'articles') : (count === 1 ? 'Artikel' : 'Artikel')} ${isEn ? 'found' : 'gefunden'}`;
+  document.getElementById('searchCount').textContent = count > 0 ? count : '';
+
+  if (count === 0) {
+    container.innerHTML = '';
+    noResults.classList.add('show');
+    return;
+  }
+  noResults.classList.remove('show');
+
+  const featured = filtered.find(a => a.featured);
+  const rest = filtered.filter(a => !a.featured);
+
+  let html = '';
+
+  // FEATURED
+  if (featured && !searchQuery) {
+    html += `
+    <a href="${featured.url}" class="featured-card" style="${featured.comingSoon ? 'pointer-events:none;opacity:0.7;' : ''}">
+      <div class="featured-img img-green">
+        <span style="font-size:4rem;">${featured.emoji}</span>
+        <div class="featured-badge">${isEn ? '⭐ Featured' : '⭐ Empfohlen'}</div>
+      </div>
+      <div class="featured-body">
+        <div class="card-tag-pill">${featured['tag_' + currentLang]}</div>
+        <div class="featured-title">${featured['title_' + currentLang]}</div>
+        <div class="featured-excerpt">${featured['excerpt_' + currentLang]}</div>
+        <div class="card-meta">
+          <span>⏱ ${featured.lesezeit}</span>
+          <span>📈 ${featured['level_' + currentLang]}</span>
+          <span>📅 ${featured.datum}</span>
+          ${featured.comingSoon ? `<span style="color:var(--accent3)">${isEn ? 'Coming soon' : 'Bald verfügbar'}</span>` : `<span style="color:var(--accent)">${isEn ? 'Read now →' : 'Jetzt lesen →'}</span>`}
+        </div>
+      </div>
+    </a>`;
+  }
+
+  // GRID
+  if (rest.length > 0) {
+    html += `<div class="articles-grid">`;
+    rest.forEach(a => {
+      html += `
+      <a href="${a.comingSoon ? '#' : a.url}" class="article-card" style="${a.comingSoon ? 'pointer-events:none;' : ''}">
+        <div class="article-img ${a.imgClass}">${a.emoji}</div>
+        <div class="article-body">
+          <div class="article-tag-sm">${a['tag_' + currentLang]}</div>
+          <div class="article-title">${a['title_' + currentLang]}</div>
+          <div class="article-excerpt">${a['excerpt_' + currentLang]}</div>
+          <div class="article-meta-sm">
+            <span>⏱ ${a.lesezeit}</span>
+            ${a.comingSoon ? `<span style="color:var(--accent3)">⏳ ${isEn ? 'Coming soon' : 'Bald'}</span>` : `<span style="color:var(--accent)">→ ${isEn ? 'Read' : 'Lesen'}</span>`}
+          </div>
+        </div>
+      </a>`;
+    });
+    html += `</div>`;
+  }
+
+  // If search results include featured mixed with rest
+  if (searchQuery && featured) {
+    html = `<div class="articles-grid">`;
+    filtered.forEach(a => {
+      html += `
+      <a href="${a.comingSoon ? '#' : a.url}" class="article-card" style="${a.comingSoon ? 'pointer-events:none;' : ''}">
+        <div class="article-img ${a.imgClass}">${a.emoji}</div>
+        <div class="article-body">
+          <div class="article-tag-sm">${a['tag_' + currentLang]}</div>
+          <div class="article-title">${a['title_' + currentLang]}</div>
+          <div class="article-excerpt">${a['excerpt_' + currentLang]}</div>
+          <div class="article-meta-sm">
+            <span>⏱ ${a.lesezeit}</span>
+            ${a.comingSoon ? `<span style="color:var(--accent3)">⏳ ${isEn ? 'Coming soon' : 'Bald'}</span>` : `<span style="color:var(--accent)">→ ${isEn ? 'Read' : 'Lesen'}</span>`}
+          </div>
+        </div>
+      </a>`;
+    });
+    html += `</div>`;
+  }
+
+  container.innerHTML = html;
+}
+
+function renderVideos() {
+  const filtered = getFilteredVideos();
+  const container = document.getElementById('videosContainer');
+  const info = document.getElementById('resultsInfo');
+  const isEn = currentLang === 'en';
+
+  info.innerHTML = `<strong>${filtered.length}</strong> ${isEn ? 'videos found' : 'Videos gefunden'}`;
+
+  container.innerHTML = filtered.map(v => `
+    <div class="video-card">
+      <div class="video-thumb">
+        <span style="font-size:2.5rem;opacity:0.4;">${v.emoji}</span>
+        <div class="play-btn">▶</div>
+        <div class="coming-soon-overlay">${isEn ? '🎬 Coming soon' : '🎬 Bald verfügbar'}</div>
+      </div>
+      <div class="video-body">
+        <div class="video-tag">${v['tag_' + currentLang]}</div>
+        <div class="video-title">${v['title_' + currentLang]}</div>
+        <div class="video-meta">⏱ ${v.dauer}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ============================================================
+// INIT
+// ============================================================
+renderAll();
+</script>
+</body>
+</html>
